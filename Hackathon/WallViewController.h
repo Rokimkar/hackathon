@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WallViewController : UIViewController
+- (IBAction)sideBarButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *sideBarButton;
 
 @end
