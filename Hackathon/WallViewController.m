@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  WallViewController.m
 //  Hackathon
 //
-//  Created by Sanchit Kumar Singh on 10/7/15.
+//  Created by Sanchit Kumar Singh on 10/9/15.
 //  Copyright (c) 2015 Sanchit Kumar Singh. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WallViewController.h"
 
-@interface ViewController ()
+@interface WallViewController ()
 
 @end
 
-@implementation ViewController
+@implementation WallViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

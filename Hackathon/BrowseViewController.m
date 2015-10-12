@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  BrowseViewController.m
 //  Hackathon
 //
-//  Created by Sanchit Kumar Singh on 10/7/15.
+//  Created by Sanchit Kumar Singh on 10/9/15.
 //  Copyright (c) 2015 Sanchit Kumar Singh. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BrowseViewController.h"
 
-@interface ViewController ()
+@interface BrowseViewController ()
 
 @end
 
-@implementation ViewController
+@implementation BrowseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

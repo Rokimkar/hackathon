@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  LeftDeckViewController.m
 //  Hackathon
 //
-//  Created by Sanchit Kumar Singh on 10/7/15.
+//  Created by Sanchit Kumar Singh on 10/11/15.
 //  Copyright (c) 2015 Sanchit Kumar Singh. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LeftDeckViewController.h"
 
-@interface ViewController ()
+@interface LeftDeckViewController ()
 
 @end
 
-@implementation ViewController
+@implementation LeftDeckViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
