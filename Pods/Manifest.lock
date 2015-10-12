@@ -20,14 +20,11 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - SWRevealViewController (2.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - SWRevealViewController (= 2.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  SWRevealViewController: c686381b4b426a90bb0e091856738ba3c5bdc037
 
 COCOAPODS: 0.39.0
