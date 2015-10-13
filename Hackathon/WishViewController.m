@@ -7,17 +7,22 @@
 //
 
 #import "WishViewController.h"
-
+#import "BaseTableView.h"
 @interface WishViewController ()
-
+{
+    BaseTableView *wishTableView;
+}
 @end
 
 @implementation WishViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 0, 100, 500) andProductsArray:nil];
     // Do any additional setup after loading the view.
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
