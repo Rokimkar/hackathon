@@ -16,6 +16,7 @@
     self.productArray=prodsArray;
     self.dataSource=self;
     self.delegate=self;
+    [self registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"TableViewCell"];
     return [self initWithFrame:frame];
 }
 
@@ -24,7 +25,9 @@
 }
 
 -(NSInteger) tableView :(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
-    return _productArray.count;
+//    return _productArray.count;
+    return 10;
+
 }
 
 -(UITableViewCell *)tableView : (UITableView *)tableView cellForRowAtIndexPath : (NSIndexPath *) indexPath{
@@ -37,7 +40,11 @@
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{
-    return 65;
+    return 87;
+}
+
+-(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 87;
 }
 
 @end

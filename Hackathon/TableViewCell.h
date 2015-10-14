@@ -12,6 +12,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sellerLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *favoriteImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewForProduct;
+- (IBAction)buttonForFavoriteTapped:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonForFavoriteTapped;
+
 
 @end

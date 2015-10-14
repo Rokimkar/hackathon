@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6e-C5-bBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446" y="-32"/>
+            <point key="canvasLocation" x="446" y="-24"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="B1W-OD-8Fs">
@@ -84,8 +84,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="8rI-jG-jU0" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="TLV-ho-hOv"/>
-                        <segue destination="z3k-dm-9g8" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="7Fx-kh-rq6"/>
+                        <segue destination="8rI-jG-jU0" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="JYi-lJ-bJj"/>
+                        <segue destination="z3k-dm-9g8" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="tjQ-DI-NfE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7w-uG-zVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,6 +95,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fss-eO-hGT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCT-j4-Wp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="8rI-jG-jU0" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jAV-jS-7Vx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -104,9 +105,8 @@
                         <segue destination="6uz-5q-Zic" kind="relationship" relationship="rootViewController" id="CXa-79-RJe"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eCT-j4-Wp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-627" y="-24"/>
+            <point key="canvasLocation" x="-628" y="-24"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2xl-aE-QCp">
@@ -127,7 +127,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2UT-Gg-VVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="-32"/>
+            <point key="canvasLocation" x="-94" y="-24"/>
         </scene>
         <!--Left Deck View Controller-->
         <scene sceneID="YvK-W6-Hhn">
@@ -172,16 +172,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9jb-Oj-ote">
-                                <rect key="frame" x="16" y="101" width="288" height="410"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="bD3-V0-2tX" id="mfQ-bS-tUY"/>
-                                    <outlet property="delegate" destination="bD3-V0-2tX" id="P2L-I9-z9q"/>
-                                </connections>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wish" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H54-Kr-RD5">
-                                <rect key="frame" x="143" y="72" width="35" height="21"/>
+                                <rect key="frame" x="197" y="64" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -190,9 +182,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wish" id="59O-lH-nWG"/>
-                    <connections>
-                        <outlet property="tableView" destination="9jb-Oj-ote" id="2md-xS-8hC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfk-7P-0ct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
