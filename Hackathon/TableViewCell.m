@@ -7,7 +7,7 @@
 //
 
 #import "TableViewCell.h"
-
+#import "UIImageView+AFNetworking.h"
 @implementation TableViewCell
 
 - (void)awakeFromNib {
@@ -22,4 +22,33 @@
 
 - (IBAction)buttonForFavoriteTapped:(id)sender {
 }
+
+-(void) bindDataFor:(Product*) product{
+    
+    self.descriptionLabel.text=product.title;
+    self.descriptionLabel.numberOfLines=0;
+    self.descriptionLabel.sizeToFit;
+    self.priceLabel.text=product.price;
+    
+    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:product.img1] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
+    
+    [self.imageViewForProduct setImageWithURLRequest:req placeholderImage:[UIImage imageNamed:@""] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        
+        if (!request) {
+            self.imageViewForProduct.image=image;
+            self.imageViewForProduct.contentMode=UIViewContentModeScaleAspectFit;
+        }
+        else{
+            
+            [UIView transitionWithView:self.imageViewForProduct duration:1.0f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                self.imageViewForProduct.image=image;
+                self.imageViewForProduct.contentMode=UIViewContentModeScaleAspectFit;
+            } completion:^(BOOL finished) {
+                
+            }];
+        }
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+    }];
+}
+
 @end

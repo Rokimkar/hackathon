@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseTableView : UITableView
-@property (weak,nonatomic) NSArray *productArray;
+@property (strong,nonatomic) NSArray *productArray;
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSArray*) prodSArray;
 
 @end

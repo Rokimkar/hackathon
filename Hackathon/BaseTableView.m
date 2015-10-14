@@ -34,8 +34,8 @@
 }
 
 -(NSInteger) tableView :(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
-//    return _productArray.count;
-    return 10;
+    return _productArray.count;
+//    return 10;
 
 }
 
@@ -45,14 +45,13 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    cell.imageViewForProduct.image=[self resizeImage:[UIImage imageNamed:@"search.png"] toSize:CGSizeMake(40, 30)];
+//    cell.imageViewForProduct.image=[self resizeImage:[UIImage imageNamed:@"search.png"] toSize:CGSizeMake(40, 30)];
     [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_unselected.png"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
     if(indexPath.row==5){
         [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_selected.jpeg"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
     }
-    cell.priceLabel.text=@"350";
-    cell.sellerLabel.text=@"snapdeal";
-    cell.descriptionLabel.text=@"Search items";
+    [cell bindDataFor:[_productArray objectAtIndex:indexPath.row]];
+    
     return cell;
 }
 

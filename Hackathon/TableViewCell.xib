@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,30 +14,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJc-LJ-CcZ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJc-LJ-CcZ">
                         <rect key="frame" x="81" y="8" width="196" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y31-ai-mp5">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y31-ai-mp5">
                         <rect key="frame" x="81" y="32" width="196" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXD-Gr-Oo3">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXD-Gr-Oo3">
                         <rect key="frame" x="81" y="57" width="196" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="to4-06-5Tf">
-                        <rect key="frame" x="8" y="8" width="65" height="70"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="to4-06-5Tf">
+                        <rect key="frame" x="8" y="8" width="65" height="71"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="XZ1-nA-Ibk"/>
+                        </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVW-LM-Dj8">
-                        <rect key="frame" x="285" y="4" width="21" height="25"/>
-                        <state key="normal" title="Button">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVW-LM-Dj8">
+                        <rect key="frame" x="285" y="8" width="27" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="3fo-GS-vfL"/>
+                            <constraint firstAttribute="width" constant="27" id="KCb-hZ-wgB"/>
+                        </constraints>
+                        <state key="normal">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
@@ -44,6 +52,28 @@
                         </connections>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="to4-06-5Tf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="0C6-oR-Brg"/>
+                    <constraint firstItem="VVW-LM-Dj8" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="0vT-hR-O76"/>
+                    <constraint firstItem="BXD-Gr-Oo3" firstAttribute="leading" secondItem="to4-06-5Tf" secondAttribute="trailing" constant="8" id="A3p-jA-veb"/>
+                    <constraint firstItem="to4-06-5Tf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Ea0-Kl-UkH"/>
+                    <constraint firstItem="NJc-LJ-CcZ" firstAttribute="height" secondItem="Y31-ai-mp5" secondAttribute="height" id="HOe-YY-AlK"/>
+                    <constraint firstItem="NJc-LJ-CcZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="KAB-YR-jvK"/>
+                    <constraint firstItem="Y31-ai-mp5" firstAttribute="width" secondItem="BXD-Gr-Oo3" secondAttribute="width" id="Kq2-zF-1sV"/>
+                    <constraint firstItem="NJc-LJ-CcZ" firstAttribute="leading" secondItem="to4-06-5Tf" secondAttribute="trailing" constant="8" id="LbN-pO-cdF"/>
+                    <constraint firstItem="Y31-ai-mp5" firstAttribute="top" secondItem="NJc-LJ-CcZ" secondAttribute="bottom" constant="3" id="RqS-a1-Iua"/>
+                    <constraint firstItem="Y31-ai-mp5" firstAttribute="leading" secondItem="to4-06-5Tf" secondAttribute="trailing" constant="8" id="STk-kx-04f"/>
+                    <constraint firstItem="NJc-LJ-CcZ" firstAttribute="width" secondItem="Y31-ai-mp5" secondAttribute="width" id="TCs-LP-G4u"/>
+                    <constraint firstItem="BXD-Gr-Oo3" firstAttribute="leading" secondItem="to4-06-5Tf" secondAttribute="trailing" constant="8" id="UTX-bx-InY"/>
+                    <constraint firstItem="BXD-Gr-Oo3" firstAttribute="top" secondItem="Y31-ai-mp5" secondAttribute="bottom" constant="4" id="VwI-AL-vK6"/>
+                    <constraint firstItem="to4-06-5Tf" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Vxm-5v-GiP"/>
+                    <constraint firstItem="Y31-ai-mp5" firstAttribute="top" secondItem="NJc-LJ-CcZ" secondAttribute="bottom" constant="3" id="iWt-Rv-Nuw"/>
+                    <constraint firstItem="BXD-Gr-Oo3" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="mga-3w-j1A"/>
+                    <constraint firstItem="Y31-ai-mp5" firstAttribute="height" secondItem="BXD-Gr-Oo3" secondAttribute="height" id="mlG-ma-Lit"/>
+                    <constraint firstItem="VVW-LM-Dj8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="mpz-wn-M35"/>
+                    <constraint firstItem="VVW-LM-Dj8" firstAttribute="leading" secondItem="NJc-LJ-CcZ" secondAttribute="trailing" constant="8" id="nLo-Cs-koi"/>
+                    <constraint firstItem="NJc-LJ-CcZ" firstAttribute="height" secondItem="Y31-ai-mp5" secondAttribute="height" id="yX6-73-d7q"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
