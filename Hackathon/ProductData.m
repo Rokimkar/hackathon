@@ -10,7 +10,7 @@
 #import "Product.h"
 @implementation ProductData
 
-- (void) fetchData:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure{
+- (void) fetchDataFor:(NSString*)category withSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure{
     
     NSError *deserializingError;
     NSString *path = [[NSBundle mainBundle] bundlePath];
@@ -25,16 +25,17 @@
     }
     else
     {
-        success([self getDataFrom:[object valueForKey:@"items"]]);
+        success([self getDataFrom:[object valueForKey:@"items"] forCategory:category]);
     }
 }
 
 
 
--(NSMutableArray*) getDataFrom:(id)dataObject
+-(NSMutableArray*) getDataFrom:(id)dataObject forCategory:(NSString*)category
 {
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
     for (NSMutableDictionary *prodObj in dataObject) {
+        if ([[prodObj objectForKey:@"category"] isEqualToString:category]) {
             Product *product = [[Product alloc] init];
             product.title = [prodObj objectForKey:@"title"];
             product.prodDesc = [prodObj objectForKey:@"prodDesc"];
@@ -47,6 +48,7 @@
             product.img2 = [prodObj objectForKey:@"img2"];
             product.img3 = [prodObj objectForKey:@"img3"];
             [dataArray addObject:product];
+        }
     }
     return dataArray;
 }

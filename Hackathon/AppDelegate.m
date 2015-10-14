@@ -18,12 +18,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    ProductData *prodData = [[ProductData alloc] init];
-//    [prodData fetchData:^(NSMutableArray *data) {
-//        
-//    } failure:^(NSError *error) {
-//        
-//    }];
+    ProductData *prodData = [[ProductData alloc] init];
+    [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
     
     return YES;
