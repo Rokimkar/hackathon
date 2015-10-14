@@ -68,6 +68,8 @@
 		A0A7AAAF1BCD83B600F0CBFC /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAAE1BCD83B600F0CBFC /* BaseTableView.m */; };
 		A0A7AAB41BCD851D00F0CBFC /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAB21BCD851D00F0CBFC /* TableViewCell.m */; };
 		A0A7AAB51BCD851D00F0CBFC /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0A7AAB31BCD851D00F0CBFC /* TableViewCell.xib */; };
+		A0E8E9D51BCED753003F0F51 /* favorite_selected.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A0E8E9D31BCED753003F0F51 /* favorite_selected.jpeg */; };
+		A0E8E9D61BCED753003F0F51 /* favorite_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E8E9D41BCED753003F0F51 /* favorite_unselected.png */; };
 		E9A62DF8154C5A36F85CA285 /* libPods-Hackathon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F66369270EE509E8A014 /* libPods-Hackathon.a */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +168,8 @@
 		A0A7AAB11BCD851D00F0CBFC /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		A0A7AAB21BCD851D00F0CBFC /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		A0A7AAB31BCD851D00F0CBFC /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		A0E8E9D31BCED753003F0F51 /* favorite_selected.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = favorite_selected.jpeg; sourceTree = "<group>"; };
+		A0E8E9D41BCED753003F0F51 /* favorite_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite_unselected.png; sourceTree = "<group>"; };
 		AFC5F66369270EE509E8A014 /* libPods-Hackathon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hackathon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE44D8D57855B1ECCDCD40D9 /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		DFDAA087076CB726C712CF96 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
@@ -363,6 +367,8 @@
 		2F1882501BC7D56B00F29C34 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				A0E8E9D31BCED753003F0F51 /* favorite_selected.jpeg */,
+				A0E8E9D41BCED753003F0F51 /* favorite_unselected.png */,
 				2F1882511BC850A400F29C34 /* feed.png */,
 				2F1882521BC850A400F29C34 /* search.png */,
 				2F1882531BC850A400F29C34 /* wish.png */,
@@ -521,6 +527,7 @@
 				A0A7AAB51BCD851D00F0CBFC /* TableViewCell.xib in Resources */,
 				2F1668ED1BC5580D00744672 /* LaunchScreen.xib in Resources */,
 				0C958FC51BCED6B9007A7694 /* slider-default-handle-highlighted.png in Resources */,
+				A0E8E9D51BCED753003F0F51 /* favorite_selected.jpeg in Resources */,
 				0C958FC91BCED6B9007A7694 /* slider-default-track.png in Resources */,
 				0C958FD11BCED6B9007A7694 /* slider-default7-track@2x.png in Resources */,
 				0C958FD51BCED6B9007A7694 /* slider-default7-trackCrossedOver@2x.png in Resources */,
@@ -528,6 +535,7 @@
 				0C958FC71BCED6B9007A7694 /* slider-default-handle.png in Resources */,
 				2F1668EA1BC5580D00744672 /* Images.xcassets in Resources */,
 				0C958FC81BCED6B9007A7694 /* slider-default-handle@2x.png in Resources */,
+				A0E8E9D61BCED753003F0F51 /* favorite_unselected.png in Resources */,
 				0C958FDB1BCED6B9007A7694 /* slider-metal-track@2x.png in Resources */,
 				2F1882541BC850A400F29C34 /* feed.png in Resources */,
 				0C958FA21BCED670007A7694 /* ProductDetailViewController.xib in Resources */,
