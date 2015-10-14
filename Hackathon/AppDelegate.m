@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ProductData.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ProductData *prodData = [[ProductData alloc] init];
+    [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+    
     return YES;
 }
 
