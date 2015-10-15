@@ -20,13 +20,22 @@
     return [self initWithFrame:frame];
 }
 
+-(UIImage *) resizeImage : (UIImage *)image toSize :(CGSize)rect {
+    UIGraphicsBeginImageContextWithOptions(rect, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, rect.width, rect.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+
 - (NSInteger) numberOfSectionsInTableView : (UITableView *)tableView{
     return 1;
 }
 
 -(NSInteger) tableView :(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
-//    return _productArray.count;
-    return 10;
+    return _productArray.count;
+//    return 10;
 
 }
 
@@ -36,15 +45,22 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+//    cell.imageViewForProduct.image=[self resizeImage:[UIImage imageNamed:@"search.png"] toSize:CGSizeMake(40, 30)];
+    [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_unselected.png"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
+    if(indexPath.row==5){
+        [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_selected.jpeg"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
+    }
+    [cell bindDataFor:[_productArray objectAtIndex:indexPath.row]];
+    
     return cell;
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{
-    return 87;
+    return 0;
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 87;
+    return 84;
 }
 
 @end

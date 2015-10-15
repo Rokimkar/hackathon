@@ -8,6 +8,7 @@
 
 #import "WishViewController.h"
 #import "BaseTableView.h"
+#import "ProductData.h"
 @interface WishViewController ()
 {
     BaseTableView *wishTableView;
@@ -18,8 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) andProductsArray:nil];
-    [self.view addSubview:wishTableView];
+    
+    ProductData *prodData = [[ProductData alloc] init];
+    [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
+        wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-50) andProductsArray:data];
+        [self.view addSubview:wishTableView];
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
     // Do any additional setup after loading the view.
 }
 
