@@ -10,6 +10,8 @@
 
 @interface SubcategorydetailViewController : UIViewController
 
+-(instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andDataArray:(NSMutableArray*)dataArray;
+
 @property (nonatomic,strong) NSString *subCategoryTitle;
 @property (nonatomic,strong) NSArray *dataArray;
 @property (weak, nonatomic) IBOutlet UILabel *subLabel;
