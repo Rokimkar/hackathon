@@ -11,6 +11,32 @@
 @implementation ProductData
 
 - (void) fetchDataFor:(NSString*)category withSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure{
+    id object = [self getObjectFromJSON];
+    if (!object) {
+        failure(nil);
+    }
+    else
+    {
+        success([self getDataFrom:[object valueForKey:@"items"] forCategory:category]);
+    }
+}
+
+
+- (void) fetchDataFor:(NSString*)category andSubCategory:(NSString*)subCategory withSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure{
+    
+    id object = [self getObjectFromJSON];
+    if (!object) {
+        failure(nil);
+    }
+    else
+    {
+        success([self getDataFrom:[object valueForKey:@"items"] forCategory:category andSubCategory:subCategory]);
+    }
+    
+    
+}
+
+-(id) getObjectFromJSON{
     
     NSError *deserializingError;
     NSString *path = [[NSBundle mainBundle] bundlePath];
@@ -20,16 +46,9 @@
     id object = [NSJSONSerialization JSONObjectWithData:contentOfLocalFile
                                                 options:NSJSONReadingMutableContainers
                                                   error:&deserializingError];
-    if (deserializingError) {
-        failure(deserializingError);
-    }
-    else
-    {
-        success([self getDataFrom:[object valueForKey:@"items"] forCategory:category]);
-    }
+    return object;
+    
 }
-
-
 
 -(NSMutableArray*) getDataFrom:(id)dataObject forCategory:(NSString*)category
 {
@@ -41,6 +60,18 @@
     }
     return dataArray;
 }
+
+-(NSMutableArray*) getDataFrom:(id)dataObject forCategory:(NSString*)category andSubCategory:(NSString*)subCategory
+{
+    NSMutableArray *dataArray = [[NSMutableArray alloc] init];
+    for (NSMutableDictionary *prodObj in dataObject) {
+        if ([[prodObj objectForKey:@"category"] isEqualToString:category] && [[prodObj objectForKey:@"subcategory"] isEqualToString:subCategory]) {
+            [dataArray addObject:[self mapWith:prodObj]];
+        }
+    }
+    return dataArray;
+}
+
 
 -(Product*) mapWith:(NSMutableDictionary*)prodObj{
     Product *product = [[Product alloc] init];

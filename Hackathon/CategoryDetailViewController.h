@@ -10,6 +10,6 @@
 #import "RMPScrollingMenuBarController.h"
 @interface CategoryDetailViewController : RMPScrollingMenuBarController
 
--(instancetype) initWithSubCategoryArray:(NSArray*) subCategoryArray;
+-(instancetype) initWithCategory:(NSString*)category andSubCategoryArray:(NSArray*) subCategoryArray;
 
 @end

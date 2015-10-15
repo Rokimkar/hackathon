@@ -12,5 +12,7 @@
 
 - (void) fetchDataFor:(NSString*)category withSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure;
 
+- (void) fetchDataFor:(NSString*)category andSubCategory:(NSString*)subCategory withSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure;
+
 
 @end

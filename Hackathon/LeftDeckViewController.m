@@ -10,9 +10,12 @@
 #import "LeftDeckTableViewCell.h"
 #import "CategoryDetailViewController.h"
 #import "SWRevealViewController.h"
+#import "HackathonAppManager.h"
 @interface LeftDeckViewController (){
     NSArray *itemsArray ;
     CGSize screenSize;
+    NSString *selectedCategory;
+    NSArray *subCategoriesArray;
 }
 
 @end
@@ -61,16 +64,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    CategoryDetailViewController *controller = [[CategoryDetailViewController alloc] initWithSubCategoryArray:nil];
-    controller.delegate=self;
-    controller.view.backgroundColor = [UIColor greenColor];
-    controller.menuBar.indicatorColor = [UIColor blueColor];
-    UINavigationController *navCont = [[UINavigationController alloc] initWithRootViewController:controller];
-    SWRevealViewController *revealCont = [self revealViewController];
-    [revealCont setFrontViewController:navCont animated:YES];
-    [revealCont setFrontViewPosition: FrontViewPositionLeft animated: YES];
-//    revealCont.frontViewController.view.frame = CGRectMake(0, 0, screenSize.width, screenSize.height);
+    if (indexPath.row!=0) {
+        if (indexPath.row<itemsArray.count) {
+            selectedCategory = [itemsArray objectAtIndex:indexPath.row];
+            if (selectedCategory && ![selectedCategory isEqualToString:@""]) {
+                subCategoriesArray = [[HackathonAppManager sharedInstance] getSubCategoriesFor:selectedCategory];
+                CategoryDetailViewController *controller = [[CategoryDetailViewController alloc] initWithCategory:selectedCategory andSubCategoryArray:subCategoriesArray];
+                controller.delegate=self;
+                controller.view.backgroundColor = [UIColor greenColor];
+                controller.menuBar.indicatorColor = [UIColor blueColor];
+                UINavigationController *navCont = [[UINavigationController alloc] initWithRootViewController:controller];
+                SWRevealViewController *revealCont = [self revealViewController];
+                [revealCont setFrontViewController:navCont animated:YES];
+                [revealCont setFrontViewPosition: FrontViewPositionLeft animated: YES];
+            }
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,8 +97,9 @@ tableView heightForRowAtIndexPath: (NSIndexPath *)indexPath{
                            menuBarItemAtIndex:(NSInteger)index
 {
     RMPScrollingMenuBarItem* item = [[RMPScrollingMenuBarItem alloc] init];
-    item.title = [NSString stringWithFormat:@"Title %02ld", (long)(index+1)];
-    
+    if (index<subCategoriesArray.count) {
+        item.title = [subCategoriesArray objectAtIndex:index];
+    }
     // Customize appearance of menu bar item.
     UIButton* button = item.button;
     [button setTitleColor:[UIColor lightGrayColor]
