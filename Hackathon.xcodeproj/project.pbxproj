@@ -50,16 +50,15 @@
 		0C958FEC1BCED750007A7694 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C958FEB1BCED750007A7694 /* Product.m */; };
 		0C958FEE1BCED882007A7694 /* prods.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C958FED1BCED882007A7694 /* prods.json */; };
 		0C958FF11BCED8AC007A7694 /* ProductData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C958FF01BCED8AC007A7694 /* ProductData.m */; };
-		0CA5D65C1BCFC6750017004C /* CategoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D65B1BCFC6750017004C /* CategoryDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0CA5D6661BCFC8410017004C /* SubcategorydetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D6641BCFC8410017004C /* SubcategorydetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0CA5D6671BCFC8410017004C /* SubcategorydetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA5D6651BCFC8410017004C /* SubcategorydetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		0CA5D6761BCFD4870017004C /* RMPScrollingMenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D66B1BCFD4870017004C /* RMPScrollingMenuBar.m */; settings = {ASSET_TAGS = (); }; };
-		0CA5D6771BCFD4870017004C /* RMPScrollingMenuBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D66D1BCFD4870017004C /* RMPScrollingMenuBarController.m */; settings = {ASSET_TAGS = (); }; };
-		0CA5D6781BCFD4870017004C /* RMPScrollingMenuBarControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D66F1BCFD4870017004C /* RMPScrollingMenuBarControllerAnimator.m */; settings = {ASSET_TAGS = (); }; };
-		0CA5D6791BCFD4870017004C /* RMPScrollingMenuBarControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D6711BCFD4870017004C /* RMPScrollingMenuBarControllerTransition.m */; settings = {ASSET_TAGS = (); }; };
-		0CA5D67A1BCFD4870017004C /* RMPScrollingMenuBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D6731BCFD4870017004C /* RMPScrollingMenuBarItem.m */; settings = {ASSET_TAGS = (); }; };
-		0CA5D67B1BCFD4870017004C /* UIViewController+RMPScrollingMenuBarControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D6751BCFD4870017004C /* UIViewController+RMPScrollingMenuBarControllerHelper.m */; settings = {ASSET_TAGS = (); }; };
-		0CA5D67E1BCFD54E0017004C /* SubCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D67D1BCFD54E0017004C /* SubCategoryViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0CA5D65C1BCFC6750017004C /* CategoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D65B1BCFC6750017004C /* CategoryDetailViewController.m */; };
+		0CA5D6661BCFC8410017004C /* SubcategorydetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D6641BCFC8410017004C /* SubcategorydetailViewController.m */; };
+		0CA5D6671BCFC8410017004C /* SubcategorydetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA5D6651BCFC8410017004C /* SubcategorydetailViewController.xib */; };
+		0CA5D6761BCFD4870017004C /* RMPScrollingMenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D66B1BCFD4870017004C /* RMPScrollingMenuBar.m */; };
+		0CA5D6771BCFD4870017004C /* RMPScrollingMenuBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D66D1BCFD4870017004C /* RMPScrollingMenuBarController.m */; };
+		0CA5D6781BCFD4870017004C /* RMPScrollingMenuBarControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D66F1BCFD4870017004C /* RMPScrollingMenuBarControllerAnimator.m */; };
+		0CA5D6791BCFD4870017004C /* RMPScrollingMenuBarControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D6711BCFD4870017004C /* RMPScrollingMenuBarControllerTransition.m */; };
+		0CA5D67A1BCFD4870017004C /* RMPScrollingMenuBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D6731BCFD4870017004C /* RMPScrollingMenuBarItem.m */; };
+		0CA5D67B1BCFD4870017004C /* UIViewController+RMPScrollingMenuBarControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5D6751BCFD4870017004C /* UIViewController+RMPScrollingMenuBarControllerHelper.m */; };
 		2F085F111BCC431F004E6643 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F085F101BCC431F004E6643 /* SWRevealViewController.m */; };
 		2F1668DF1BC5580D00744672 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668DE1BC5580C00744672 /* main.m */; };
 		2F1668E21BC5580D00744672 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668E11BC5580D00744672 /* AppDelegate.m */; };
@@ -166,8 +165,6 @@
 		0CA5D6731BCFD4870017004C /* RMPScrollingMenuBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPScrollingMenuBarItem.m; sourceTree = "<group>"; };
 		0CA5D6741BCFD4870017004C /* UIViewController+RMPScrollingMenuBarControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RMPScrollingMenuBarControllerHelper.h"; sourceTree = "<group>"; };
 		0CA5D6751BCFD4870017004C /* UIViewController+RMPScrollingMenuBarControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RMPScrollingMenuBarControllerHelper.m"; sourceTree = "<group>"; };
-		0CA5D67C1BCFD54E0017004C /* SubCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoryViewController.h; sourceTree = "<group>"; };
-		0CA5D67D1BCFD54E0017004C /* SubCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoryViewController.m; sourceTree = "<group>"; };
 		2F085F0F1BCC431F004E6643 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		2F085F101BCC431F004E6643 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2F1668D91BC5580C00744672 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,8 +314,6 @@
 				0CA5D6631BCFC8410017004C /* SubcategorydetailViewController.h */,
 				0CA5D6641BCFC8410017004C /* SubcategorydetailViewController.m */,
 				0CA5D6651BCFC8410017004C /* SubcategorydetailViewController.xib */,
-				0CA5D67C1BCFD54E0017004C /* SubCategoryViewController.h */,
-				0CA5D67D1BCFD54E0017004C /* SubCategoryViewController.m */,
 			);
 			name = CategoryDetail;
 			sourceTree = "<group>";
@@ -708,7 +703,6 @@
 				0C958FA31BCED670007A7694 /* TopZoneCollectionViewCell.m in Sources */,
 				0C958FC31BCED6B8007A7694 /* NMRangeSlider.m in Sources */,
 				0CA5D6761BCFD4870017004C /* RMPScrollingMenuBar.m in Sources */,
-				0CA5D67E1BCFD54E0017004C /* SubCategoryViewController.m in Sources */,
 				0C958FE51BCED709007A7694 /* AddWishViewController.m in Sources */,
 				A0A7AAAF1BCD83B600F0CBFC /* BaseTableView.m in Sources */,
 				0C958FE71BCED709007A7694 /* ImagesCollectionViewCell.m in Sources */,

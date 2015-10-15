@@ -7,8 +7,10 @@
 //
 
 #import "SubcategorydetailViewController.h"
-
-@interface SubcategorydetailViewController ()
+#import "BaseTableView.h"
+@interface SubcategorydetailViewController (){
+    BaseTableView *tableView;
+}
 
 @end
 
@@ -18,6 +20,9 @@
     [super viewDidLoad];
     self.title = self.subCategoryTitle;
     self.subLabel.text = self.subCategoryTitle;
+    tableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) andProductsArray:nil];
+    [self.view addSubview:tableView];
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -26,6 +31,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    tableView.frame =CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) ;
+}
 /*
 #pragma mark - Navigation
 
