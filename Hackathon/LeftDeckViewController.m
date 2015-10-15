@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     screenSize=([UIScreen mainScreen]).bounds.size;
-    itemsArray = [[NSArray alloc]initWithObjects:@"Home",@"Electronics",@"Clothes",@"Books", nil];
+    itemsArray = [[NSArray alloc]initWithObjects:@"Home",@"Electronics",@"Clothing",@"Books", nil];
     // Do any additional setup after loading the view.
     [self.itemListTableView registerNib:[UINib nibWithNibName:@"LeftDeckTableViewCell" bundle:nil] forCellReuseIdentifier:@"LeftDeckTableViewCell"];
     self.itemListTableView.scrollEnabled=NO;

@@ -36,23 +36,25 @@
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
     for (NSMutableDictionary *prodObj in dataObject) {
         if ([[prodObj objectForKey:@"category"] isEqualToString:category]) {
-            Product *product = [[Product alloc] init];
-            product.title = [prodObj objectForKey:@"title"];
-            product.prodDesc = [prodObj objectForKey:@"prodDesc"];
-            product.price = [prodObj objectForKey:@"price"];
-            product.quantity = [[prodObj objectForKey:@"quantity"] intValue];
-            product.prodId = [[prodObj objectForKey:@"prodId"] intValue];
-            product.category = [prodObj objectForKey:@"category"];
-            product.subcategory = [prodObj objectForKey:@"subcategory"];
-            product.img1 = [prodObj objectForKey:@"img1"];
-            product.img2 = [prodObj objectForKey:@"img2"];
-            product.img3 = [prodObj objectForKey:@"img3"];
-            [dataArray addObject:product];
+            [dataArray addObject:[self mapWith:prodObj]];
         }
     }
     return dataArray;
 }
 
-
+-(Product*) mapWith:(NSMutableDictionary*)prodObj{
+    Product *product = [[Product alloc] init];
+    product.title = [prodObj objectForKey:@"title"];
+    product.prodDesc = [prodObj objectForKey:@"prodDesc"];
+    product.price = [prodObj objectForKey:@"price"];
+    product.quantity = [[prodObj objectForKey:@"quantity"] intValue];
+    product.prodId = [[prodObj objectForKey:@"prodId"] intValue];
+    product.category = [prodObj objectForKey:@"category"];
+    product.subcategory = [prodObj objectForKey:@"subcategory"];
+    product.img1 = [prodObj objectForKey:@"img1"];
+    product.img2 = [prodObj objectForKey:@"img2"];
+    product.img3 = [prodObj objectForKey:@"img3"];
+    return product;
+}
 
 @end

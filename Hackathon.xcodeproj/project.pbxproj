@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C369B5F1BD0206C00EE5539 /* HackathonAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C369B5E1BD0206C00EE5539 /* HackathonAppManager.m */; settings = {ASSET_TAGS = (); }; };
+		0C369B611BD029AC00EE5539 /* CategoriesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C369B601BD029AC00EE5539 /* CategoriesList.plist */; settings = {ASSET_TAGS = (); }; };
 		0C958F9D1BCED670007A7694 /* ProductDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C958F901BCED670007A7694 /* ProductDescriptionTableViewCell.m */; };
 		0C958F9E1BCED670007A7694 /* ProductDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C958F911BCED670007A7694 /* ProductDescriptionTableViewCell.xib */; };
 		0C958F9F1BCED670007A7694 /* ProductDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C958F931BCED670007A7694 /* ProductDetailsTableViewCell.m */; };
@@ -95,6 +97,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C369B5D1BD0206C00EE5539 /* HackathonAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HackathonAppManager.h; sourceTree = "<group>"; };
+		0C369B5E1BD0206C00EE5539 /* HackathonAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HackathonAppManager.m; sourceTree = "<group>"; };
+		0C369B601BD029AC00EE5539 /* CategoriesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoriesList.plist; sourceTree = "<group>"; };
 		0C958F8F1BCED670007A7694 /* ProductDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDescriptionTableViewCell.h; sourceTree = "<group>"; };
 		0C958F901BCED670007A7694 /* ProductDescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDescriptionTableViewCell.m; sourceTree = "<group>"; };
 		0C958F911BCED670007A7694 /* ProductDescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDescriptionTableViewCell.xib; sourceTree = "<group>"; };
@@ -225,6 +230,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C369B5C1BD0200500EE5539 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0C369B5D1BD0206C00EE5539 /* HackathonAppManager.h */,
+				0C369B5E1BD0206C00EE5539 /* HackathonAppManager.m */,
+				0C369B601BD029AC00EE5539 /* CategoriesList.plist */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		0C958F8E1BCED616007A7694 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +394,11 @@
 		2F1668DB1BC5580C00744672 /* Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				2F1668E01BC5580D00744672 /* AppDelegate.h */,
+				2F1668E11BC5580D00744672 /* AppDelegate.m */,
+				2F1669021BC5588100744672 /* ViewController.h */,
+				2F1669031BC5588100744672 /* ViewController.m */,
+				0C369B5C1BD0200500EE5539 /* Managers */,
 				0CA5D6681BCFD4360017004C /* ThirdParties */,
 				0CA5D6591BCFC5FC0017004C /* CategoryDetail */,
 				0C958FE91BCED737007A7694 /* ModalClasses */,
@@ -387,10 +407,6 @@
 				2F1882501BC7D56B00F29C34 /* Icons */,
 				2F18822E1BC7962600F29C34 /* TabBarItems */,
 				2F085F0E1BCC42FD004E6643 /* SWReveal */,
-				2F1668E01BC5580D00744672 /* AppDelegate.h */,
-				2F1668E11BC5580D00744672 /* AppDelegate.m */,
-				2F1669021BC5588100744672 /* ViewController.h */,
-				2F1669031BC5588100744672 /* ViewController.m */,
 				A0A7AAB01BCD83C500F0CBFC /* BaseTableView */,
 				2F1668E61BC5580D00744672 /* Main.storyboard */,
 				2F1668E91BC5580D00744672 /* Images.xcassets */,
@@ -601,6 +617,7 @@
 				0C958FC61BCED6B9007A7694 /* slider-default-handle-highlighted@2x.png in Resources */,
 				A0A7AAB51BCD851D00F0CBFC /* TableViewCell.xib in Resources */,
 				0C958FEE1BCED882007A7694 /* prods.json in Resources */,
+				0C369B611BD029AC00EE5539 /* CategoriesList.plist in Resources */,
 				0CA5D6671BCFC8410017004C /* SubcategorydetailViewController.xib in Resources */,
 				2F1668ED1BC5580D00744672 /* LaunchScreen.xib in Resources */,
 				0C958FC51BCED6B9007A7694 /* slider-default-handle-highlighted.png in Resources */,
@@ -711,6 +728,7 @@
 				0CA5D6781BCFD4870017004C /* RMPScrollingMenuBarControllerAnimator.m in Sources */,
 				0CA5D6661BCFC8410017004C /* SubcategorydetailViewController.m in Sources */,
 				0C958FA11BCED670007A7694 /* ProductDetailViewController.m in Sources */,
+				0C369B5F1BD0206C00EE5539 /* HackathonAppManager.m in Sources */,
 				2F1668DF1BC5580D00744672 /* main.m in Sources */,
 				2F1882641BC9A88A00F29C34 /* LeftDeckTableViewCell.m in Sources */,
 			);

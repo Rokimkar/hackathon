@@ -40,7 +40,7 @@
               "img2": "http://n3.sdlcdn.com/imgs/a/o/k/Reebok-Silver-Men-Sports-Shoes-SDL868701355-2-e66bb.jpg",
               "img3": "http://n2.sdlcdn.com/imgs/a/o/k/Reebok-Silver-Men-Sports-Shoes-SDL868701355-5-3d5f3.jpg",
               "seller": "India Shoes",
-              "type": "Similar"
+              "type": "Exactly Same"
               },
               {
               "title": "Mufti Blue Slim Fit Shirt",
@@ -124,7 +124,7 @@
               "img2": "http://n1.sdlcdn.com/imgs/a/5/m/American-Swan-Blue-Casuals-Chinos-SDL975484289-3-d3650.jpg",
               "img3": "http://n2.sdlcdn.com/imgs/a/5/m/American-Swan-Blue-Casuals-Chinos-SDL975484289-2-3145e.jpg",
               "seller": "Neeraj Clothes",
-              "type": "Similar"
+              "type": "Exactly Same"
               },
               {
               "title": "Intec IV421UHD 106 cm (42) 4K Ultra HD Smart LED Television",
@@ -208,7 +208,7 @@
               "img2": "http://n1.sdlcdn.com/imgs/a/t/e/Black2-c909d.jpg",
               "img3": "http://n4.sdlcdn.com/imgs/a/t/e/Black3-fc75b.jpg",
               "seller": "Planet Electronics",
-              "type": "Similar"
+              "type": "Exactly Same"
               },
               {
               "title": "Nikon Coolpix L31 16.1MP Digital Camera",
@@ -251,7 +251,136 @@
               "img3": "http://n1.sdlcdn.com/imgs/a/w/b/Canon-EOS-700D-with-18-SDL708765217-3-e1cf6.jpg",
               "seller": "Photo Store",
               "type": "Similar"
+              },
+              {
+              "title": "Head First Java, 2/Ed (Cover Java 5.0)",
+              "prodDesc": "Head First Java delivers a highly interactive, multisensory learning experience that lets new programmers pick up the fundamentals of the Java language quickly.",
+              "price": "595",
+              "quantity": 5,
+              "prodId": 701,
+              "category": "Books",
+              "subcategory": "Academic",
+              "img1": "http://n1.sdlcdn.com/imgs/a/5/h/Head-First-Java-2-Ed-SDL763458459-1-b7acc.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/5/h/Head-First-Java-2-Ed-SDL763458459-1-b7acc.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/5/h/Head-First-Java-2-Ed-SDL763458459-1-b7acc.jpg",
+              "seller": "Orange Books",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Fluid Mechanics For Chemical Engineering",
+              "prodDesc": "Fluid Mechanics For Chemical Engineering",
+              "price": "740",
+              "quantity": 2,
+              "prodId": 702,
+              "category": "Books",
+              "subcategory": "Academic",
+              "img1": "http://n1.sdlcdn.com/imgs/a/4/8/Fluid-Mechanics-For-Chemical-Engineering-SDL770703013-1-e715b.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/4/8/Fluid-Mechanics-For-Chemical-Engineering-SDL770703013-1-e715b.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/4/8/Fluid-Mechanics-For-Chemical-Engineering-SDL770703013-1-e715b.jpg",
+              "seller": "Smart Sales",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Introduction To Logic (Pb)",
+              "prodDesc": "Introduction To Logic (Pb)",
+              "price": "613",
+              "quantity": 5,
+              "prodId": 703,
+              "category": "Books",
+              "subcategory": "Academic",
+              "img1": "http://n2.sdlcdn.com/imgs/a/5/h/Introduction-To-Logic-Pb--SDL453709025-1-500c9.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/5/h/Introduction-To-Logic-Pb--SDL453709025-1-500c9.jpg",
+              "img3": "http://n2.sdlcdn.com/imgs/a/5/h/Introduction-To-Logic-Pb--SDL453709025-1-500c9.jpg",
+              "seller": "Comma Store",
+              "type": "Similar"
+              },
+              {
+              "title": "Scion Of Ikshvaku (English)",
+              "prodDesc": "Ram Rajya. The Perfect Land. But perfection has a price. He paid that price. 3400 BCE. INDIA Ayodhya is weakened by divisions. A terrible war has taken its toll. The damage runs deep.",
+              "price": "215",
+              "quantity": 5,
+              "prodId": 801,
+              "category": "Books",
+              "subcategory": "Fiction",
+              "img1": "http://n3.sdlcdn.com/imgs/a/4/g/Scion-Of-Ikshvaku-SDL612693717-1-ac218.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/4/g/Scion-Of-Ikshvaku-SDL612693717-1-ac218.jpg",
+              "img3": "http://n3.sdlcdn.com/imgs/a/4/g/Scion-Of-Ikshvaku-SDL612693717-1-ac218.jpg",
+              "seller": "Comma Books",
+              "type": "Similar"
+              },
+              {
+              "title": "A Walk To Remember",
+              "prodDesc": "A Walk To Remember",
+              "price": "315",
+              "quantity": 2,
+              "prodId": 802,
+              "category": "Books",
+              "subcategory": "Fiction",
+              "img1": "http://n4.sdlcdn.com/imgs/a/5/g/A-Walk-To-Remember-SDL319747130-1-7e77f.jpg",
+              "img2": "http://n4.sdlcdn.com/imgs/a/5/g/A-Walk-To-Remember-SDL319747130-1-7e77f.jpg",
+              "img3": "http://n4.sdlcdn.com/imgs/a/5/g/A-Walk-To-Remember-SDL319747130-1-7e77f.jpg",
+              "seller": "Smart Sales",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Forge Your Future",
+              "prodDesc": "Forge Your Future",
+              "price": "225",
+              "quantity": 5,
+              "prodId": 803,
+              "category": "Books",
+              "subcategory": "Fiction",
+              "img1": "http://n2.sdlcdn.com/imgs/a/4/g/Forge-Your-Future-SDL743750858-1-09b77.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/4/g/Forge-Your-Future-SDL743750858-1-09b77.jpg",
+              "img3": "http://n2.sdlcdn.com/imgs/a/4/g/Forge-Your-Future-SDL743750858-1-09b77.jpg",
+              "seller": "Orange Books",
+              "type": "Similar"
+              },
+              {
+              "title": "How To Make Money Trading With Charts",
+              "prodDesc": "How To Make Money Trading With Charts",
+              "price": "799",
+              "quantity": 5,
+              "prodId": 901,
+              "category": "Books",
+              "subcategory": "Business",
+              "img1": "http://n3.sdlcdn.com/imgs/a/4/v/How-To-Make-Money-Trading-SDL961374760-1-3e72c.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/4/v/How-To-Make-Money-Trading-SDL961374760-1-3e72c.jpg",
+              "img3": "http://n3.sdlcdn.com/imgs/a/4/v/How-To-Make-Money-Trading-SDL961374760-1-3e72c.jpg",
+              "seller": "Seller Score",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Thinking, Fast And Slow",
+              "prodDesc": "Thinking, Fast And Slow",
+              "price": "449",
+              "quantity": 2,
+              "prodId": 902,
+              "category": "Books",
+              "subcategory": "Business",
+              "img1": "http://n3.sdlcdn.com/imgs/a/5/h/Thinking-Fast-And-Slow-SDL538027225-1-15e62.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/5/h/Thinking-Fast-And-Slow-SDL538027225-1-15e62.jpg",
+              "img3": "http://n3.sdlcdn.com/imgs/a/5/h/Thinking-Fast-And-Slow-SDL538027225-1-15e62.jpg",
+              "seller": "Comma Books",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Food And Beverage Services: A Training Manual, 3Rd Ed.",
+              "prodDesc": "Food And Beverage Services: A Training Manual, 3Rd Ed.",
+              "price": "435",
+              "quantity": 5,
+              "prodId": 903,
+              "category": "Books",
+              "subcategory": "Business",
+              "img1": "http://n2.sdlcdn.com/imgs/a/4/v/Food-And-Beverage-Services-A-SDL262683134-1-b78da.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/4/v/Food-And-Beverage-Services-A-SDL262683134-1-b78da.jpg",
+              "img3": "http://n2.sdlcdn.com/imgs/a/4/v/Food-And-Beverage-Services-A-SDL262683134-1-b78da.jpg",
+              "seller": "Orange Books",
+              "type": "Similar"
               }
               
-    ]
+              
+              
+              
+              ]
 }

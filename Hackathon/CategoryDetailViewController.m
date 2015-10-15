@@ -8,7 +8,6 @@
 
 #import "CategoryDetailViewController.h"
 #import "SubcategorydetailViewController.h"
-#import "SubCategoryViewController.h"
 #import "ProductData.h"
 @interface  CategoryDetailViewController()
 {
