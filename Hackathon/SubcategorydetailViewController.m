@@ -10,17 +10,29 @@
 #import "BaseTableView.h"
 @interface SubcategorydetailViewController (){
     BaseTableView *tableView;
+    CGSize screenSize;
 }
 
 @end
 
 @implementation SubcategorydetailViewController
 
+
+-(instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andDataArray:(NSMutableArray*)dataArray{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.dataArray = dataArray;
+        screenSize = [UIScreen mainScreen].bounds.size;
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.subCategoryTitle;
     self.subLabel.text = self.subCategoryTitle;
-    tableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) andProductsArray:nil];
+    tableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height-100) andProductsArray:self.dataArray];
     [self.view addSubview:tableView];
 
     // Do any additional setup after loading the view from its nib.
@@ -33,7 +45,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    tableView.frame =CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) ;
+    tableView.frame =CGRectMake(0, 0, screenSize.width, screenSize.height-100);
 }
 /*
 #pragma mark - Navigation
