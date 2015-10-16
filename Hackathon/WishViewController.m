@@ -35,10 +35,12 @@
     wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 120, getScreenWidth(), getScreenHeight()-120-50) andProductsArray:nil];
     wishTableView.separatorColor = [UIColor clearColor];
     wishTableView.backgroundColor=RGBA(244, 245, 244, 1);
+    self.view.backgroundColor=RGBA(244, 245, 244, 1);
     [self.view addSubview:wishTableView];
     [self.addNewWishBtn.layer setBorderColor:RGBA(217, 218, 216, 1).CGColor];
     [self.addNewWishBtn.layer setBorderWidth:1.0];
     [self.addNewWishBtn.layer setCornerRadius:5.0f];
+    [self.addNewWishBtn setBackgroundColor:[UIColor whiteColor]];
 
     // Do any additional setup after loading the view.
 }
@@ -48,6 +50,7 @@
     self.addNewWishBtn.frame = CGRectMake(16, getOriginY(self.topSegmentControl)+getHeight(self.topSegmentControl)+14, getScreenWidth()-32, 30);
     int ycord = getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14;
     self.responsesCollectionView.frame=CGRectMake(0, getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14, getScreenWidth(), getScreenHeight()-ycord);
+    self.topSegmentControl.backgroundColor = [UIColor whiteColor];
 }
 
 
