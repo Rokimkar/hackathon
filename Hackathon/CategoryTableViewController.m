@@ -12,6 +12,7 @@
 #import "SWRevealViewController.h"
 #import "HackathonAppManager.h"
 #import "ViewController.h"
+#import "Prefix.pch"
 
 @interface CategoryTableViewController ()
 {
@@ -33,6 +34,8 @@
     [self.itemListTableView registerNib:[UINib nibWithNibName:@"LeftDeckTableViewCell" bundle:nil] forCellReuseIdentifier:@"LeftDeckTableViewCell"];
     self.itemListTableView.scrollEnabled=NO;
     self.itemListTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    [self.view setBackgroundColor:RGBA(246, 246, 246, 1)];
+    [self.itemListTableView setBackgroundColor:RGBA(246, 246, 246, 1)];
 }
 
 - (SWRevealViewController*)revealViewController
