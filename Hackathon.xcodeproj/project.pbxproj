@@ -92,6 +92,7 @@
 		A07E81B61BD15FE900FCE32B /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A07E81B51BD15FE900FCE32B /* menu_icon.png */; };
 		A07E81BB1BD1824600FCE32B /* splashImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A07E81B91BD1824600FCE32B /* splashImage.png */; };
 		A07E81BC1BD1824600FCE32B /* splashImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A07E81BA1BD1824600FCE32B /* splashImage1.jpg */; };
+		A07E81BF1BD1A6B100FCE32B /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07E81BE1BD1A6B100FCE32B /* LogInViewController.m */; };
 		A0A7AAAF1BCD83B600F0CBFC /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAAE1BCD83B600F0CBFC /* BaseTableView.m */; };
 		A0A7AAB41BCD851D00F0CBFC /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAB21BCD851D00F0CBFC /* TableViewCell.m */; };
 		A0A7AAB51BCD851D00F0CBFC /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0A7AAB31BCD851D00F0CBFC /* TableViewCell.xib */; };
@@ -232,6 +233,8 @@
 		A07E81B51BD15FE900FCE32B /* menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon.png; sourceTree = "<group>"; };
 		A07E81B91BD1824600FCE32B /* splashImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashImage.png; sourceTree = "<group>"; };
 		A07E81BA1BD1824600FCE32B /* splashImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splashImage1.jpg; sourceTree = "<group>"; };
+		A07E81BD1BD1A6B100FCE32B /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		A07E81BE1BD1A6B100FCE32B /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		A0A7AAAD1BCD83B600F0CBFC /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
 		A0A7AAAE1BCD83B600F0CBFC /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		A0A7AAB11BCD851D00F0CBFC /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
@@ -458,6 +461,8 @@
 				2F085F0E1BCC42FD004E6643 /* SWReveal */,
 				A0A7AAB01BCD83C500F0CBFC /* BaseTableView */,
 				2F1668E61BC5580D00744672 /* Main.storyboard */,
+				A07E81BD1BD1A6B100FCE32B /* LogInViewController.h */,
+				A07E81BE1BD1A6B100FCE32B /* LogInViewController.m */,
 				2F1668E91BC5580D00744672 /* Images.xcassets */,
 				2F1668EB1BC5580D00744672 /* LaunchScreen.xib */,
 				2F1668DC1BC5580C00744672 /* Supporting Files */,
@@ -786,6 +791,7 @@
 				0C958FEC1BCED750007A7694 /* Product.m in Sources */,
 				2F1669041BC5588100744672 /* ViewController.m in Sources */,
 				0C958FA51BCED670007A7694 /* TopZoneView.m in Sources */,
+				A07E81BF1BD1A6B100FCE32B /* LogInViewController.m in Sources */,
 				A0A7AAB41BCD851D00F0CBFC /* TableViewCell.m in Sources */,
 				0C958FF11BCED8AC007A7694 /* ProductData.m in Sources */,
 				2F1668E21BC5580D00744672 /* AppDelegate.m in Sources */,

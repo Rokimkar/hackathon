@@ -143,6 +143,54 @@
             </objects>
             <point key="canvasLocation" x="-94" y="-24"/>
         </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="SdL-fk-L5Q">
+            <objects>
+                <viewController id="fSd-wO-dFN" customClass="LogInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Ys-jH-4LA"/>
+                        <viewControllerLayoutGuide type="bottom" id="1wX-Pu-MzU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1CC-fG-5Iv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-nf-lJ2">
+                                <rect key="frame" x="78" y="212" width="149" height="30"/>
+                                <state key="normal" title="Buyer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonForBuyer:" destination="fSd-wO-dFN" eventType="touchUpInside" id="1Rl-Nc-1ID"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-5K-kbv">
+                                <rect key="frame" x="78" y="318" width="149" height="30"/>
+                                <state key="normal" title="Seller">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonForSeller:" destination="fSd-wO-dFN" eventType="touchUpInside" id="RTB-di-Sgz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter As :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI9-pR-f6n">
+                                <rect key="frame" x="78" y="143" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonForBuyer" destination="9dh-nf-lJ2" id="CUP-aF-gR0"/>
+                        <outlet property="buttonForSeller" destination="hpc-5K-kbv" id="b53-qU-S7d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xU-Wo-Ahs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1677" y="602"/>
+        </scene>
         <!--Left Deck View Controller-->
         <scene sceneID="YvK-W6-Hhn">
             <objects>
