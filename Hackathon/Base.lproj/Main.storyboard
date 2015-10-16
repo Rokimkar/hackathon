@@ -11,8 +11,8 @@
             <objects>
                 <viewController storyboardIdentifier="browseViewController" title="Browse" id="iT5-Vb-gvx" customClass="BrowseViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qF0-Px-aJ4"/>
-                        <viewControllerLayoutGuide type="bottom" id="yNe-aC-q79"/>
+                        <viewControllerLayoutGuide type="top" id="dYn-U3-xGk"/>
+                        <viewControllerLayoutGuide type="bottom" id="odF-iS-xOH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LYa-GU-Dee">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -38,8 +38,8 @@
             <objects>
                 <viewController storyboardIdentifier="wallViewController" title="Wall" id="HhL-Mc-b7j" customClass="WallViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="T80-11-kE4"/>
-                        <viewControllerLayoutGuide type="bottom" id="USS-ek-nsp"/>
+                        <viewControllerLayoutGuide type="top" id="sEV-uo-GIB"/>
+                        <viewControllerLayoutGuide type="bottom" id="teU-LA-RAo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IJJ-kc-30a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -108,8 +108,8 @@
             <objects>
                 <viewController id="6Kx-If-Hfi" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SJu-zo-JDp"/>
-                        <viewControllerLayoutGuide type="bottom" id="U3w-ng-PH7"/>
+                        <viewControllerLayoutGuide type="top" id="7BZ-C8-hCq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sjn-Of-5pq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7Y8-9c-ktw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -167,14 +167,14 @@
             <objects>
                 <viewController storyboardIdentifier="LeftDeckViewController" id="z3k-dm-9g8" customClass="LeftDeckViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="H0S-UF-cky"/>
-                        <viewControllerLayoutGuide type="bottom" id="eYN-Wy-utT"/>
+                        <viewControllerLayoutGuide type="top" id="blg-jU-VKf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zsl-W9-hkc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Uw-Ob-lPi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1H1-fk-I9i">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1H1-fk-I9i">
                                 <rect key="frame" x="0.0" y="-1" width="320" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -184,12 +184,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="1H1-fk-I9i" secondAttribute="bottom" constant="-20" id="Xbd-ap-wVO"/>
-                            <constraint firstItem="1H1-fk-I9i" firstAttribute="top" secondItem="H0S-UF-cky" secondAttribute="bottom" constant="-21" id="YEs-VP-3P1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1H1-fk-I9i" secondAttribute="trailing" constant="-16" id="Zkw-uA-gC0"/>
-                            <constraint firstItem="1H1-fk-I9i" firstAttribute="leading" secondItem="0Uw-Ob-lPi" secondAttribute="leadingMargin" constant="-16" id="xop-GH-scL"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="itemListTableView" destination="1H1-fk-I9i" id="Z3A-sL-RIY"/>
@@ -204,8 +198,8 @@
             <objects>
                 <viewController storyboardIdentifier="wishViewController" title="Wish" id="bD3-V0-2tX" customClass="WishViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DKe-KQ-BGy"/>
-                        <viewControllerLayoutGuide type="bottom" id="mzR-c6-8Sg"/>
+                        <viewControllerLayoutGuide type="top" id="pG0-vE-Nrj"/>
+                        <viewControllerLayoutGuide type="bottom" id="gjF-B1-Qqe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6v3-jt-PD4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

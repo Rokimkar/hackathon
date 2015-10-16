@@ -64,11 +64,11 @@
 		0CBC85BC1BD0D8D100FD44FF /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85BB1BD0D8D100FD44FF /* menuIcon.png */; };
 		0CBC85C01BD0EA0200FD44FF /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85BE1BD0EA0200FD44FF /* fav.png */; };
 		0CBC85C11BD0EA0200FD44FF /* unFav.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85BF1BD0EA0200FD44FF /* unFav.png */; };
-		0CBC85C51BD12C0600FD44FF /* cardLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85C41BD12C0600FD44FF /* cardLayout.png */; settings = {ASSET_TAGS = (); }; };
-		0CBC85CC1BD12DC100FD44FF /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85C91BD12DC100FD44FF /* WYPopoverController.m */; settings = {ASSET_TAGS = (); }; };
-		0CBC85CD1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85CB1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m */; settings = {ASSET_TAGS = (); }; };
-		0CBC85D91BD136B700FD44FF /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85D81BD136B700FD44FF /* CategoryTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0CE54A751BD16A910043A1C2 /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE54A741BD16A910043A1C2 /* addIcon.png */; settings = {ASSET_TAGS = (); }; };
+		0CBC85C51BD12C0600FD44FF /* cardLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85C41BD12C0600FD44FF /* cardLayout.png */; };
+		0CBC85CC1BD12DC100FD44FF /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85C91BD12DC100FD44FF /* WYPopoverController.m */; };
+		0CBC85CD1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85CB1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m */; };
+		0CBC85D91BD136B700FD44FF /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85D81BD136B700FD44FF /* CategoryTableViewController.m */; };
+		0CE54A751BD16A910043A1C2 /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE54A741BD16A910043A1C2 /* addIcon.png */; };
 		2F085F111BCC431F004E6643 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F085F101BCC431F004E6643 /* SWRevealViewController.m */; };
 		2F1668DF1BC5580D00744672 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668DE1BC5580C00744672 /* main.m */; };
 		2F1668E21BC5580D00744672 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668E11BC5580D00744672 /* AppDelegate.m */; };
@@ -90,6 +90,8 @@
 		A07E81B01BD0DBD500FCE32B /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07E81AE1BD0DBD500FCE32B /* CollectionViewCell.xib */; };
 		A07E81B21BD1157200FCE32B /* placeHolderImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A07E81B11BD1157200FCE32B /* placeHolderImage.png */; };
 		A07E81B61BD15FE900FCE32B /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A07E81B51BD15FE900FCE32B /* menu_icon.png */; };
+		A07E81BB1BD1824600FCE32B /* splashImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A07E81B91BD1824600FCE32B /* splashImage.png */; };
+		A07E81BC1BD1824600FCE32B /* splashImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A07E81BA1BD1824600FCE32B /* splashImage1.jpg */; };
 		A0A7AAAF1BCD83B600F0CBFC /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAAE1BCD83B600F0CBFC /* BaseTableView.m */; };
 		A0A7AAB41BCD851D00F0CBFC /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAB21BCD851D00F0CBFC /* TableViewCell.m */; };
 		A0A7AAB51BCD851D00F0CBFC /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0A7AAB31BCD851D00F0CBFC /* TableViewCell.xib */; };
@@ -228,6 +230,8 @@
 		A07E81AE1BD0DBD500FCE32B /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		A07E81B11BD1157200FCE32B /* placeHolderImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeHolderImage.png; sourceTree = "<group>"; };
 		A07E81B51BD15FE900FCE32B /* menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon.png; sourceTree = "<group>"; };
+		A07E81B91BD1824600FCE32B /* splashImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashImage.png; sourceTree = "<group>"; };
+		A07E81BA1BD1824600FCE32B /* splashImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splashImage1.jpg; sourceTree = "<group>"; };
 		A0A7AAAD1BCD83B600F0CBFC /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
 		A0A7AAAE1BCD83B600F0CBFC /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		A0A7AAB11BCD851D00F0CBFC /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
@@ -503,6 +507,7 @@
 		2F1882501BC7D56B00F29C34 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				A07E81B81BD1822700FCE32B /* SplashImages */,
 				0CE54A741BD16A910043A1C2 /* addIcon.png */,
 				A07E81B51BD15FE900FCE32B /* menu_icon.png */,
 				0CBC85C41BD12C0600FD44FF /* cardLayout.png */,
@@ -539,6 +544,15 @@
 				AFC5F66369270EE509E8A014 /* libPods-Hackathon.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A07E81B81BD1822700FCE32B /* SplashImages */ = {
+			isa = PBXGroup;
+			children = (
+				A07E81B91BD1824600FCE32B /* splashImage.png */,
+				A07E81BA1BD1824600FCE32B /* splashImage1.jpg */,
+			);
+			name = SplashImages;
 			sourceTree = "<group>";
 		};
 		A0A7AAB01BCD83C500F0CBFC /* BaseTableView */ = {
@@ -660,7 +674,9 @@
 				0CBC85C11BD0EA0200FD44FF /* unFav.png in Resources */,
 				A07E81B61BD15FE900FCE32B /* menu_icon.png in Resources */,
 				2F1882551BC850A400F29C34 /* search.png in Resources */,
+				A07E81BC1BD1824600FCE32B /* splashImage1.jpg in Resources */,
 				0CE54A751BD16A910043A1C2 /* addIcon.png in Resources */,
+				A07E81BB1BD1824600FCE32B /* splashImage.png in Resources */,
 				2F1668E81BC5580D00744672 /* Main.storyboard in Resources */,
 				0C958FCA1BCED6B9007A7694 /* slider-default-track@2x.png in Resources */,
 				0C958FD21BCED6B9007A7694 /* slider-default7-trackBackground.png in Resources */,

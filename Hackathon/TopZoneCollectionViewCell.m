@@ -47,18 +47,22 @@
                                                   cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                               timeoutInterval:60];
     
-    [self.bgImageView setImageWithURLRequest:imageRequest placeholderImage:[UIImage imageNamed:@"cardLayout.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        [self.bgImageView setContentMode:UIViewContentModeScaleAspectFit];
-        if (!request) // image was cached
+    [self.bgImageView setImageWithURLRequest:imageRequest placeholderImage:[UIImage imageNamed:@"placeHolderImage.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        [self.bgImageView setContentMode:UIViewContentModeCenter];
+        if (!request){ // image was cached
+            [self.bgImageView setContentMode:UIViewContentModeScaleAspectFit];
             [self.bgImageView setImage:image];
-        else
+        }
+        else{
             [UIView transitionWithView:self.bgImageView
                               duration:1.0f
                                options:UIViewAnimationOptionTransitionCrossDissolve
                             animations:^{
+                                [self.bgImageView setContentMode:UIViewContentModeScaleAspectFit];
                                 self.bgImageView.image = image;
                                 
                             } completion:NULL];
+        }
         
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {

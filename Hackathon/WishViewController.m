@@ -159,6 +159,16 @@
     
 }
 
+- (UINavigationController *)getViewController {
+    UIResponder *nextResponderView = [self nextResponder];
+    while (![nextResponderView isKindOfClass:[UINavigationController class]]) {
+        nextResponderView = [nextResponderView nextResponder];
+        if (nil == nextResponderView) {
+            break;
+        }
+    }
+    return (UINavigationController *)nextResponderView;
+}
 
 
 /*
