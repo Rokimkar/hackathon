@@ -1,38 +1,38 @@
 //
-//  LeftDeckViewController.m
+//  CategoryTableViewController.m
 //  Hackathon
 //
-//  Created by Sanchit Kumar Singh on 10/11/15.
-//  Copyright (c) 2015 Sanchit Kumar Singh. All rights reserved.
+//  Created by Kunal Chelani on 10/16/15.
+//  Copyright © 2015 Sanchit Kumar Singh. All rights reserved.
 //
 
-#import "LeftDeckViewController.h"
+#import "CategoryTableViewController.h"
 #import "LeftDeckTableViewCell.h"
 #import "CategoryDetailViewController.h"
 #import "SWRevealViewController.h"
 #import "HackathonAppManager.h"
 #import "ViewController.h"
 
-@interface LeftDeckViewController (){
+@interface CategoryTableViewController ()
+{
     NSArray *itemsArray ;
     CGSize screenSize;
     NSString *selectedCategory;
     NSArray *subCategoriesArray;
-}
 
+}
 @end
 
-@implementation LeftDeckViewController
+@implementation CategoryTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     screenSize=([UIScreen mainScreen]).bounds.size;
-    itemsArray = [[NSArray alloc]initWithObjects:@"Home",@"Electronics",@"Clothing",@"Books", nil];
+    itemsArray = [[NSArray alloc]initWithObjects:@"Electronics",@"Clothing",@"Books", nil];
     // Do any additional setup after loading the view.
     [self.itemListTableView registerNib:[UINib nibWithNibName:@"LeftDeckTableViewCell" bundle:nil] forCellReuseIdentifier:@"LeftDeckTableViewCell"];
     self.itemListTableView.scrollEnabled=NO;
-    self.itemListTableView.backgroundColor=RGBA(196, 56, 64, 1);
-    //self.itemListTableView.separatorColor = [UIColor clearColor];
+    self.itemListTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
 }
 
 - (SWRevealViewController*)revealViewController
@@ -52,7 +52,7 @@
 }
 
 -(NSInteger) tableView :(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
-   
+    
     return itemsArray.count;
 }
 
@@ -64,40 +64,13 @@
         cell = [nib objectAtIndex:0];
     }
     cell.labelForItems.text=[itemsArray objectAtIndex:indexPath.row];
-    cell.backgroundColor=RGBA(196, 56, 64, 1);
+    [cell.labelForItems setTextAlignment:NSTextAlignmentLeft];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    if (indexPath.row!=0) {
-        if (indexPath.row<itemsArray.count) {
-            selectedCategory = [itemsArray objectAtIndex:indexPath.row];
-            if (selectedCategory && ![selectedCategory isEqualToString:@""]) {
-                subCategoriesArray = [[HackathonAppManager sharedInstance] getSubCategoriesFor:selectedCategory];
-                CategoryDetailViewController *controller = [[CategoryDetailViewController alloc] initWithCategory:selectedCategory andSubCategoryArray:subCategoriesArray];
-                controller.delegate=self;
-                controller.view.backgroundColor = [UIColor greenColor];
-                controller.menuBar.indicatorColor = [UIColor blueColor];
-                UINavigationController *navCont = [[UINavigationController alloc] initWithRootViewController:controller];
-                SWRevealViewController *revealCont = [self revealViewController];
-                [revealCont setFrontViewController:navCont animated:YES];
-                [revealCont setFrontViewPosition: FrontViewPositionLeft animated: YES];
-            }
-        }
-    }
-    else{
-        
-        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UINavigationController *homeNavCont = [mainStoryBoard instantiateViewControllerWithIdentifier:@"homeNavCont"];
-        SWRevealViewController *revealCont = [self revealViewController];
-        [revealCont setFrontViewController:homeNavCont animated:YES];
-        [revealCont setFrontViewPosition: FrontViewPositionLeft animated: YES];
-
-        
-        
-    }
+    [self.delegate dismissAfterSelectionWithSelectedString:[itemsArray objectAtIndex:indexPath.row]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -132,21 +105,19 @@ tableView heightForRowAtIndexPath: (NSIndexPath *)indexPath{
 - (void)menuBarController:(RMPScrollingMenuBarController *)menuBarController
  willSelectViewController:(UIViewController *)viewController
 {
-//    NSLog(@"will select %@", viewController);
+    //    NSLog(@"will select %@", viewController);
 }
 
 - (void)menuBarController:(RMPScrollingMenuBarController *)menuBarController
   didSelectViewController:(UIViewController *)viewController
 {
-//    NSLog(@"did select %@", viewController);
+    //    NSLog(@"did select %@", viewController);
 }
 
 - (void)menuBarController:(RMPScrollingMenuBarController *)menuBarController
   didCancelViewController:(UIViewController *)viewController
 {
-//    NSLog(@"did cancel %@", viewController);
+    //    NSLog(@"did cancel %@", viewController);
 }
-
-
 
 @end

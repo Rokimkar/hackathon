@@ -32,19 +32,9 @@
     } failure:^(NSError *error) {
         
     }];
-    
-    [prodData fetchFavoritesWithSuccess:^(NSMutableArray *data) {
-        wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 120, getScreenWidth(), getScreenHeight()-120-50) andProductsArray:data];
-        wishTableView.separatorColor = [UIColor clearColor];
-        wishTableView.backgroundColor=RGBA(244, 245, 244, 1);
-        [self.view addSubview:wishTableView];
-    } failure:^(NSError *error) {
-        
-    }];
-    
+    wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 120, getScreenWidth(), getScreenHeight()-120-50) andProductsArray:nil];
+    [self.view addSubview:wishTableView];
 
-    
-    
     // Do any additional setup after loading the view.
 }
 
@@ -82,6 +72,15 @@
     else{
         self.addNewWishBtn.hidden=YES;
         self.responsesCollectionView.hidden=YES;
+        ProductData *prodData = [[ProductData alloc] init];
+
+        [prodData fetchFavoritesWithSuccess:^(NSMutableArray *data) {
+            wishTableView.productArray=data;
+            [wishTableView reloadData];
+        } failure:^(NSError *error) {
+            
+        }];
+        
         wishTableView.hidden=NO;
     }
 

@@ -8,12 +8,18 @@
 
 #import "AddWishViewController.h"
 #import "ImagesCollectionViewCell.h"
-#define IMAGES_ALLOWED 5
+#import "WYPopoverController.h"
+#import "LeftDeckViewController.h"
+#import "CategoryTableViewController.h"
+#import "Prefix.pch"
+#define IMAGES_ALLOWED 3
 
-@interface AddWishViewController ()<UITextFieldDelegate,UITextViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>{
+@interface AddWishViewController ()<UITextFieldDelegate,UITextViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,CategoryViewControllerDelegate,WYPopoverControllerDelegate>{
     
     NSMutableArray *imagesArray;
     UserType userType;
+    WYPopoverController *settingsPopoverController;
+    
 }
 @end
 
@@ -21,10 +27,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.product=[[Product alloc] init];
     imagesArray = [[NSMutableArray alloc] init];
     userType = kBuyer;
     [self setLayout];
     [self configureLabelSlider];
+    
+    [self.titleTextField.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
+    [self.titleTextField.layer setBorderWidth:1.0];
+    [self.titleTextField.layer setCornerRadius:1.0];
+    [self.decTextView.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
+    [self.decTextView.layer setBorderWidth:1.0];
+    [self.decTextView.layer setCornerRadius:1.0];
+
+    [self.qtyTextField.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
+    [self.qtyTextField.layer setBorderWidth:1.0];
+    [self.qtyTextField.layer setCornerRadius:1.0];
+
+    [self.categoryBtn.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
+    [self.categoryBtn.layer setBorderWidth:1.0];
+    [self.categoryBtn.layer setCornerRadius:1.0];
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -46,19 +69,38 @@
     
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField{
+    if (textField.tag==101) {
+        self.product.title=textField.text;
+    }
+    else if (textField.tag==201){
+        self.product.quantity=[textField.text intValue];
+    }
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    if (textField.tag==101) {
+        self.product.title=textField.text;
+    }
+    else if (textField.tag==201){
+        self.product.quantity=[textField.text intValue];
+    }
+
+    return YES;
     
 }
-
 #pragma mark UITextViewMethods
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
     
 }
 - (void)textViewDidEndEditing:(UITextView *)textView{
-    
+    self.product.prodDesc=textView.text;
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+    }
     return YES;
 }
 
@@ -180,6 +222,96 @@
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
+- (IBAction)catBtnPressed:(id)sender {
+    
+    
+    if (settingsPopoverController.isPopoverVisible) {
+        return;
+    }
+    
+    if (settingsPopoverController == nil)
+    {
+        UIView *btn = (UIView *)sender;
+        
+        UIStoryboard *storyBoard  = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        CategoryTableViewController *leftDeck = [storyBoard instantiateViewControllerWithIdentifier:@"CategoryTableViewController"];
+        leftDeck.delegate = self;
+        leftDeck.preferredContentSize = CGSizeMake(110, 135);
+        
+        leftDeck.modalInPopover = NO;
+        
+        UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:leftDeck];
+        contentViewController.navigationBarHidden = YES;
+        settingsPopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
+        settingsPopoverController.delegate = self;
+        settingsPopoverController.passthroughViews = @[btn];
+        settingsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
+        settingsPopoverController.wantsDefaultContentAppearance = NO;
+        settingsPopoverController.theme.arrowBase = 16;
+        settingsPopoverController.theme.arrowHeight = 8;
+        [settingsPopoverController presentPopoverFromRect:btn.bounds
+                                                   inView:btn
+                                 permittedArrowDirections:WYPopoverArrowDirectionAny
+                                                 animated:YES
+                                                  options:WYPopoverAnimationOptionFadeWithScale];
+    }
+    else{
+        [settingsPopoverController dismissPopoverAnimated:YES completion:^{
+            [self popoverControllerDidDismissPopover:settingsPopoverController];
+        }];
+        
+    }
+    
+}
+
+
+#pragma mark - WYPopoverControllerDelegate
+
+- (void)popoverControllerDidPresentPopover:(WYPopoverController *)controller{
+    //NSLog(@"popoverControllerDidPresentPopover");
+    
+}
+
+- (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)controller{
+    return YES;
+}
+
+- (void)popoverControllerDidDismissPopover:(WYPopoverController *)controller
+{
+    
+    if (controller == settingsPopoverController)
+    {
+        settingsPopoverController.delegate = nil;
+        settingsPopoverController = nil;
+    }
+    //NSLog(@"%@",[self inPagePlayerView].settingsButton.titleLabel.text);
+    //NSLog(@"%@",[[SettingsManager sharedInstance] getStreamingQualityString]);
+
+}
+
+- (BOOL)popoverControllerShouldIgnoreKeyboardBounds:(WYPopoverController *)popoverController
+{
+    return YES;
+}
+
+- (void)popoverController:(WYPopoverController *)popoverController willTranslatePopoverWithYOffset:(float *)value
+{
+    // keyboard is shown and the popover will be moved up by 163 pixels for example ( *value = 163 )
+    *value = 0; // set value to 0 if you want to avoid the popover to be moved
+}
+
+-(void)dismissAfterSelectionWithSelectedString:(NSString*)category{
+    [self.categoryBtn setTitle:category forState:UIControlStateNormal];
+    [self.categoryBtn setTitle:category forState:UIControlStateHighlighted];
+    if (settingsPopoverController) {
+        [settingsPopoverController dismissPopoverAnimated:YES completion:^{
+            [self popoverControllerDidDismissPopover:settingsPopoverController];
+        }];
+    }
+
+}
+
+
 
 /*
 #pragma mark - Navigation

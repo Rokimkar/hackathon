@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NMRangeSlider.h"
-
+#import "Product.h"
 typedef enum {
     kSeller,
     kBuyer
@@ -23,7 +23,8 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UIButton *postLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lowerRange;
 @property (weak, nonatomic) IBOutlet UILabel *higherRange;
+@property (weak, nonatomic) IBOutlet UIButton *categoryBtn;
 
-
+@property (strong,nonatomic) Product *product;
 
 @end
