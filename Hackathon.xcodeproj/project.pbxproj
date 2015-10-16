@@ -68,6 +68,7 @@
 		0CBC85CC1BD12DC100FD44FF /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85C91BD12DC100FD44FF /* WYPopoverController.m */; settings = {ASSET_TAGS = (); }; };
 		0CBC85CD1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85CB1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m */; settings = {ASSET_TAGS = (); }; };
 		0CBC85D91BD136B700FD44FF /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85D81BD136B700FD44FF /* CategoryTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0CBC85DB1BD167B600FD44FF /* addIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85DA1BD167B600FD44FF /* addIcon.png */; settings = {ASSET_TAGS = (); }; };
 		2F085F111BCC431F004E6643 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F085F101BCC431F004E6643 /* SWRevealViewController.m */; };
 		2F1668DF1BC5580D00744672 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668DE1BC5580C00744672 /* main.m */; };
 		2F1668E21BC5580D00744672 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668E11BC5580D00744672 /* AppDelegate.m */; };
@@ -191,6 +192,7 @@
 		0CBC85CB1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
 		0CBC85D71BD136B700FD44FF /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
 		0CBC85D81BD136B700FD44FF /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		0CBC85DA1BD167B600FD44FF /* addIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addIcon.png; sourceTree = "<group>"; };
 		2F085F0F1BCC431F004E6643 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		2F085F101BCC431F004E6643 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2F1668D91BC5580C00744672 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -499,6 +501,7 @@
 		2F1882501BC7D56B00F29C34 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				0CBC85DA1BD167B600FD44FF /* addIcon.png */,
 				0CBC85C41BD12C0600FD44FF /* cardLayout.png */,
 				A07E81B11BD1157200FCE32B /* placeHolderImage.png */,
 				A0E8E9D31BCED753003F0F51 /* favorite_selected.jpeg */,
@@ -639,6 +642,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBC85DB1BD167B600FD44FF /* addIcon.png in Resources */,
 				0C958FCB1BCED6B9007A7694 /* slider-default-trackBackground.png in Resources */,
 				0C958FD61BCED6B9007A7694 /* slider-metal-handle-highlighted.png in Resources */,
 				0C958FD31BCED6B9007A7694 /* slider-default7-trackBackground@2x.png in Resources */,

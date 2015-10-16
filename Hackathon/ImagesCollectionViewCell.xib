@@ -13,7 +13,7 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="140" height="134"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="M8i-01-f40">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M8i-01-f40">
                         <rect key="frame" x="0.0" y="0.0" width="140" height="134"/>
                     </imageView>
                 </subviews>
@@ -33,7 +33,4 @@
             <point key="canvasLocation" x="272" y="269"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="addIcon.png" width="100" height="100"/>
-    </resources>
 </document>
