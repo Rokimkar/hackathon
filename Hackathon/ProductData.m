@@ -54,6 +54,18 @@
 }
 
 
+- (void) fetchAllDataWithSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure{
+    id object = [self getObjectFromJSON];
+    if (!object) {
+        failure(nil);
+    }
+    else
+    {
+        success([self getDataFrom:[object valueForKey:@"items"]]);
+    }
+}
+
+
 
 -(id) getObjectFromJSON{
     
@@ -68,6 +80,16 @@
     return object;
     
 }
+
+-(NSMutableArray*) getDataFrom:(id)dataObject
+{
+    NSMutableArray *dataArray = [[NSMutableArray alloc] init];
+    for (NSMutableDictionary *prodObj in dataObject) {
+            [dataArray addObject:[self mapWith:prodObj]];
+    }
+    return dataArray;
+}
+
 
 -(NSMutableArray*) getDataFrom:(id)dataObject forCategory:(NSString*)category
 {

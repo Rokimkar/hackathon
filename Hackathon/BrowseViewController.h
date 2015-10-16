@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface BrowseViewController : UIViewController
+@property (strong,nonatomic) UICollectionView *topCollView;
+@property (strong,nonatomic) NSMutableArray *dataArray;
+@property (strong,nonatomic) NSMutableArray *collDataArray;
 
 @end
