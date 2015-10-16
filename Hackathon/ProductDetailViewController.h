@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Product.h"
 
 @interface ProductDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *detailTableView;
-
+@property (weak,nonatomic) Product *product;
 @end

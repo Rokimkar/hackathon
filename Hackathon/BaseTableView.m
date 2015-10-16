@@ -8,6 +8,7 @@
 
 #import "BaseTableView.h"
 #import "TableViewCell.h"
+#import "ProductDetailViewController.h"
 
 @implementation BaseTableView
 
@@ -46,6 +47,7 @@
         cell = [nib objectAtIndex:0];
     }
 //    cell.imageViewForProduct.image=[self resizeImage:[UIImage imageNamed:@"search.png"] toSize:CGSizeMake(40, 30)];
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_unselected.png"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
     if(indexPath.row==5){
         [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_selected.jpeg"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
@@ -54,6 +56,29 @@
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ProductDetailViewController *vc = [[ProductDetailViewController alloc]init];
+    UINavigationController *navCont = [self getViewController];
+    if (navCont) {
+        [navCont pushViewController:vc animated:YES];
+    }
+    else{
+    }
+}
+
+
+- (UINavigationController *)getViewController {
+    UIResponder *nextResponderView = [self nextResponder];
+    while (![nextResponderView isKindOfClass:[UINavigationController class]]) {
+        nextResponderView = [nextResponderView nextResponder];
+        if (nil == nextResponderView) {
+            break;
+        }
+    }
+    return (UINavigationController *)nextResponderView;
+}
+
 
 -(CGFloat) tableView:(UITableView *) tableView heightForHeaderInSection :(NSInteger) section{
     return 0;
