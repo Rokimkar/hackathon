@@ -9,9 +9,12 @@
 #import "CategoryDetailViewController.h"
 #import "SubcategorydetailViewController.h"
 #import "ProductData.h"
+#import "SWRevealViewController.h"
 @interface  CategoryDetailViewController()
 {
     CGSize screenSize;
+    UIButton *_leftBarButtonItem ;
+
 }
 @end
 
@@ -45,12 +48,63 @@
     return self;
 }
 
+-(void)viewDidLoad{
+    
+    [super viewDidLoad];
+
+    
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationItem.leftBarButtonItem=[self getLeftMenuButton];
+
+    
+}
+
+
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
 }
 
 
+- (UIBarButtonItem *) getLeftMenuButton{
+    
+    UIView *leftCotainerView = [[UIView alloc] initWithFrame:CGRectMake(0.0,0.0, 45.0f,44.0f)];
+    _leftBarButtonItem = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 45, 39)];
+    _leftBarButtonItem.showsTouchWhenHighlighted = FALSE;
+    [_leftBarButtonItem addTarget:self action:@selector(leftBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+//    [_leftBarButtonItem setTitle:@"Button" forState:UIControlStateNormal];
+//    [_leftBarButtonItem setTitle:@"Button" forState:UIControlStateHighlighted];
+//    [_leftBarButtonItem setBackgroundColor:[UIColor redColor]];
+    [_leftBarButtonItem setImage:[UIImage imageNamed:@"menuIcon.png"] forState:UIControlStateNormal];
+    [_leftBarButtonItem setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [leftCotainerView addSubview:_leftBarButtonItem];
+    
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftCotainerView];
+    
+    
+    return leftBarButtonItem;
+}
 
 
+- (SWRevealViewController*)revealViewController
+{
+    UIViewController *parent = self;
+    Class revealClass = [SWRevealViewController class];
+    
+    while ( nil != (parent = [parent parentViewController]) && ![parent isKindOfClass:revealClass] )
+    {
+    }
+    
+    return (id)parent;
+}
+
+-(void)leftBtnTapped{
+    SWRevealViewController *revealCont = [self revealViewController];
+    [revealCont revealToggleAnimated:YES];
+
+    
+}
 
 @end
