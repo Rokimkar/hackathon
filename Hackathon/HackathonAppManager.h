@@ -14,5 +14,8 @@
 + (HackathonAppManager*)sharedInstance;
 
 -(NSArray*) getSubCategoriesFor:(NSString*) category;
-
+@property (strong,nonatomic)NSMutableArray* favIdsArray;
+-(BOOL) productExist:(NSNumber *)prodId;
+-(void) removeItemFromFavIdsArray:(NSNumber *)prodId;
+-(void) addItemInFavIdsArray:(NSNumber *)prodId;
 @end

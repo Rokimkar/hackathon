@@ -16,6 +16,6 @@
 - (IBAction)buttonForFavoriteTapped:(id)sender;
 -(void) bindDataFor:(Product*) product;
 @property (weak, nonatomic) IBOutlet UIButton *buttonForFavoriteTapped;
-
+@property (strong, nonatomic) Product *product;
 
 @end
