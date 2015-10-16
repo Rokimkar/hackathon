@@ -30,6 +30,7 @@
     // Do any additional setup after loading the view.
     [self.itemListTableView registerNib:[UINib nibWithNibName:@"LeftDeckTableViewCell" bundle:nil] forCellReuseIdentifier:@"LeftDeckTableViewCell"];
     self.itemListTableView.scrollEnabled=NO;
+    self.itemListTableView.separatorColor = [UIColor clearColor];
 }
 
 - (SWRevealViewController*)revealViewController

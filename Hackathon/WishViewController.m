@@ -26,7 +26,6 @@
     
     ProductData *prodData = [[ProductData alloc] init];
     [self showResponsesCollectionView];
-
     [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
         
         self.dataArray = data;
@@ -36,6 +35,7 @@
     
     [prodData fetchFavoritesWithSuccess:^(NSMutableArray *data) {
         wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 120, getScreenWidth(), getScreenHeight()-120-50) andProductsArray:data];
+        wishTableView.separatorColor = [UIColor clearColor];
         [self.view addSubview:wishTableView];
     } failure:^(NSError *error) {
         
