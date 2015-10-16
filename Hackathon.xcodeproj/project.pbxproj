@@ -65,6 +65,9 @@
 		0CBC85C01BD0EA0200FD44FF /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85BE1BD0EA0200FD44FF /* fav.png */; };
 		0CBC85C11BD0EA0200FD44FF /* unFav.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85BF1BD0EA0200FD44FF /* unFav.png */; };
 		0CBC85C51BD12C0600FD44FF /* cardLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85C41BD12C0600FD44FF /* cardLayout.png */; settings = {ASSET_TAGS = (); }; };
+		0CBC85CC1BD12DC100FD44FF /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85C91BD12DC100FD44FF /* WYPopoverController.m */; settings = {ASSET_TAGS = (); }; };
+		0CBC85CD1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85CB1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m */; settings = {ASSET_TAGS = (); }; };
+		0CBC85D91BD136B700FD44FF /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC85D81BD136B700FD44FF /* CategoryTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2F085F111BCC431F004E6643 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F085F101BCC431F004E6643 /* SWRevealViewController.m */; };
 		2F1668DF1BC5580D00744672 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668DE1BC5580C00744672 /* main.m */; };
 		2F1668E21BC5580D00744672 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668E11BC5580D00744672 /* AppDelegate.m */; };
@@ -182,6 +185,12 @@
 		0CBC85BE1BD0EA0200FD44FF /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav.png; sourceTree = "<group>"; };
 		0CBC85BF1BD0EA0200FD44FF /* unFav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unFav.png; sourceTree = "<group>"; };
 		0CBC85C41BD12C0600FD44FF /* cardLayout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardLayout.png; sourceTree = "<group>"; };
+		0CBC85C81BD12DC100FD44FF /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		0CBC85C91BD12DC100FD44FF /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		0CBC85CA1BD12DC100FD44FF /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		0CBC85CB1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		0CBC85D71BD136B700FD44FF /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		0CBC85D81BD136B700FD44FF /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
 		2F085F0F1BCC431F004E6643 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		2F085F101BCC431F004E6643 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2F1668D91BC5580C00744672 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +364,7 @@
 		0CA5D6681BCFD4360017004C /* ThirdParties */ = {
 			isa = PBXGroup;
 			children = (
+				0CBC85C71BD12DA800FD44FF /* WYPopOver */,
 				0CA5D6691BCFD44B0017004C /* RMPScroller */,
 				2F1882601BC9A71100F29C34 /* LeftDeck */,
 				0C958FA61BCED677007A7694 /* NMRangeSlider */,
@@ -379,6 +389,17 @@
 				0CA5D6751BCFD4870017004C /* UIViewController+RMPScrollingMenuBarControllerHelper.m */,
 			);
 			name = RMPScroller;
+			sourceTree = "<group>";
+		};
+		0CBC85C71BD12DA800FD44FF /* WYPopOver */ = {
+			isa = PBXGroup;
+			children = (
+				0CBC85C81BD12DC100FD44FF /* WYPopoverController.h */,
+				0CBC85C91BD12DC100FD44FF /* WYPopoverController.m */,
+				0CBC85CA1BD12DC100FD44FF /* WYStoryboardPopoverSegue.h */,
+				0CBC85CB1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m */,
+			);
+			name = WYPopOver;
 			sourceTree = "<group>";
 		};
 		2F085F0E1BCC42FD004E6643 /* SWReveal */ = {
@@ -500,6 +521,8 @@
 				2F1882611BC9A88A00F29C34 /* LeftDeckTableViewCell.h */,
 				2F1882621BC9A88A00F29C34 /* LeftDeckTableViewCell.m */,
 				2F1882631BC9A88A00F29C34 /* LeftDeckTableViewCell.xib */,
+				0CBC85D71BD136B700FD44FF /* CategoryTableViewController.h */,
+				0CBC85D81BD136B700FD44FF /* CategoryTableViewController.m */,
 			);
 			name = LeftDeck;
 			sourceTree = "<group>";
@@ -747,11 +770,13 @@
 				0C958F9F1BCED670007A7694 /* ProductDetailsTableViewCell.m in Sources */,
 				2F1882461BC7C99800F29C34 /* WishViewController.m in Sources */,
 				2F1882431BC7C98200F29C34 /* WallViewController.m in Sources */,
+				0CBC85CC1BD12DC100FD44FF /* WYPopoverController.m in Sources */,
 				0CA5D67B1BCFD4870017004C /* UIViewController+RMPScrollingMenuBarControllerHelper.m in Sources */,
 				2F18825C1BC9A43600F29C34 /* LeftDeckViewController.m in Sources */,
 				0C958FA31BCED670007A7694 /* TopZoneCollectionViewCell.m in Sources */,
 				0C958FC31BCED6B8007A7694 /* NMRangeSlider.m in Sources */,
 				0CA5D6761BCFD4870017004C /* RMPScrollingMenuBar.m in Sources */,
+				0CBC85D91BD136B700FD44FF /* CategoryTableViewController.m in Sources */,
 				0C958FE51BCED709007A7694 /* AddWishViewController.m in Sources */,
 				A0A7AAAF1BCD83B600F0CBFC /* BaseTableView.m in Sources */,
 				0C958FE71BCED709007A7694 /* ImagesCollectionViewCell.m in Sources */,
@@ -763,6 +788,7 @@
 				0C369B5F1BD0206C00EE5539 /* HackathonAppManager.m in Sources */,
 				2F1668DF1BC5580D00744672 /* main.m in Sources */,
 				2F1882641BC9A88A00F29C34 /* LeftDeckTableViewCell.m in Sources */,
+				0CBC85CD1BD12DC100FD44FF /* WYStoryboardPopoverSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

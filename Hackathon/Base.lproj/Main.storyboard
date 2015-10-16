@@ -71,6 +71,37 @@
             </objects>
             <point key="canvasLocation" x="446" y="-24"/>
         </scene>
+        <!--Category Table View Controller-->
+        <scene sceneID="Leb-Pt-1uX">
+            <objects>
+                <tableViewController storyboardIdentifier="CategoryTableViewController" id="cCs-nH-9KF" customClass="CategoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="h0q-oG-xiW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6gL-s4-Z0V">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6gL-s4-Z0V" id="bti-ph-F4j">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cCs-nH-9KF" id="cXU-T8-4h3"/>
+                            <outlet property="delegate" destination="cCs-nH-9KF" id="5nr-IZ-pz6"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="itemListTableView" destination="h0q-oG-xiW" id="tMX-aQ-z3v"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5lx-xh-5YH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2018" y="-63"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="B1W-OD-8Fs">
             <objects>
@@ -133,7 +164,7 @@
         <!--Left Deck View Controller-->
         <scene sceneID="YvK-W6-Hhn">
             <objects>
-                <viewController id="z3k-dm-9g8" customClass="LeftDeckViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftDeckViewController" id="z3k-dm-9g8" customClass="LeftDeckViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H0S-UF-cky"/>
                         <viewControllerLayoutGuide type="bottom" id="eYN-Wy-utT"/>
