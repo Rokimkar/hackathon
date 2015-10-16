@@ -10,6 +10,7 @@
 #import "TopZoneView.h"
 #import "ProductDetailsTableViewCell.h"
 #import "ProductDescriptionTableViewCell.h"
+#import "Product.h"
 @interface ProductDetailViewController () <UITableViewDelegate,UITableViewDataSource>
 {
     CGSize screenSize;
@@ -17,6 +18,14 @@
 @end
 
 @implementation ProductDetailViewController
+
+-(instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andProduct:(Product *)product{
+    self=[super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self){
+        self.product=product;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

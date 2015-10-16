@@ -26,10 +26,10 @@
     UIImage *image = [self resizeImage:[UIImage imageNamed:@"feed.png"] toSize:CGSizeMake(25, 25)];
     image=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     wallTabBarItem.image=image;
-    image = [self resizeImage:[UIImage imageNamed:@"wish.png"] toSize:CGSizeMake(50, 50)];
+    image = [self resizeImage:[UIImage imageNamed:@"search.png"] toSize:CGSizeMake(25,25)];
     image=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     wishTabBarItem.image=image;
-    image = [self resizeImage:[UIImage imageNamed:@"search.png"] toSize:CGSizeMake(25,25)];
+    image = [self resizeImage:[UIImage imageNamed:@"wish.png"] toSize:CGSizeMake(50, 50)];
     image=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     browseTabBarItem.image=image;
     

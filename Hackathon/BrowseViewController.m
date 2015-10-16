@@ -7,8 +7,11 @@
 //
 
 #import "BrowseViewController.h"
-
-@interface BrowseViewController ()
+#import "ProductData.h"
+#import "BaseTableView.h"
+@interface BrowseViewController (){
+    BaseTableView *baseTableView;
+}
 
 @end
 
@@ -17,6 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    ProductData *prodData = [[ProductData alloc] init];
+    [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
+        baseTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0,194, self.view.frame.size.width, self.view.frame.size.height-50) andProductsArray:data];
+        [self.view addSubview:baseTableView];
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
