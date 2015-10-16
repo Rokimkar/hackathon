@@ -11,6 +11,7 @@
 #import "CategoryDetailViewController.h"
 #import "SWRevealViewController.h"
 #import "HackathonAppManager.h"
+#import "ViewController.h"
 @interface LeftDeckViewController (){
     NSArray *itemsArray ;
     CGSize screenSize;
@@ -79,6 +80,17 @@
                 [revealCont setFrontViewPosition: FrontViewPositionLeft animated: YES];
             }
         }
+    }
+    else{
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UINavigationController *homeNavCont = [mainStoryBoard instantiateViewControllerWithIdentifier:@"homeNavCont"];
+        SWRevealViewController *revealCont = [self revealViewController];
+        [revealCont setFrontViewController:homeNavCont animated:YES];
+        [revealCont setFrontViewPosition: FrontViewPositionLeft animated: YES];
+
+        
+        
     }
 }
 

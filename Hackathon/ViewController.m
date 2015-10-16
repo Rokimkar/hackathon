@@ -35,8 +35,10 @@
     
     SWRevealViewController *revealController = self.revealViewController;
     if(revealController){
+        
         self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
-        self.navigationItem.leftBarButtonItem.title=@"browse";
+//        self.navigationItem.leftBarButtonItem.title=@"browse";
+        [self.navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"menuIcon.png"]];
         [self.navigationItem.leftBarButtonItem setTarget:self.revealViewController];
         [self.navigationItem.leftBarButtonItem setAction:@selector(revealToggle:)];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];

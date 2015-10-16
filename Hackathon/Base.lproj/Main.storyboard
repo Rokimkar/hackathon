@@ -96,7 +96,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fss-eO-hGT">
             <objects>
-                <navigationController id="8rI-jG-jU0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeNavCont" id="8rI-jG-jU0" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jAV-jS-7Vx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -112,7 +112,7 @@
         <!--View Controller-->
         <scene sceneID="2xl-aE-QCp">
             <objects>
-                <tabBarController id="6uz-5q-Zic" customClass="ViewController" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="homeView" id="6uz-5q-Zic" customClass="ViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="r9q-zP-vbd"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="fr8-9i-qS2">
