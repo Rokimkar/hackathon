@@ -52,7 +52,9 @@
     [self.view addSubview:menuBar];
     [_menuBar sizeToFit];
     rect = _menuBar.frame;
-    rect.origin.y = [self.topLayoutGuide length];
+//    rect.origin.y = [self.topLayoutGuide length];
+    rect.origin.y = 64;
+
     _menuBar.frame = rect;
     _menuBar.delegate = self;
     _menuBar.backgroundColor = self.view.backgroundColor;
@@ -64,7 +66,9 @@
                       self.view.bounds.size.height - y);
     UIView* containerView = [[UIView alloc] initWithFrame:rect];
     _containerView = containerView;
-    _containerView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1.0];
+   // _containerView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1.0];
+    //here
+        _containerView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_containerView];
 
     [self.view insertSubview:self.containerView belowSubview:self.menuBar];
@@ -93,7 +97,7 @@
     [super viewWillLayoutSubviews];
 
     CGRect rect;
-    rect = CGRectMake(0, [self.topLayoutGuide length]+20, self.view.bounds.size.width, _menuBar.barHeight);
+    rect = CGRectMake(0, 64, self.view.bounds.size.width, _menuBar.barHeight);
     _menuBar.frame = rect;
 
     rect = CGRectMake(0, CGRectGetMaxY(_menuBar.frame),
