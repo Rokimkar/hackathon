@@ -10,6 +10,8 @@
 #import "Product.h"
 
 @interface ProductDetailViewController : UIViewController
+-(instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andProduct:(Product *)product;
+
 @property (weak, nonatomic) IBOutlet UITableView *detailTableView;
 @property (weak,nonatomic) Product *product;
 @end

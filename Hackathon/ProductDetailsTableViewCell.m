@@ -20,9 +20,9 @@
 }
 
 -(void) bindData:(Product*) product{
-    self.titleLabel.text=@"French Connection Slim Fit Men's Trousers";
-    self.priceLabel.text=@"₹ 2000";
-    self.qtyLabel.text=@"10 available";
+    self.titleLabel.text=product.title;
+    self.priceLabel.text=[NSString stringWithFormat:@"₹ %@",product.price];
+    self.qtyLabel.text=[NSString stringWithFormat:@"%d in stock",product.quantity];
 }
 
 @end

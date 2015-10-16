@@ -7,7 +7,7 @@
 //
 
 #import "TopZoneCollectionViewCell.h"
-//#import "UIImageView+AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 @implementation TopZoneCollectionViewCell
 
 - (void)awakeFromNib {
@@ -21,8 +21,8 @@
 //        [self bindImageFor:itemData.imageUrl];
 //    else
 //        [self bindImageFor:itemData.productThumbnail];
-//    self.mainLabel.text=itemData.productName;
-    self.bgImageView.image = [UIImage imageNamed:@"addIcon"];
+    self.mainLabel.text=itemData.type;
+//    self.bgImageView.image = [UIImage imageNamed:@"addIcon"];
 }
 
 -(void) bindImageFor:(NSString*) imageUrl
@@ -31,23 +31,23 @@
                                                   cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                               timeoutInterval:60];
     
-//    [self.bgImageView setImageWithURLRequest:imageRequest placeholderImage:[UIImage imageNamed:@"cardLayout.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-//        [self.bgImageView setContentMode:UIViewContentModeScaleToFill];
-//        if (!request) // image was cached
-//            [self.bgImageView setImage:image];
-//        else
-//            [UIView transitionWithView:self.bgImageView
-//                              duration:1.0f
-//                               options:UIViewAnimationOptionTransitionCrossDissolve
-//                            animations:^{
-//                                self.bgImageView.image = image;
-//                                
-//                            } completion:NULL];
-//        
-//        
-//    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-//        
-//    }];
+    [self.bgImageView setImageWithURLRequest:imageRequest placeholderImage:[UIImage imageNamed:@"cardLayout.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        [self.bgImageView setContentMode:UIViewContentModeScaleAspectFit];
+        if (!request) // image was cached
+            [self.bgImageView setImage:image];
+        else
+            [UIView transitionWithView:self.bgImageView
+                              duration:1.0f
+                               options:UIViewAnimationOptionTransitionCrossDissolve
+                            animations:^{
+                                self.bgImageView.image = image;
+                                
+                            } completion:NULL];
+        
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        
+    }];
     
 }
 

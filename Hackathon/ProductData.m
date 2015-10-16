@@ -85,6 +85,9 @@
     product.img1 = [prodObj objectForKey:@"img1"];
     product.img2 = [prodObj objectForKey:@"img2"];
     product.img3 = [prodObj objectForKey:@"img3"];
+    product.seller = [prodObj objectForKey:@"seller"];
+    product.type = [prodObj objectForKey:@"type"];
+
     return product;
 }
 
