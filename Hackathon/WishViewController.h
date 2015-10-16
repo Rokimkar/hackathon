@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WishViewController : UIViewController
+@interface WishViewController : UIViewController 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *topSegmentControl;
+@property (weak, nonatomic) IBOutlet UIButton *addNewWishBtn;
+@property (weak, nonatomic) IBOutlet UICollectionView *responsesCollectionView;
 
 @end

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Kx-If-Hfi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Kx-If-Hfi">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Browse-->
@@ -172,25 +174,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wish" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H54-Kr-RD5">
-                                <rect key="frame" x="197" y="64" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-PS-Jj3">
+                                <rect key="frame" x="90" y="78" width="139" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="WQ8-YW-msj"/>
+                                    <constraint firstAttribute="width" constant="139" id="buZ-GR-XhH"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Wishes"/>
+                                    <segment title="Favorites"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValChanged:" destination="bD3-V0-2tX" eventType="valueChanged" id="dYI-Bd-iKH"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZS-ZN-nOv">
+                                <rect key="frame" x="16" y="120" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="k0y-zR-jh8"/>
+                                </constraints>
+                                <state key="normal" title="Add new wish"/>
+                                <connections>
+                                    <action selector="addNewWishBtn:" destination="bD3-V0-2tX" eventType="touchUpInside" id="8ub-ai-EYR"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HLg-ah-BGd">
+                                <rect key="frame" x="12" y="164" width="296" height="355"/>
+                                <color key="backgroundColor" red="0.019607843140000001" green="0.67843137249999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HKz-ix-Uv1">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dor-r2-yVv">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="bD3-V0-2tX" id="nq5-FV-AlL"/>
+                                    <outlet property="delegate" destination="bD3-V0-2tX" id="mb2-PZ-l1u"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qZS-ZN-nOv" firstAttribute="trailing" secondItem="6v3-jt-PD4" secondAttribute="trailingMargin" id="C26-dx-fXA"/>
+                            <constraint firstItem="HLg-ah-BGd" firstAttribute="leading" secondItem="6v3-jt-PD4" secondAttribute="leadingMargin" constant="-4" id="Kvj-Dh-whI"/>
+                            <constraint firstItem="mzR-c6-8Sg" firstAttribute="top" secondItem="HLg-ah-BGd" secondAttribute="bottom" id="O54-8L-gpk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HLg-ah-BGd" secondAttribute="trailing" constant="-4" id="P4u-m3-wWM"/>
+                            <constraint firstItem="0n5-PS-Jj3" firstAttribute="top" secondItem="DKe-KQ-BGy" secondAttribute="bottom" constant="14" id="WD6-fR-hb9"/>
+                            <constraint firstItem="qZS-ZN-nOv" firstAttribute="centerX" secondItem="6v3-jt-PD4" secondAttribute="centerX" id="cH3-CN-Ar2"/>
+                            <constraint firstItem="qZS-ZN-nOv" firstAttribute="leading" secondItem="6v3-jt-PD4" secondAttribute="leadingMargin" id="fpb-oQ-aDA"/>
+                            <constraint firstItem="0n5-PS-Jj3" firstAttribute="centerX" secondItem="6v3-jt-PD4" secondAttribute="centerX" id="frf-Y5-YUd"/>
+                            <constraint firstItem="qZS-ZN-nOv" firstAttribute="top" secondItem="0n5-PS-Jj3" secondAttribute="bottom" constant="14" id="gBf-es-ZvY"/>
+                            <constraint firstItem="HLg-ah-BGd" firstAttribute="top" secondItem="qZS-ZN-nOv" secondAttribute="bottom" constant="14" id="iNh-w8-oNW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wish" id="59O-lH-nWG"/>
+                    <connections>
+                        <outlet property="addNewWishBtn" destination="qZS-ZN-nOv" id="qGl-CA-xYg"/>
+                        <outlet property="responsesCollectionView" destination="HLg-ah-BGd" id="tQI-17-782"/>
+                        <outlet property="topSegmentControl" destination="0n5-PS-Jj3" id="dzp-9z-Esh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfk-7P-0ct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-94" y="728"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
