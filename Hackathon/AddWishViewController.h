@@ -29,7 +29,9 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UILabel *higherRange;
 @property (weak, nonatomic) IBOutlet UIButton *categoryBtn;
 @property (weak, nonatomic) IBOutlet UILabel *priceDummyLabel;
+@property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 
 @property (strong,nonatomic) Product *product;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *changingConstraint;
 
 @end

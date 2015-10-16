@@ -68,6 +68,11 @@
     [self.imagesCollView.layer setBorderWidth:1.0];
     [self.imagesCollView.layer setCornerRadius:5.0];
     
+    [self.priceTextField.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
+    [self.priceTextField.layer setBorderWidth:1.0];
+    [self.priceTextField.layer setCornerRadius:5.0];
+
+    
     if (queryTitle && ![queryTitle isEqualToString:@""]) {
         self.titleTextField.text=queryTitle;
         self.product.title=queryTitle;
@@ -82,15 +87,27 @@
     [self updateSliderLabels];
     
     if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
-        self.priceDummyLabel.text=@"Price:";
+        self.priceDummyLabel.text=@"Price (in ₹):";
         [self.postLabel setTitle:@"Respond" forState:UIControlStateNormal];
         [self.postLabel setTitle:@"Respond" forState:UIControlStateHighlighted];
+        self.priceTextField.hidden=NO;
+        self.lowerRange.hidden=YES;
+        self.higherRange.hidden=YES;
+        self.priceSlider.hidden=YES;
+        self.changingConstraint.constant=0.0;
     }
     else{
         self.priceDummyLabel.text=@"Price Range:";
         [self.postLabel setTitle:@"Add Wish" forState:UIControlStateNormal];
         [self.postLabel setTitle:@"Add Wish" forState:UIControlStateHighlighted];
+        self.priceTextField.hidden=YES;
+        self.lowerRange.hidden=NO;
+        self.higherRange.hidden=NO;
+        self.priceSlider.hidden=NO;
+        self.changingConstraint.constant=15.0;
     }
+    [self.view layoutSubviews];
+    [self.view layoutIfNeeded];
     
 }
 
@@ -111,6 +128,9 @@
     else if (textField.tag==201){
         self.product.quantity=[textField.text intValue];
     }
+    else if (textField.tag==1001){
+        self.product.price=textField.text;
+    }
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
@@ -120,7 +140,9 @@
     else if (textField.tag==201){
         self.product.quantity=[textField.text intValue];
     }
-
+    else if (textField.tag==1001){
+        self.product.price=textField.text;
+    }
     return YES;
     
 }
@@ -366,20 +388,25 @@
 }
 
 - (IBAction)postBtnPressed:(id)sender {
-    
+    if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Is the product exactly same or smilar to the one queried?" delegate:self cancelButtonTitle:@"Exactly Same" otherButtonTitles:@"Similar", nil];
     alert.tag=303;
-    [alert show];
+        [alert show];
+    }
+    else{
+        [self moveToPost];
+    }
 }
 
 
 -(void) moveToPost{
-    self.product.price = [NSString stringWithFormat:@"%@ to %@",self.lowerRange.text,self.higherRange.text ];
     UIAlertView *alertView;
     if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+        self.product.price = [NSString stringWithFormat:@"%@",self.priceTextField.text];
         alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Your response has been posted." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     }
     else{
+        self.product.price = [NSString stringWithFormat:@"%@ to %@",self.lowerRange.text,self.higherRange.text ];
         alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Your wish has been posted." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     }
     

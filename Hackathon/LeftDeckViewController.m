@@ -33,8 +33,10 @@
     [self.itemListTableView registerNib:[UINib nibWithNibName:@"LeftDeckTableViewCell" bundle:nil] forCellReuseIdentifier:@"LeftDeckTableViewCell"];
     self.itemListTableView.scrollEnabled=NO;
     self.itemListTableView.backgroundColor=RGBA(196, 156, 164, 1);
+    self.view.backgroundColor=RGBA(196, 156, 164, 1);
     //self.itemListTableView.separatorColor = [UIColor clearColor];
 }
+
 
 - (SWRevealViewController*)revealViewController
 {

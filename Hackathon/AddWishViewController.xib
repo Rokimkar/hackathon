@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddWishViewController">
             <connections>
                 <outlet property="categoryBtn" destination="Otx-Wl-F5x" id="Thm-eq-0MJ"/>
+                <outlet property="changingConstraint" destination="iEO-NE-pnH" id="gUB-zz-e8P"/>
                 <outlet property="decTextView" destination="YDs-hA-B5i" id="ksa-lp-Yf2"/>
                 <outlet property="higherRange" destination="s4g-hK-gOr" id="llE-I7-bTr"/>
                 <outlet property="imagesCollView" destination="EhJ-mc-Pzy" id="AdN-MQ-Mfu"/>
@@ -15,6 +16,7 @@
                 <outlet property="postLabel" destination="tq4-oN-A3e" id="rUu-vG-oej"/>
                 <outlet property="priceDummyLabel" destination="KP6-jh-Luo" id="5Ms-su-Jdv"/>
                 <outlet property="priceSlider" destination="60S-ju-BZN" id="3OL-3r-Ws6"/>
+                <outlet property="priceTextField" destination="zJe-ji-Bwt" id="Z0x-Hr-7Ao"/>
                 <outlet property="qtyTextField" destination="n4M-1U-Fh5" id="k5p-ff-2f9"/>
                 <outlet property="titleTextField" destination="LoY-ga-lbO" id="pOA-QM-AQt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -155,6 +157,15 @@
                         <action selector="catBtnPressed:" destination="-1" eventType="touchUpInside" id="lA0-4h-djk"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJe-ji-Bwt">
+                    <rect key="frame" x="112" y="236" width="200" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="JlU-VG-dZD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -163,6 +174,7 @@
                 <constraint firstAttribute="trailing" secondItem="Otx-Wl-F5x" secondAttribute="trailing" constant="8" id="54z-YO-eXE"/>
                 <constraint firstItem="60S-ju-BZN" firstAttribute="centerY" secondItem="s4g-hK-gOr" secondAttribute="centerY" id="64g-tU-zBx"/>
                 <constraint firstItem="KP6-jh-Luo" firstAttribute="top" secondItem="n4M-1U-Fh5" secondAttribute="bottom" constant="15" id="AT6-kf-Fee"/>
+                <constraint firstAttribute="trailing" secondItem="zJe-ji-Bwt" secondAttribute="trailing" constant="8" id="AwR-j6-XW2"/>
                 <constraint firstAttribute="trailing" secondItem="EhJ-mc-Pzy" secondAttribute="trailing" constant="8" id="Bei-Rr-MKI"/>
                 <constraint firstAttribute="trailing" secondItem="LoY-ga-lbO" secondAttribute="trailing" constant="8" id="CFg-lE-dMx"/>
                 <constraint firstAttribute="trailing" secondItem="tq4-oN-A3e" secondAttribute="trailing" constant="54" id="Csr-YT-AVU"/>
@@ -180,6 +192,7 @@
                 <constraint firstAttribute="trailing" secondItem="YDs-hA-B5i" secondAttribute="trailing" constant="8" id="Yva-A9-U2g"/>
                 <constraint firstItem="l1A-cU-orN" firstAttribute="centerY" secondItem="60S-ju-BZN" secondAttribute="centerY" id="c9f-uG-dFS"/>
                 <constraint firstItem="s4g-hK-gOr" firstAttribute="leading" secondItem="60S-ju-BZN" secondAttribute="trailing" constant="4" id="dO2-HO-6zP"/>
+                <constraint firstItem="zJe-ji-Bwt" firstAttribute="top" secondItem="Otx-Wl-F5x" secondAttribute="bottom" constant="11" id="dUV-ZH-m1X"/>
                 <constraint firstItem="60S-ju-BZN" firstAttribute="leading" secondItem="l1A-cU-orN" secondAttribute="trailing" constant="4" id="eij-jp-90J"/>
                 <constraint firstItem="EhJ-mc-Pzy" firstAttribute="top" secondItem="60S-ju-BZN" secondAttribute="bottom" constant="15" id="iEO-NE-pnH"/>
                 <constraint firstItem="Otx-Wl-F5x" firstAttribute="leading" secondItem="n4M-1U-Fh5" secondAttribute="trailing" constant="18" id="paf-Ri-NgR"/>
@@ -187,6 +200,7 @@
                 <constraint firstItem="YDs-hA-B5i" firstAttribute="top" secondItem="LoY-ga-lbO" secondAttribute="bottom" constant="15" id="qm8-pg-PBs"/>
                 <constraint firstItem="EhJ-mc-Pzy" firstAttribute="top" secondItem="60S-ju-BZN" secondAttribute="bottom" constant="20" id="snZ-Ft-aFp"/>
                 <constraint firstItem="tq4-oN-A3e" firstAttribute="top" secondItem="EhJ-mc-Pzy" secondAttribute="bottom" constant="20" id="t3f-yc-TmY"/>
+                <constraint firstItem="zJe-ji-Bwt" firstAttribute="leading" secondItem="KP6-jh-Luo" secondAttribute="trailing" constant="7" id="tX3-kP-egY"/>
                 <constraint firstItem="Otx-Wl-F5x" firstAttribute="centerY" secondItem="n4M-1U-Fh5" secondAttribute="centerY" id="uGO-fR-N0L"/>
                 <constraint firstItem="60S-ju-BZN" firstAttribute="top" secondItem="KP6-jh-Luo" secondAttribute="bottom" constant="4" id="vY4-k0-ZJ3"/>
                 <constraint firstItem="n4M-1U-Fh5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="zxn-sD-dDx"/>
