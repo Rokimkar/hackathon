@@ -33,6 +33,8 @@
         
     }];
     wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 120, getScreenWidth(), getScreenHeight()-120-50) andProductsArray:nil];
+    wishTableView.separatorColor = [UIColor clearColor];
+    wishTableView.backgroundColor=RGBA(244, 245, 244, 1);
     [self.view addSubview:wishTableView];
 
     // Do any additional setup after loading the view.

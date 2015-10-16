@@ -35,19 +35,28 @@
     
     [self.titleTextField.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
     [self.titleTextField.layer setBorderWidth:1.0];
-    [self.titleTextField.layer setCornerRadius:1.0];
+    [self.titleTextField.layer setCornerRadius:5.0];
     [self.decTextView.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
     [self.decTextView.layer setBorderWidth:1.0];
-    [self.decTextView.layer setCornerRadius:1.0];
+    [self.decTextView.layer setCornerRadius:5.0];
 
     [self.qtyTextField.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
     [self.qtyTextField.layer setBorderWidth:1.0];
-    [self.qtyTextField.layer setCornerRadius:1.0];
+    [self.qtyTextField.layer setCornerRadius:5.0];
 
     [self.categoryBtn.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
     [self.categoryBtn.layer setBorderWidth:1.0];
-    [self.categoryBtn.layer setCornerRadius:1.0];
+    [self.categoryBtn.layer setCornerRadius:5.0];
 
+    [self.postLabel.layer setBorderColor:[UIColor blueColor].CGColor];
+    [self.postLabel.layer setBorderWidth:1.0];
+    [self.postLabel.layer setCornerRadius:5.0];
+
+    [self.imagesCollView.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
+    [self.imagesCollView.layer setBorderWidth:1.0];
+    [self.imagesCollView.layer setCornerRadius:5.0];
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -129,6 +138,7 @@
     layout.minimumInteritemSpacing = 5;
     self.imagesCollView.collectionViewLayout=layout;
     [self.imagesCollView registerNib:[UINib nibWithNibName:@"ImagesCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ImagesCollectionViewCell"];
+    [self.imagesCollView setBackgroundColor:[UIColor clearColor]];
     
 }
 
@@ -146,6 +156,10 @@
     if (indexPath.row<imagesArray.count) {
         cell.imgView.image = [imagesArray objectAtIndex:indexPath.row];
     }
+    [cell.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
+    [cell.layer setBorderWidth:1.0];
+    [cell.layer setCornerRadius:5.0];
+
     return cell;
 }
 
@@ -203,6 +217,18 @@
             }];
             }
         }
+    }
+    else if (alertView.tag==303){
+        if (buttonIndex==0) {
+            self.product.type=@"Exactly Same";
+        }
+        else{
+            self.product.type=@"Similar";
+        }
+        [self moveToPost];
+    }
+    else if (alertView.tag==404){
+        [self.navigationController popViewControllerAnimated:YES];
     }
     
 }
@@ -303,6 +329,7 @@
 -(void)dismissAfterSelectionWithSelectedString:(NSString*)category{
     [self.categoryBtn setTitle:category forState:UIControlStateNormal];
     [self.categoryBtn setTitle:category forState:UIControlStateHighlighted];
+    self.product.category=category;
     if (settingsPopoverController) {
         [settingsPopoverController dismissPopoverAnimated:YES completion:^{
             [self popoverControllerDidDismissPopover:settingsPopoverController];
@@ -311,7 +338,20 @@
 
 }
 
+- (IBAction)postBtnPressed:(id)sender {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Is the product exactly same or smilar to the one queried?" delegate:self cancelButtonTitle:@"Exactly Same" otherButtonTitles:@"Similar", nil];
+    alert.tag=303;
+    [alert show];
+}
 
+
+-(void) moveToPost{
+    self.product.price = [NSString stringWithFormat:@"%@ to %@",self.lowerRange.text,self.higherRange.text ];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Your response has been posted." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    alertView.tag=404;
+    [alertView show];
+}
 
 /*
 #pragma mark - Navigation

@@ -12,7 +12,7 @@
 #import "SWRevealViewController.h"
 #import "HackathonAppManager.h"
 #import "ViewController.h"
-
+#import "Prefix.pch"
 @interface LeftDeckViewController (){
     NSArray *itemsArray ;
     CGSize screenSize;
