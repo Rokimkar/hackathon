@@ -40,10 +40,8 @@
     // Do any additional setup after loading the view from its nib.
 }
 
--(void) viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self setBtnTitle];
-
+-(void)viewDidAppear:(BOOL)animated{
+    self.navigationController.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning {

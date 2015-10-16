@@ -81,6 +81,7 @@
                 subCategoriesArray = [[HackathonAppManager sharedInstance] getSubCategoriesFor:selectedCategory];
                 CategoryDetailViewController *controller = [[CategoryDetailViewController alloc] initWithCategory:selectedCategory andSubCategoryArray:subCategoriesArray];
                 controller.delegate=self;
+                controller.title=selectedCategory;
                 controller.view.backgroundColor = [UIColor clearColor];
                 controller.menuBar.indicatorColor = [UIColor blackColor];
                 UINavigationController *navCont = [[UINavigationController alloc] initWithRootViewController:controller];
