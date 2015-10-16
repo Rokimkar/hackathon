@@ -31,6 +31,8 @@
     // Do any additional setup after loading the view.
     [self.itemListTableView registerNib:[UINib nibWithNibName:@"LeftDeckTableViewCell" bundle:nil] forCellReuseIdentifier:@"LeftDeckTableViewCell"];
     self.itemListTableView.scrollEnabled=NO;
+    self.itemListTableView.backgroundColor=RGBA(196, 56, 64, 1);
+    //self.itemListTableView.separatorColor = [UIColor clearColor];
 }
 
 - (SWRevealViewController*)revealViewController
@@ -62,6 +64,7 @@
         cell = [nib objectAtIndex:0];
     }
     cell.labelForItems.text=[itemsArray objectAtIndex:indexPath.row];
+    cell.backgroundColor=RGBA(196, 56, 64, 1);
     return cell;
 }
 

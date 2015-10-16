@@ -23,6 +23,7 @@
     ProductData *prodData = [[ProductData alloc] init];
     [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
         baseTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0,194, self.view.frame.size.width, self.view.frame.size.height-50) andProductsArray:data];
+        baseTableView.separatorColor = [UIColor clearColor];
         [self.view addSubview:baseTableView];
         
     } failure:^(NSError *error) {

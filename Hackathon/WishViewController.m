@@ -26,7 +26,6 @@
     
     ProductData *prodData = [[ProductData alloc] init];
     [self showResponsesCollectionView];
-
     [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
         
         self.dataArray = data;

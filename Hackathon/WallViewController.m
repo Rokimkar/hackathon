@@ -10,6 +10,7 @@
 #import "SWRevealViewController.h"
 #import "ProductData.h"
 #import "BaseTableView.h"
+#import "Prefix.pch"
 
 
 @interface WallViewController (){
@@ -26,6 +27,8 @@
     ProductData *prodData = [[ProductData alloc] init];
     [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
         wallTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-50) andProductsArray:data];
+        wallTableView.separatorColor = [UIColor clearColor];
+        wallTableView.backgroundColor=RGBA(244, 245, 244, 1);
         [self.view addSubview:wallTableView];
         
     } failure:^(NSError *error) {

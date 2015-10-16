@@ -10,6 +10,7 @@
 #import "SubcategorydetailViewController.h"
 #import "ProductData.h"
 #import "SWRevealViewController.h"
+#import "Prefix.pch"
 @interface  CategoryDetailViewController()
 {
     CGSize screenSize;
@@ -52,13 +53,14 @@
     
     [super viewDidLoad];
 
-    
+    self.menuBar.backgroundColor = RGBA(244, 245, 244, 1);
+    self.view.backgroundColor = [UIColor clearColor];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationItem.leftBarButtonItem=[self getLeftMenuButton];
-
+    self.view.backgroundColor = [UIColor clearColor];
     
 }
 

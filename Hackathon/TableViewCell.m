@@ -9,6 +9,7 @@
 #import "TableViewCell.h"
 #import "HackathonAppManager.h"
 #import "UIImageView+AFNetworking.h"
+#import "Prefix.pch"
 @implementation TableViewCell
 
 - (void)awakeFromNib {
@@ -35,12 +36,14 @@
 }
 
 -(void) bindDataFor:(Product*) product{
-    
+    self.backgroundColor=RGBA(244, 245, 244, 1);
     self.descriptionLabel.text=product.title;
     self.descriptionLabel.numberOfLines=0;
-//    self.descriptionLabel.sizeToFit;
-    self.priceLabel.text=product.price;
+    self.descriptionLabel.sizeToFit;
+    self.priceLabel.text=[NSString stringWithFormat:@"₹ %@",product.price];
+    self.priceLabel.textColor=RGBA(192, 56, 64, 1);
     self.product=product;
+    self.sellerLabel.text=[NSString stringWithFormat:@"by %@",product.seller];
     
     if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
         [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];

@@ -11,5 +11,6 @@
 @interface BaseTableView : UITableView
 @property (strong,nonatomic) NSArray *productArray;
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSArray*) prodSArray;
+@property (weak,nonatomic) UIViewController *parentViewCont;
 
 @end
