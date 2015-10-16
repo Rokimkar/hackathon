@@ -54,7 +54,7 @@
     
     NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:product.img1] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
     
-    [self.imageViewForProduct setImageWithURLRequest:req placeholderImage:[UIImage imageNamed:@""] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+    [self.imageViewForProduct setImageWithURLRequest:req placeholderImage:[UIImage imageNamed:@"placeHolderImage.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         
         if (!request) {
             self.imageViewForProduct.image=image;

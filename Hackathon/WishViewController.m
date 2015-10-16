@@ -11,7 +11,7 @@
 #import "ProductData.h"
 #import "AddWishViewController.h"
 #import "CollectionViewCell.h"
-#define SPACING 10.0
+#define SPACING 20.0
 @interface WishViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 {
     BaseTableView *wishTableView;
