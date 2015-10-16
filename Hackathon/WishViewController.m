@@ -12,6 +12,7 @@
 #import "AddWishViewController.h"
 #import "CollectionViewCell.h"
 #import "Prefix.pch"
+#import "ProductDetailViewController.h"
 #define SPACING 10.0
 @interface WishViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 {
@@ -136,10 +137,27 @@
     return UIEdgeInsetsMake(SPACING, SPACING, SPACING, SPACING);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    ProductDetailViewController *vc = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil andProduct:[self.dataArray objectAtIndex:indexPath.row]];
+    UINavigationController *navCont = [self getViewController];
+    if (navCont) {
+        [navCont pushViewController:vc animated:YES];
+    }
+    else{
+    }
+
     
 }
 
+- (UINavigationController *)getViewController {
+    UIResponder *nextResponderView = [self nextResponder];
+    while (![nextResponderView isKindOfClass:[UINavigationController class]]) {
+        nextResponderView = [nextResponderView nextResponder];
+        if (nil == nextResponderView) {
+            break;
+        }
+    }
+    return (UINavigationController *)nextResponderView;
+}
 
 
 /*

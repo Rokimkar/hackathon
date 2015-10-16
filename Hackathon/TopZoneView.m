@@ -9,6 +9,7 @@
 #import "TopZoneView.h"
 #import "TopZoneCollectionViewCell.h"
 #import "Prefix.pch"
+#import "HackathonAppManager.h"
 @implementation TopZoneView
 
 /*
@@ -157,7 +158,7 @@
     [collectionView dequeueReusableCellWithReuseIdentifier:@"TopZoneCollectionViewCell"
                                               forIndexPath:indexPath];//    [cell setBackgroundColor:[UIColor redColor]];
 //    [cell bindItemData:[self.productsArray objectAtIndex:indexPath.row]];
-    
+    cell.product=self.product;
     if (indexPath.row==0) {
         [cell bindItemData:self.product];
         [cell bindImageFor:self.product.img1];
@@ -169,6 +170,13 @@
     else if (indexPath.row==2) {
                 [cell bindItemData:self.product];
         [cell bindImageFor:self.product.img3];
+    }   if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
+        [cell.favButtonTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
+        [cell.favButtonTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateHighlighted];
+    }
+    else{
+        [cell.favButtonTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateNormal];
+        [cell.favButtonTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateHighlighted];
     }
     return cell;
 }

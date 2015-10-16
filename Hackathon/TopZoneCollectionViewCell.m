@@ -8,6 +8,8 @@
 
 #import "TopZoneCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "HackathonAppManager.h"
+
 @implementation TopZoneCollectionViewCell
 
 - (void)awakeFromNib {
@@ -31,18 +33,22 @@
                                                   cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                               timeoutInterval:60];
     
-    [self.bgImageView setImageWithURLRequest:imageRequest placeholderImage:[UIImage imageNamed:@"cardLayout.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        [self.bgImageView setContentMode:UIViewContentModeScaleAspectFit];
-        if (!request) // image was cached
+    [self.bgImageView setImageWithURLRequest:imageRequest placeholderImage:[UIImage imageNamed:@"placeHolderImage.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        [self.bgImageView setContentMode:UIViewContentModeCenter];
+        if (!request){ // image was cached
+            [self.bgImageView setContentMode:UIViewContentModeScaleAspectFit];
             [self.bgImageView setImage:image];
-        else
+        }
+        else{
             [UIView transitionWithView:self.bgImageView
                               duration:1.0f
                                options:UIViewAnimationOptionTransitionCrossDissolve
                             animations:^{
+                                [self.bgImageView setContentMode:UIViewContentModeScaleAspectFit];
                                 self.bgImageView.image = image;
                                 
                             } completion:NULL];
+        }
         
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
@@ -51,4 +57,16 @@
     
 }
 
+- (IBAction)favButtonTapped:(id)sender {
+    if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
+        [[HackathonAppManager sharedInstance]removeItemFromFavIdsArray:[NSNumber numberWithInteger: self.product.prodId]];
+        [self.favButtonTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateNormal];
+        [self.favButtonTapped  setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateHighlighted];
+    }
+    else{
+        [self.favButtonTapped  setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
+        [self.favButtonTapped  setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateHighlighted];
+        [[HackathonAppManager sharedInstance]addItemInFavIdsArray:[NSNumber numberWithInteger: self.product.prodId]];
+    }
+}
 @end
