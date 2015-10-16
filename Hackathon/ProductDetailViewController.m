@@ -35,6 +35,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    self.navigationController.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

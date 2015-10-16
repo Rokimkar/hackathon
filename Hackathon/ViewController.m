@@ -46,6 +46,7 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
         revealController.rearViewRevealWidth=150.0f;
     }
+    self.title=@"Home";
     //wallViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"mc" image:image selectedImage:image];
 }
 
