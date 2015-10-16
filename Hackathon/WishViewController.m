@@ -26,6 +26,8 @@
     screenSize = ([UIScreen mainScreen]).bounds.size;
     
     ProductData *prodData = [[ProductData alloc] init];
+    [self showResponsesCollectionView];
+
     [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
         
         self.dataArray = data;
@@ -51,11 +53,11 @@
 -(void) viewWillAppear:(BOOL)animated{
     if (self.topSegmentControl.selectedSegmentIndex==0) {
         self.addNewWishBtn.hidden=NO;
-        self.responsesCollectionView.hidden=YES;
-        [self showResponsesCollectionView];
+        self.responsesCollectionView.hidden=NO;
     }
     else{
         self.addNewWishBtn.hidden=YES;
+        self.responsesCollectionView.hidden=YES;
         [self showFavTableView];
     }
 }
@@ -82,19 +84,11 @@
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     NSInteger width = (screenSize.width-3*SPACING)*0.5;
     layout.itemSize = CGSizeMake(width, width);
-    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    layout.minimumLineSpacing = width;
-    layout.minimumInteritemSpacing = width;
+    [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    layout.minimumLineSpacing = SPACING;
+    layout.minimumInteritemSpacing = SPACING;
     self.responsesCollectionView.collectionViewLayout=layout;
     [self.responsesCollectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCell"];
-    
-    
-}
-
-
-
--(void) setLayout{
-    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -103,20 +97,16 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCell" forIndexPath:indexPath];
-
+    [cell bindData:[self.dataArray objectAtIndex:indexPath.row]];
     
     return cell;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(5, 5, 5, 5);
+    return UIEdgeInsetsMake(SPACING, SPACING, SPACING, SPACING);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-//    NSInteger rows = [collectionView numberOfItemsInSection:indexPath.section];
-//    if (indexPath.row == rows-1 && imagesArray.count<IMAGES_ALLOWED) {
-//        [self startImagePicking];
-//    }
     
 }
 
