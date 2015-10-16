@@ -8,6 +8,7 @@
 
 #import "SubcategorydetailViewController.h"
 #import "BaseTableView.h"
+#import "Prefix.pch"
 @interface SubcategorydetailViewController (){
     BaseTableView *tableView;
     CGSize screenSize;
@@ -34,6 +35,7 @@
     self.subLabel.text = self.subCategoryTitle;
     tableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, screenSize.height-100) andProductsArray:self.dataArray];
     tableView.separatorColor = [UIColor clearColor];
+    tableView.backgroundColor = RGBA(244, 245, 244, 1);
     [self.view addSubview:tableView];
 
     // Do any additional setup after loading the view from its nib.

@@ -9,7 +9,7 @@
 #import "BaseTableView.h"
 #import "TableViewCell.h"
 #import "ProductDetailViewController.h"
-
+#import "Prefix.pch"
 @implementation BaseTableView
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSArray*) prodsArray{
@@ -18,6 +18,7 @@
     self.dataSource=self;
     self.delegate=self;
     [self registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"TableViewCell"];
+    
     return [self initWithFrame:frame];
 }
 
