@@ -154,6 +154,8 @@
     if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
         vc.btnTitle=@"Respond";
     }
+    else{
+    }
 
     [self.navigationController pushViewController:vc animated:YES];
     

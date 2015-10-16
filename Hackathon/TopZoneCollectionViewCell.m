@@ -25,19 +25,18 @@
 //        [self bindImageFor:itemData.productThumbnail];
     self.mainLabel.text=itemData.type;
 
-    if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
-        self.mainLabel.hidden=YES;
-    }
-    else{
-        WishViewController *vc = (WishViewController*)[self getViewController];
-        if (vc) {
-            self.mainLabel.hidden=NO;
-        }
-        else{
-                 self.mainLabel.hidden=YES;
-        }
-    }
-    
+//    if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+//        self.mainLabel.hidden=YES;
+//    }
+//    else{
+//        if (self.isWish) {
+//            self.mainLabel.hidden=NO;
+//        }
+//        else{
+//                 self.mainLabel.hidden=YES;
+//        }
+//    }
+    self.mainLabel.hidden=YES;
 //    self.bgImageView.image = [UIImage imageNamed:@"addIcon"];
 }
 
@@ -71,15 +70,17 @@
     
 }
 
-- (UIViewController *)getViewController {
-    UIResponder *nextResponderView = [self nextResponder];
-    while (![nextResponderView isKindOfClass:[WishViewController class]]) {
-        nextResponderView = [nextResponderView nextResponder];
-        if (nil == nextResponderView) {
-            break;
-        }
+- (IBAction)favButtonTapped:(id)sender {
+    if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
+        [[HackathonAppManager sharedInstance]removeItemFromFavIdsArray:[NSNumber numberWithInteger: self.product.prodId]];
+        [self.favButtonTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateNormal];
+        [self.favButtonTapped  setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateHighlighted];
     }
-    return (UIViewController *)nextResponderView;
+    else{
+        [self.favButtonTapped  setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
+        [self.favButtonTapped  setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateHighlighted];
+        [[HackathonAppManager sharedInstance]addItemInFavIdsArray:[NSNumber numberWithInteger: self.product.prodId]];
+    }
 }
 
 @end

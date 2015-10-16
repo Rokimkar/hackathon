@@ -16,6 +16,8 @@
 @property (assign, nonatomic) NSInteger noOfItems;
 @property (nonatomic,strong) NSArray* productsArray;
 @property (nonatomic,strong) Product* product;
+@property (assign, nonatomic) BOOL isWish;
+
 -(id) initWithFrame: (CGRect)frame andItems: (NSArray*) productArray;
 -(id) initWithFrame: (CGRect)frame andProduct:(Product*)product;
 
