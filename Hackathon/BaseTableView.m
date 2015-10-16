@@ -48,12 +48,11 @@
     }
 //    cell.imageViewForProduct.image=[self resizeImage:[UIImage imageNamed:@"search.png"] toSize:CGSizeMake(40, 30)];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
-    [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_unselected.png"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
-    if(indexPath.row==5){
-        [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_selected.jpeg"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
-    }
+//    [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_unselected.png"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
+//    if(indexPath.row==5){
+//        [cell.buttonForFavoriteTapped setBackgroundImage:[self  resizeImage:[UIImage imageNamed:@"favorite_selected.jpeg"] toSize:CGSizeMake(10, 10)] forState:UIControlStateNormal];
+//    }
     [cell bindDataFor:[_productArray objectAtIndex:indexPath.row]];
-    
     return cell;
 }
 

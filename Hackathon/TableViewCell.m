@@ -7,6 +7,7 @@
 //
 
 #import "TableViewCell.h"
+#import "HackathonAppManager.h"
 #import "UIImageView+AFNetworking.h"
 @implementation TableViewCell
 
@@ -21,14 +22,35 @@
 }
 
 - (IBAction)buttonForFavoriteTapped:(id)sender {
+    if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
+        [[HackathonAppManager sharedInstance]removeItemFromFavIdsArray:[NSNumber numberWithInteger: self.product.prodId]];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_unselected.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_unselected.png"] forState:UIControlStateHighlighted];
+    }
+    else{
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_selected.jpeg"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_selected.jpeg"] forState:UIControlStateHighlighted];
+        [[HackathonAppManager sharedInstance]addItemInFavIdsArray:[NSNumber numberWithInteger: self.product.prodId]];
+    }
 }
 
 -(void) bindDataFor:(Product*) product{
     
     self.descriptionLabel.text=product.title;
     self.descriptionLabel.numberOfLines=0;
-    self.descriptionLabel.sizeToFit;
+//    self.descriptionLabel.sizeToFit;
     self.priceLabel.text=product.price;
+    self.product=product;
+    
+    if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_selected.jpeg"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_selected.jpeg"] forState:UIControlStateHighlighted];
+    }
+    else{
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_unselected.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_unselected.png"] forState:UIControlStateHighlighted];
+    }
+
     
     NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:product.img1] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
     

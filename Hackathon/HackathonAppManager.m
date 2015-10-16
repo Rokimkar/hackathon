@@ -31,7 +31,7 @@
 -(id)init
 {
     self = [super init];
-
+    self.favIdsArray = [[NSMutableArray alloc]init];
     return self;
     
 }
@@ -78,7 +78,21 @@
     
 }
 
+-(BOOL) productExist:(NSNumber *)prodId{
+    if([self.favIdsArray containsObject:prodId]){
+        if([self.favIdsArray indexOfObject:prodId]<[self.favIdsArray count]&&[self.favIdsArray indexOfObject:prodId]>=0){
+            return YES;
+        }
+    }
+    return  NO;
+}
 
+-(void) removeItemFromFavIdsArray:(NSNumber *)prodId{
+    [self.favIdsArray removeObject:prodId];
+}
 
+-(void) addItemInFavIdsArray:(NSNumber *)prodId{
+    [self.favIdsArray addObject:prodId];
+}
 
 @end
