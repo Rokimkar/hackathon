@@ -13,6 +13,7 @@
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *prodDesc;
 @property (nonatomic,strong) NSString *price;
+@property (nonatomic,strong) NSString *upperPrice;
 @property (nonatomic,assign) int quantity;
 @property (nonatomic,assign) int prodId;
 @property (nonatomic,strong) NSString *category;

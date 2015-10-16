@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "AddWishViewController.h"
 @interface HackathonAppManager : NSObject
 
 
@@ -15,6 +15,7 @@
 
 -(NSArray*) getSubCategoriesFor:(NSString*) category;
 @property (strong,nonatomic)NSMutableArray* favIdsArray;
+@property (assign,nonatomic) UserType appUserType;
 -(BOOL) productExist:(NSNumber *)prodId;
 -(void) removeItemFromFavIdsArray:(NSNumber *)prodId;
 -(void) addItemInFavIdsArray:(NSNumber *)prodId;

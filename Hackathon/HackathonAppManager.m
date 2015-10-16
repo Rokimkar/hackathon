@@ -32,6 +32,7 @@
 {
     self = [super init];
     self.favIdsArray = [[NSMutableArray alloc]init];
+//    self.appUserType=kBuyer;
     return self;
     
 }

@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *qtyLabel;
+@property (assign, nonatomic) BOOL isWish;
 
 -(void) bindData:(Product*) product;
 

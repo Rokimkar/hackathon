@@ -14,4 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *detailTableView;
 @property (weak,nonatomic) Product *product;
+@property (weak, nonatomic) IBOutlet UIButton *buyBtnPressed;
+@property (strong, nonatomic) NSString *btnTitle;
+
 @end
