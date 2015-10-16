@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+NSCoding.h"
 
-@interface Product : NSObject
+@interface Product : NSObject<NSCoding>
 
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *prodDesc;

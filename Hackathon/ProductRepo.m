@@ -1,14 +1,15 @@
 //
-//  Product.m
-//  ImagePickerProject
+//  ProductRepo.m
+//  Hackathon
 //
-//  Created by Kunal Chelani on 10/12/15.
-//  Copyright © 2015 til. All rights reserved.
+//  Created by Kunal Chelani on 10/17/15.
+//  Copyright © 2015 Sanchit Kumar Singh. All rights reserved.
 //
 
-#import "Product.h"
+#import "ProductRepo.h"
 
-@implementation Product
+@implementation ProductRepo
+
 
 
 -(instancetype) init
@@ -16,7 +17,7 @@
     self=[super init];
     if(self)
     {
-        
+        self.prodsArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -31,5 +32,6 @@
     }
     return self;
 }
+
 
 @end

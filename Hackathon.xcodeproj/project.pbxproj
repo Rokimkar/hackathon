@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C31A02B1BD1BA120052AFBF /* ProductRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C31A02A1BD1BA120052AFBF /* ProductRepo.m */; settings = {ASSET_TAGS = (); }; };
 		0C369B5F1BD0206C00EE5539 /* HackathonAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C369B5E1BD0206C00EE5539 /* HackathonAppManager.m */; };
 		0C369B611BD029AC00EE5539 /* CategoriesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C369B601BD029AC00EE5539 /* CategoriesList.plist */; };
 		0C958F9D1BCED670007A7694 /* ProductDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C958F901BCED670007A7694 /* ProductDescriptionTableViewCell.m */; };
@@ -112,6 +113,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C31A0291BD1BA120052AFBF /* ProductRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductRepo.h; sourceTree = "<group>"; };
+		0C31A02A1BD1BA120052AFBF /* ProductRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductRepo.m; sourceTree = "<group>"; };
 		0C369B5D1BD0206C00EE5539 /* HackathonAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HackathonAppManager.h; sourceTree = "<group>"; };
 		0C369B5E1BD0206C00EE5539 /* HackathonAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HackathonAppManager.m; sourceTree = "<group>"; };
 		0C369B601BD029AC00EE5539 /* CategoriesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoriesList.plist; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 				0C958FEF1BCED8AC007A7694 /* ProductData.h */,
 				0C958FF01BCED8AC007A7694 /* ProductData.m */,
 				0C958FED1BCED882007A7694 /* prods.json */,
+				0C31A0291BD1BA120052AFBF /* ProductRepo.h */,
+				0C31A02A1BD1BA120052AFBF /* ProductRepo.m */,
 			);
 			name = ModalClasses;
 			sourceTree = "<group>";
@@ -795,6 +800,7 @@
 				A0A7AAB41BCD851D00F0CBFC /* TableViewCell.m in Sources */,
 				0C958FF11BCED8AC007A7694 /* ProductData.m in Sources */,
 				2F1668E21BC5580D00744672 /* AppDelegate.m in Sources */,
+				0C31A02B1BD1BA120052AFBF /* ProductRepo.m in Sources */,
 				0CA5D65C1BCFC6750017004C /* CategoryDetailViewController.m in Sources */,
 				0CA5D6791BCFD4870017004C /* RMPScrollingMenuBarControllerTransition.m in Sources */,
 				0C958F9F1BCED670007A7694 /* ProductDetailsTableViewCell.m in Sources */,

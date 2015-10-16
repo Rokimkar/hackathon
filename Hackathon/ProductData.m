@@ -48,9 +48,35 @@
     {
         success([self getFavDataFrom:[object valueForKey:@"items"]]);
     }
+}
 
+- (void) fetchWishDataWithSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure{
     
     
+    id object = [self getObjectFromJSON];
+    if (!object) {
+        failure(nil);
+    }
+    else
+    {
+        NSMutableArray* dataArray = [self getFavDataFrom:[self getDataFrom:[object valueForKey:@"items"] forCategory:@"Clothing"]];
+        if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+            NSMutableArray *array = [HackathonAppManager sharedInstance].sellerResponses.prodsArray;
+            if (!array) {
+                array = [[NSMutableArray alloc] init];
+            }
+            [array addObjectsFromArray:dataArray];
+            success(array);
+        }
+        else{
+            NSMutableArray *array = [HackathonAppManager sharedInstance].buyerWishes.prodsArray;
+            if (!array) {
+                array = [[NSMutableArray alloc] init];
+            }
+            [array addObjectsFromArray:dataArray];
+            success(array);
+        }
+    }
 }
 
 

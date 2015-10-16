@@ -18,4 +18,7 @@
 
 - (void) fetchAllDataWithSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure;
 
+- (void) fetchWishDataWithSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure;
+
+
 @end

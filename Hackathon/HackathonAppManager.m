@@ -7,7 +7,7 @@
 //
 
 #import "HackathonAppManager.h"
-
+#import "Archiver.h"
 @implementation HackathonAppManager
 
 
@@ -33,6 +33,14 @@
     self = [super init];
     self.favIdsArray = [[NSMutableArray alloc]init];
     self.appUserType=kBuyer;
+    self.buyerWishes = [Archiver retrieve:@"buyerWishes"];
+    if (!self.buyerWishes) {
+        self.buyerWishes = [[ProductRepo alloc] init];
+    }
+    self.sellerResponses = [Archiver retrieve:@"sellerResponses"];
+    if (!self.sellerResponses) {
+        self.sellerResponses = [[ProductRepo alloc] init];
+    }
     return self;
     
 }
@@ -94,6 +102,20 @@
 
 -(void) addItemInFavIdsArray:(NSNumber *)prodId{
     [self.favIdsArray addObject:prodId];
+}
+
+-(void) addProduct:(Product*) product{
+    
+    if (self.appUserType==kSeller) {
+        [self.sellerResponses.prodsArray addObject:product];
+        [Archiver delete:@"sellerResponses"];
+        [Archiver persist:self.sellerResponses key:@"sellerResponses"];
+    }
+    else{
+        [self.buyerWishes.prodsArray addObject:product];
+        [Archiver delete:@"buyerWishes"];
+        [Archiver persist:self.buyerWishes key:@"buyerWishes"];
+    }
 }
 
 @end

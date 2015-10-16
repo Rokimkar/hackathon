@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NSObject-NSCoding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Hackathon.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>124E3FF85D45C8EE938F3FB1D1FFDEEB</key>
+		<key>09267372F977A8B66A9E89E6E1FB7687</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>94400C31EAF0A5923DB0B47760B98937</key>
+		<key>3DD9F24AC38038D6D81BF2E6A78593C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9583692ADF852ECEC68C28F135950DBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

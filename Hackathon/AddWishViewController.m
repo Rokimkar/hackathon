@@ -409,9 +409,9 @@
         self.product.price = [NSString stringWithFormat:@"%@ to %@",self.lowerRange.text,self.higherRange.text ];
         alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Your wish has been posted." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     }
-    
     alertView.tag=404;
     [alertView show];
+    [[HackathonAppManager sharedInstance] addProduct:self.product];
 }
 
 /*
