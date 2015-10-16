@@ -59,9 +59,10 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.view.backgroundColor = [UIColor clearColor];
     self.navigationItem.leftBarButtonItem=[self getLeftMenuButton];
     self.view.backgroundColor = [UIColor clearColor];
-    
+    [self.containerView setBackgroundColor:[UIColor clearColor]];
 }
 
 
