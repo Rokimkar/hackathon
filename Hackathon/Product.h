@@ -20,5 +20,8 @@
 @property (nonatomic,strong) NSString *img1;
 @property (nonatomic,strong) NSString *img2;
 @property (nonatomic,strong) NSString *img3;
+@property (nonatomic,strong) NSString *seller;
+@property (nonatomic,strong) NSString *type;
+
 
 @end

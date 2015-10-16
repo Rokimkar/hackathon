@@ -8,6 +8,7 @@
 
 #import "TopZoneView.h"
 #import "TopZoneCollectionViewCell.h"
+#import "Prefix.pch"
 @implementation TopZoneView
 
 /*
@@ -28,6 +29,19 @@
     }
     return self;
 }
+
+-(id) initWithFrame: (CGRect)frame andProduct:(Product*)product
+{
+    self=[super initWithFrame:frame];
+    if (self) {
+        self.product=product;
+        self.noOfItems=3;
+        [self initCollectionView];
+        [self initPageControl];
+    }
+    return self;
+}
+
 
 -(void) initCollectionView
 {
@@ -72,7 +86,7 @@
     self.pageControl.numberOfPages = 3;
     self.pageControl.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
-    self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+    self.pageControl.currentPageIndicatorTintColor = RGBA(51, 73, 255, 1.0);
     [self addSubview:self.pageControl];
 }
 
@@ -142,7 +156,20 @@
     TopZoneCollectionViewCell *cell =
     [collectionView dequeueReusableCellWithReuseIdentifier:@"TopZoneCollectionViewCell"
                                               forIndexPath:indexPath];//    [cell setBackgroundColor:[UIColor redColor]];
-    [cell bindItemData:[self.productsArray objectAtIndex:indexPath.row]];
+//    [cell bindItemData:[self.productsArray objectAtIndex:indexPath.row]];
+    
+    if (indexPath.row==0) {
+        [cell bindItemData:self.product];
+        [cell bindImageFor:self.product.img1];
+    }
+    else if (indexPath.row==1) {
+                [cell bindItemData:self.product];
+        [cell bindImageFor:self.product.img2];
+    }
+    else if (indexPath.row==2) {
+                [cell bindItemData:self.product];
+        [cell bindImageFor:self.product.img3];
+    }
     return cell;
 }
 

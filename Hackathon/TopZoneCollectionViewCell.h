@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *mainLabel;
 
 -(void) bindItemData :(Product*) itemData;
+-(void) bindImageFor:(NSString*) imageUrl;
 
 
 @end

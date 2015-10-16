@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Product.h"
 
 @interface TopZoneView : UIView <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -14,6 +15,8 @@
 @property (strong, nonatomic) UIPageControl *pageControl;
 @property (assign, nonatomic) NSInteger noOfItems;
 @property (nonatomic,strong) NSArray* productsArray;
+@property (nonatomic,strong) Product* product;
 -(id) initWithFrame: (CGRect)frame andItems: (NSArray*) productArray;
+-(id) initWithFrame: (CGRect)frame andProduct:(Product*)product;
 
 @end

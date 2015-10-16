@@ -11,6 +11,7 @@
 #import "ProductDetailsTableViewCell.h"
 #import "ProductDescriptionTableViewCell.h"
 #import "Product.h"
+#import "Prefix.pch"
 @interface ProductDetailViewController () <UITableViewDelegate,UITableViewDataSource>
 {
     CGSize screenSize;
@@ -30,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     screenSize = ([[UIScreen mainScreen] bounds]).size;
+    self.detailTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -57,7 +59,8 @@
     UITableViewCell *cell;
     if (indexPath.section==0 && indexPath.row==0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        TopZoneView *topZoneView = [[TopZoneView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, 172) andItems:nil];
+//        TopZoneView *topZoneView = [[TopZoneView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, 172) andItems:imagesarr];
+        TopZoneView *topZoneView = [[TopZoneView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, 172) andProduct:self.product];
         [cell setBackgroundColor:[UIColor greenColor]];
         [cell addSubview:topZoneView];
     }
@@ -68,7 +71,7 @@
             NSArray *cellnib = [[NSBundle mainBundle] loadNibNamed:@"ProductDetailsTableViewCell" owner:self options:nil];
             cell = (ProductDetailsTableViewCell *)[cellnib objectAtIndex:0];
         }
-        [(ProductDetailsTableViewCell*)cell bindData:nil];
+        [(ProductDetailsTableViewCell*)cell bindData:self.product];
     }
     else{
         cell = (ProductDescriptionTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"ProductDescriptionTableViewCell"];
@@ -77,14 +80,12 @@
             NSArray *cellnib = [[NSBundle mainBundle] loadNibNamed:@"ProductDescriptionTableViewCell" owner:self options:nil];
             cell = (ProductDescriptionTableViewCell *)[cellnib objectAtIndex:0];
         }
-        [(ProductDescriptionTableViewCell*)cell bindDataFor:nil];
+        [(ProductDescriptionTableViewCell*)cell bindDataFor:self.product];
     }
     
     [cell setNeedsUpdateConstraints];
     [cell updateConstraintsIfNeeded];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-    
     return cell;
 }
 
@@ -93,10 +94,9 @@
     if (indexPath.section==0 && indexPath.row==0)
         return 172;
     else if (indexPath.section==0 && indexPath.row==1)
-        return 128;
+        return 105;
     else if(indexPath.section==1)
         return [self heightForBasicCellAtIndexPath:indexPath];
-    
     return 100;
 }
 
@@ -110,7 +110,7 @@
             NSArray *cellnib = [[NSBundle mainBundle] loadNibNamed:@"ProductDescriptionTableViewCell" owner:self options:nil];
             sizingCell = (ProductDescriptionTableViewCell *)[cellnib objectAtIndex:0];
         });
-    sizingCell.descLabel.text=@"hdjkdhsdljkhdkjlhdskjldshdlkjhdskjhdsvkjdhdvslkjhdsjkhhdkjdhdkshsdkjdhdskhjbdhbdjbdskjdsbdkjbdkjbdckjbdkjbdkjbdkjbdkjbdkjbdkbdkbdkjbdskjdbskjdbskdjsbdskjbdkjbdkbdkjbdkjbdkjbdkjbdkjbdkdjsbdbdkjbdskjbsdkjdbkjdbdkjbdkjbdkjdbdkjbdkjbdkjbdkjbdkjbdskjbdkjbdkjbdkbdsvdskjdskjbdsjkbdskjbddjbdvbdsdbdskjbdskjbdfskbdskddkdkdkjdvkbdjkbdskbdkbdskjdkjdskbdvskbjcdksdkbdvkdkdfdskdskbdskbdkbdksfbkdbkbdkbdkbddkbdkb";
+    sizingCell.descLabel.text=self.product.prodDesc;
         return [self calculateHeightForConfiguredSizingCell:sizingCell];
 }
 
@@ -131,10 +131,9 @@
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, 44)];
         UILabel *lbl =[[UILabel alloc] initWithFrame:CGRectMake(30, 0, screenSize.width, 44)];
         lbl.text=@"Description";
-//        lbl.textColor=RGBA(98, 98, 98, 1);
+        lbl.textColor=RGBA(256, 256, 256, 1);
 //        lbl.font=[UIFont fontWithName:@"SinkinSans-300Light" size:15];
-//        [view setBackgroundColor:RGBA(245, 246, 245, 1.0)];
-        [view setBackgroundColor:[UIColor lightGrayColor]];
+        [view setBackgroundColor:RGBA(5, 173, 255, 1.0)];
         [view addSubview:lbl];
         return view;
     }

@@ -58,7 +58,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ProductDetailViewController *vc = [[ProductDetailViewController alloc]init];
+    ProductDetailViewController *vc = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil andProduct:[self.productArray objectAtIndex:indexPath.row]];
     UINavigationController *navCont = [self getViewController];
     if (navCont) {
         [navCont pushViewController:vc animated:YES];

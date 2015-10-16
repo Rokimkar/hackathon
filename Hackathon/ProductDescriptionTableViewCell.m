@@ -14,7 +14,7 @@
 }
 
 -(void) bindDataFor :(Product*) product{
-    [self justifyTextWith:@"hdjkdhsdljkhdkjlhdskjldshdlkjhdskjhdsvkjdhdvslkjhdsjkhhdkjdhdkshsdkjdhdskhjbdhbdjbdskjdsbdkjbdkjbdckjbdkjbdkjbdkjbdkjbdkjbdkbdkbdkjbdskjdbskjdbskdjsbdskjbdkjbdkbdkjbdkjbdkjbdkjbdkjbdkdjsbdbdkjbdskjbsdkjdbkjdbdkjbdkjbdkjdbdkjbdkjbdkjbdkjbdkjbdskjbdkjbdkjbdkbdsvdskjdskjbdsjkbdskjbddjbdvbdsdbdskjbdskjbdfskbdskddkdkdkjdvkbdjkbdskbdkbdskjdkjdskbdvskbjcdksdkbdvkdkdfdskdskbdskbdkbdksfbkdbkbdkbdkbddkbdkb"];
+    [self justifyTextWith:product.prodDesc];
 }
 
 -(void) justifyTextWith:(NSString*) myText
