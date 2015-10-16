@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Product.h"
 @interface CollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageForProduct;
 @property (weak, nonatomic) IBOutlet UIButton *buttonForFavoriteTapped;
 - (IBAction)buttonForFavoriteTapped:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *labelForProductInformation;
+
+-(void) bindData:(Product*)product;
 
 @end

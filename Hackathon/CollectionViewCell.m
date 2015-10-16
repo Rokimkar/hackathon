@@ -16,4 +16,12 @@
 
 - (IBAction)buttonForFavoriteTapped:(id)sender {
 }
+
+
+-(void) bindData:(Product*)product{
+    
+    
+}
+
+
 @end

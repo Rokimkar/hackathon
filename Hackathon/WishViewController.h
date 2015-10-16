@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *topSegmentControl;
 @property (weak, nonatomic) IBOutlet UIButton *addNewWishBtn;
 @property (weak, nonatomic) IBOutlet UICollectionView *responsesCollectionView;
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end

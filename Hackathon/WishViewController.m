@@ -10,6 +10,7 @@
 #import "BaseTableView.h"
 #import "ProductData.h"
 #import "AddWishViewController.h"
+#import "CollectionViewCell.h"
 #define SPACING 10.0
 @interface WishViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 {
@@ -24,14 +25,17 @@
     [super viewDidLoad];
     screenSize = ([UIScreen mainScreen]).bounds.size;
     
-//    ProductData *prodData = [[ProductData alloc] init];
-//    [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
+    ProductData *prodData = [[ProductData alloc] init];
+    [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
+        
+        self.dataArray = data;
+        
 //        wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-50) andProductsArray:data];
 //        [self.view addSubview:wishTableView];
-//        
-//    } failure:^(NSError *error) {
-//        
-//    }];
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
     // Do any additional setup after loading the view.
 }
@@ -48,7 +52,7 @@
     if (self.topSegmentControl.selectedSegmentIndex==0) {
         self.addNewWishBtn.hidden=NO;
         self.responsesCollectionView.hidden=YES;
-//        [self showResponsesCollectionView];
+        [self showResponsesCollectionView];
     }
     else{
         self.addNewWishBtn.hidden=YES;
@@ -72,17 +76,17 @@
 
 #pragma mark UICollectionViewMethods
 
-/*
+
 -(void) showResponsesCollectionView{
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    NSInteger width = (screenSize.width-3*width)*0.5;
-    layout.itemSize = CGSizeMake(90, 90);
+    NSInteger width = (screenSize.width-3*SPACING)*0.5;
+    layout.itemSize = CGSizeMake(width, width);
     [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    layout.minimumLineSpacing = 10;
-    layout.minimumInteritemSpacing = 10;
-    self.imagesCollView.collectionViewLayout=layout;
-    [self.imagesCollView registerNib:[UINib nibWithNibName:@"ImagesCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ImagesCollectionViewCell"];
+    layout.minimumLineSpacing = width;
+    layout.minimumInteritemSpacing = width;
+    self.responsesCollectionView.collectionViewLayout=layout;
+    [self.responsesCollectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCell"];
     
     
 }
@@ -94,19 +98,13 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    if (imagesArray.count<IMAGES_ALLOWED) {
-        return imagesArray.count+1;
-    }
-    else{
-        return imagesArray.count;
-    }
+    return self.dataArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    ImagesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImagesCollectionViewCell" forIndexPath:indexPath];
-    if (indexPath.row<imagesArray.count) {
-        cell.imgView.image = [imagesArray objectAtIndex:indexPath.row];
-    }
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCell" forIndexPath:indexPath];
+
+    
     return cell;
 }
 
@@ -115,13 +113,13 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSInteger rows = [collectionView numberOfItemsInSection:indexPath.section];
-    if (indexPath.row == rows-1 && imagesArray.count<IMAGES_ALLOWED) {
-        [self startImagePicking];
-    }
+//    NSInteger rows = [collectionView numberOfItemsInSection:indexPath.section];
+//    if (indexPath.row == rows-1 && imagesArray.count<IMAGES_ALLOWED) {
+//        [self startImagePicking];
+//    }
     
 }
-*/
+
 
 
 /*
