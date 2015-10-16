@@ -11,7 +11,6 @@
 @implementation ImagesCollectionViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
     
     [self.imgView setImage:[self resizeImage:[UIImage imageNamed:@"addIcon.png"] toSize:CGSizeMake(40, 40)]];
     [self.imgView setContentMode:UIViewContentModeCenter];
