@@ -100,7 +100,7 @@ tableView heightForRowAtIndexPath: (NSIndexPath *)indexPath{
                  forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor]
                  forState:UIControlStateDisabled];
-    [button setTitleColor:[UIColor blueColor]
+    [button setTitleColor:[UIColor blackColor]
                  forState:UIControlStateSelected];
     return item;
 }

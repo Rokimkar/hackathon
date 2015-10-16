@@ -210,13 +210,16 @@
                                     <segment title="Wishes"/>
                                     <segment title="Favorites"/>
                                 </segments>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="segmentValChanged:" destination="bD3-V0-2tX" eventType="valueChanged" id="dYI-Bd-iKH"/>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZS-ZN-nOv">
                                 <rect key="frame" x="16" y="120" width="288" height="30"/>
-                                <state key="normal" title="Add new wish"/>
+                                <state key="normal" title="Add new wish">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="addNewWishBtn:" destination="bD3-V0-2tX" eventType="touchUpInside" id="8ub-ai-EYR"/>
                                 </connections>
@@ -246,6 +249,9 @@
                                     <outlet property="delegate" destination="bD3-V0-2tX" id="mb2-PZ-l1u"/>
                                 </connections>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add_icon.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="eut-go-GZh">
+                                <rect key="frame" x="72" y="122" width="30" height="25"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -261,4 +267,12 @@
             <point key="canvasLocation" x="-94" y="728"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add_icon.jpeg" width="225" height="225"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

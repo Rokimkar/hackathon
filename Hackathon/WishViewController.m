@@ -36,6 +36,9 @@
     wishTableView.separatorColor = [UIColor clearColor];
     wishTableView.backgroundColor=RGBA(244, 245, 244, 1);
     [self.view addSubview:wishTableView];
+    [self.addNewWishBtn.layer setBorderColor:RGBA(217, 218, 216, 1).CGColor];
+    [self.addNewWishBtn.layer setBorderWidth:1.0];
+    [self.addNewWishBtn.layer setCornerRadius:5.0f];
 
     // Do any additional setup after loading the view.
 }
