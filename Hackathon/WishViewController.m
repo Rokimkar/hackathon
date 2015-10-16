@@ -110,6 +110,7 @@
     layout.minimumLineSpacing = SPACING;
     layout.minimumInteritemSpacing = SPACING;
     self.responsesCollectionView.collectionViewLayout=layout;
+    self.responsesCollectionView.backgroundColor=RGBA(244, 245, 244, 1);
     [self.responsesCollectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCell"];
 }
 
@@ -120,7 +121,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCell" forIndexPath:indexPath];
     [cell bindDataFor:[self.dataArray objectAtIndex:indexPath.row]];
-    
+    cell.backgroundColor=RGBA(244, 245, 244, 1);
     return cell;
 }
 
