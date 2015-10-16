@@ -34,6 +34,14 @@
 -(void)bindDataFor:(Product*)product{
     self.backgroundColor=[UIColor greenColor];
     self.product=product;
+    
+    if ([HackathonAppManager sharedInstance].appUserType == kSeller) {
+        self.labelForProductInformation.hidden=YES;
+    }
+    else{
+        self.labelForProductInformation.hidden=NO;
+    }
+    
     self.labelForProductInformation.text=product.type;
     if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:product.prodId]]){
         [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];

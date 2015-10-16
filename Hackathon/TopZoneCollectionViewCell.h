@@ -19,5 +19,5 @@
 @property (strong, nonatomic) Product *product;
 
 - (IBAction)favButtonTapped:(id)sender;
-
+@property (assign, nonatomic) BOOL isWish;
 @end

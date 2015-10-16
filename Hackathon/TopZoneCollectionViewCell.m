@@ -9,7 +9,7 @@
 #import "TopZoneCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "HackathonAppManager.h"
-
+#import "WishViewController.h"
 @implementation TopZoneCollectionViewCell
 
 - (void)awakeFromNib {
@@ -24,6 +24,19 @@
 //    else
 //        [self bindImageFor:itemData.productThumbnail];
     self.mainLabel.text=itemData.type;
+
+//    if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+//        self.mainLabel.hidden=YES;
+//    }
+//    else{
+//        if (self.isWish) {
+//            self.mainLabel.hidden=NO;
+//        }
+//        else{
+//                 self.mainLabel.hidden=YES;
+//        }
+//    }
+    self.mainLabel.hidden=YES;
 //    self.bgImageView.image = [UIImage imageNamed:@"addIcon"];
 }
 
@@ -69,4 +82,5 @@
         [[HackathonAppManager sharedInstance]addItemInFavIdsArray:[NSNumber numberWithInteger: self.product.prodId]];
     }
 }
+
 @end

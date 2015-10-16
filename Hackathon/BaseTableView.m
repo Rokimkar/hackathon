@@ -9,7 +9,10 @@
 #import "BaseTableView.h"
 #import "TableViewCell.h"
 #import "ProductDetailViewController.h"
+#import "HackathonAppManager.h"
 #import "Prefix.pch"
+#import "WishViewController.h"
+#import "WallViewController.h"
 @implementation BaseTableView
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSArray*) prodsArray{
@@ -21,6 +24,8 @@
     
     return [self initWithFrame:frame];
 }
+
+
 
 -(UIImage *) resizeImage : (UIImage *)image toSize :(CGSize)rect {
     UIGraphicsBeginImageContextWithOptions(rect, NO, 0.0);
@@ -54,6 +59,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ProductDetailViewController *vc = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil andProduct:[self.productArray objectAtIndex:indexPath.row]];
+    
+    if ([self getWallController] && [HackathonAppManager sharedInstance].appUserType==kSeller) {
+        vc.btnTitle=@"Respond";
+    }
+    
     UINavigationController *navCont = [self getViewController];
     if (navCont) {
         [navCont pushViewController:vc animated:YES];
@@ -72,6 +82,18 @@
         }
     }
     return (UINavigationController *)nextResponderView;
+}
+
+
+- (UIViewController *)getWallController {
+    UIResponder *nextResponderView = [self nextResponder];
+    while (![nextResponderView isKindOfClass:[WallViewController class]]) {
+        nextResponderView = [nextResponderView nextResponder];
+        if (nil == nextResponderView) {
+            break;
+        }
+    }
+    return (UIViewController *)nextResponderView;
 }
 
 

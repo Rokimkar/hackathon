@@ -13,6 +13,7 @@
                 <outlet property="imagesCollView" destination="EhJ-mc-Pzy" id="AdN-MQ-Mfu"/>
                 <outlet property="lowerRange" destination="l1A-cU-orN" id="TxM-wJ-JUg"/>
                 <outlet property="postLabel" destination="tq4-oN-A3e" id="rUu-vG-oej"/>
+                <outlet property="priceDummyLabel" destination="KP6-jh-Luo" id="5Ms-su-Jdv"/>
                 <outlet property="priceSlider" destination="60S-ju-BZN" id="3OL-3r-Ws6"/>
                 <outlet property="qtyTextField" destination="n4M-1U-Fh5" id="k5p-ff-2f9"/>
                 <outlet property="titleTextField" destination="LoY-ga-lbO" id="pOA-QM-AQt"/>

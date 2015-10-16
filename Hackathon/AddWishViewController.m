@@ -12,6 +12,7 @@
 #import "LeftDeckViewController.h"
 #import "CategoryTableViewController.h"
 #import "Prefix.pch"
+#import "HackathonAppManager.h"
 #define IMAGES_ALLOWED 3
 
 @interface AddWishViewController ()<UITextFieldDelegate,UITextViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,CategoryViewControllerDelegate,WYPopoverControllerDelegate>{
@@ -19,11 +20,22 @@
     NSMutableArray *imagesArray;
     UserType userType;
     WYPopoverController *settingsPopoverController;
+    NSString *queryTitle;
     
 }
 @end
 
 @implementation AddWishViewController
+
+
+-(instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andDataArray:(Product*)queryProduct{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        queryTitle = queryProduct.title;
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,7 +68,10 @@
     [self.imagesCollView.layer setBorderWidth:1.0];
     [self.imagesCollView.layer setCornerRadius:5.0];
     
-    
+    if (queryTitle && ![queryTitle isEqualToString:@""]) {
+        self.titleTextField.text=queryTitle;
+        self.product.title=queryTitle;
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -65,6 +80,18 @@
     [self.priceSlider setUpperValue:40000];
     [self.priceSlider setLowerValue:9999];
     [self updateSliderLabels];
+    
+    if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+        self.priceDummyLabel.text=@"Price:";
+        [self.postLabel setTitle:@"Respond" forState:UIControlStateNormal];
+        [self.postLabel setTitle:@"Respond" forState:UIControlStateHighlighted];
+    }
+    else{
+        self.priceDummyLabel.text=@"Price Range:";
+        [self.postLabel setTitle:@"Add Wish" forState:UIControlStateNormal];
+        [self.postLabel setTitle:@"Add Wish" forState:UIControlStateHighlighted];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -348,7 +375,14 @@
 
 -(void) moveToPost{
     self.product.price = [NSString stringWithFormat:@"%@ to %@",self.lowerRange.text,self.higherRange.text ];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Your response has been posted." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    UIAlertView *alertView;
+    if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+        alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Your response has been posted." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    }
+    else{
+        alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Your wish has been posted." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    }
+    
     alertView.tag=404;
     [alertView show];
 }

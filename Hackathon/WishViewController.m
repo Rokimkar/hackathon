@@ -13,6 +13,7 @@
 #import "CollectionViewCell.h"
 #import "Prefix.pch"
 #import "ProductDetailViewController.h"
+#import "HackathonAppManager.h"
 #define SPACING 10.0
 @interface WishViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 {
@@ -48,9 +49,20 @@
 
 -(void) adjustFrames{
     self.topSegmentControl.frame=CGRectMake((getScreenWidth()-139)*0.5, 78, 139, 29);
-    self.addNewWishBtn.frame = CGRectMake(16, getOriginY(self.topSegmentControl)+getHeight(self.topSegmentControl)+14, getScreenWidth()-32, 30);
-    int ycord = getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14;
-    self.responsesCollectionView.frame=CGRectMake(0, getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14, getScreenWidth(), getScreenHeight()-ycord);
+    
+    if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+        self.addNewWishBtn.frame = CGRectMake(16, getOriginY(self.topSegmentControl)+getHeight(self.topSegmentControl)+14, getScreenWidth()-32, 0);
+        self.addNewWishBtn.hidden=YES;
+        int ycord = getOriginY(self.topSegmentControl)+getHeight(self.topSegmentControl)+14;
+        self.responsesCollectionView.frame=CGRectMake(0, ycord, getScreenWidth(), getScreenHeight()-ycord);
+        
+    }
+    else{
+        self.addNewWishBtn.frame = CGRectMake(16, getOriginY(self.topSegmentControl)+getHeight(self.topSegmentControl)+14, getScreenWidth()-32, 30);
+        int ycord = getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14;
+        self.responsesCollectionView.frame=CGRectMake(0, getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14, getScreenWidth(), getScreenHeight()-ycord);
+        
+    }
     self.topSegmentControl.backgroundColor = [UIColor whiteColor];
 }
 
@@ -62,13 +74,14 @@
 
 
 -(void) viewWillAppear:(BOOL)animated{
-    [self adjustFrames];
     [self doNecessaryActions];
-    
+    [self adjustFrames];
+
 }
 - (IBAction)segmentValChanged:(id)sender {
     
     [self doNecessaryActions];
+    [self adjustFrames];
 }
 
 -(void) doNecessaryActions{
@@ -138,13 +151,13 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     ProductDetailViewController *vc = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil andProduct:[self.dataArray objectAtIndex:indexPath.row]];
-    UINavigationController *navCont = [self getViewController];
-    if (navCont) {
-        [navCont pushViewController:vc animated:YES];
+    if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+        vc.btnTitle=@"Respond";
     }
     else{
     }
 
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

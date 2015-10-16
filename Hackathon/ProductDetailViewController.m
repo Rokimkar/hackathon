@@ -12,6 +12,10 @@
 #import "ProductDescriptionTableViewCell.h"
 #import "Product.h"
 #import "Prefix.pch"
+#import "HackathonAppManager.h"
+#import "WishViewController.h"
+#import "WallViewController.h"
+#import "AddWishViewController.h"
 @interface ProductDetailViewController () <UITableViewDelegate,UITableViewDataSource>
 {
     CGSize screenSize;
@@ -32,6 +36,7 @@
     [super viewDidLoad];
     screenSize = ([[UIScreen mainScreen] bounds]).size;
     self.detailTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -75,6 +80,14 @@
             NSArray *cellnib = [[NSBundle mainBundle] loadNibNamed:@"ProductDetailsTableViewCell" owner:self options:nil];
             cell = (ProductDetailsTableViewCell *)[cellnib objectAtIndex:0];
         }
+        if ([self.buyBtnPressed.titleLabel.text isEqualToString:@"Respond"]) {
+            ((ProductDetailsTableViewCell *)cell).isWish=YES;
+        }
+        else{
+            ((ProductDetailsTableViewCell *)cell).isWish=NO;
+        }
+        
+        
         [(ProductDetailsTableViewCell*)cell bindData:self.product];
     }
     else{
@@ -151,6 +164,73 @@
     }
     else
         return 0;
+}
+
+- (IBAction)butBtnPressed:(id)sender {
+    
+    if ([self.buyBtnPressed.titleLabel.text isEqualToString:@"Respond"]) {
+        AddWishViewController *vc = [[AddWishViewController alloc] initWithNibName:@"AddWishViewController" bundle:nil andDataArray:self.product];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else{
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"Item added to cart." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+    }
+        
+    
+}
+
+
+-(void) setBtnTitle{
+    
+    if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+//        UIViewController *vc = [self getViewController];
+//        if ([self checkForViewController]) {
+//            [self.buyBtnPressed setTitle:@"Respond" forState:UIControlStateNormal];
+//            [self.buyBtnPressed setTitle:@"Respond" forState:UIControlStateHighlighted];
+//        }
+//        else{
+//            [self.buyBtnPressed setTitle:@"Add to cart" forState:UIControlStateNormal];
+//            [self.buyBtnPressed setTitle:@"Add to cart" forState:UIControlStateHighlighted];
+//        }
+        
+        if (self.btnTitle && ![self.btnTitle isEqualToString:@""]) {
+            [self.buyBtnPressed setTitle:self.btnTitle forState:UIControlStateNormal];
+            [self.buyBtnPressed setTitle:self.btnTitle forState:UIControlStateHighlighted];
+        }
+        else{
+            [self.buyBtnPressed setTitle:@"Add to cart" forState:UIControlStateNormal];
+            [self.buyBtnPressed setTitle:@"Add to cart" forState:UIControlStateHighlighted];
+        }
+    }
+    else{
+        [self.buyBtnPressed setTitle:@"Add to cart" forState:UIControlStateNormal];
+        [self.buyBtnPressed setTitle:@"Add to cart" forState:UIControlStateHighlighted];
+    }
+}
+
+
+- (UIViewController *)getViewController {
+    UIResponder *nextResponderView = [self nextResponder];
+    while (![nextResponderView isKindOfClass:[WishViewController class]] || ![nextResponderView isKindOfClass:[WallViewController class]]) {
+        nextResponderView = [nextResponderView nextResponder];
+        if (nil == nextResponderView) {
+            break;
+        }
+    }
+    return (UIViewController *)nextResponderView;
+}
+
+
+-(BOOL) checkForViewController{
+    
+    UINavigationController *nv = self.navigationController;
+    if (nv.viewControllers.count>=2) {
+        UIViewController  *vc = [nv.viewControllers objectAtIndex:(nv.viewControllers.count-2)];
+        if ([vc isKindOfClass:[WallViewController class]] || [vc isKindOfClass:[WishViewController class]]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 

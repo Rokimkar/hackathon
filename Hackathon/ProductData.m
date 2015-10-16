@@ -106,6 +106,7 @@
     product.title = [prodObj objectForKey:@"title"];
     product.prodDesc = [prodObj objectForKey:@"prodDesc"];
     product.price = [prodObj objectForKey:@"price"];
+    product.upperPrice = [prodObj objectForKey:@"upperPrice"];
     product.quantity = [[prodObj objectForKey:@"quantity"] intValue];
     product.prodId = [[prodObj objectForKey:@"prodId"] intValue];
     product.category = [prodObj objectForKey:@"category"];

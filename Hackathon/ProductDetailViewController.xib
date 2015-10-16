@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailViewController">
             <connections>
+                <outlet property="buyBtnPressed" destination="HfS-PP-UYp" id="Sq4-HJ-UKn"/>
                 <outlet property="detailTableView" destination="AVk-2e-BQ6" id="f3g-EG-Jdh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,20 +18,36 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AVk-2e-BQ6">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="434"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="ZIa-CF-fOJ"/>
                         <outlet property="delegate" destination="-1" id="yqL-kr-Dd0"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfS-PP-UYp">
+                    <rect key="frame" x="54" y="442" width="212" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="212" id="N1A-LA-J7I"/>
+                        <constraint firstAttribute="height" constant="30" id="vVr-Vp-fM5"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="butBtnPressed:" destination="-1" eventType="touchUpInside" id="da1-ua-oET"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="HfS-PP-UYp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3Kf-bs-bTt"/>
                 <constraint firstItem="AVk-2e-BQ6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FX6-7w-xKF"/>
                 <constraint firstAttribute="trailing" secondItem="AVk-2e-BQ6" secondAttribute="trailing" id="Kz2-S3-xsN"/>
+                <constraint firstItem="HfS-PP-UYp" firstAttribute="top" secondItem="AVk-2e-BQ6" secondAttribute="bottom" constant="8" id="dc0-bV-nmL"/>
                 <constraint firstItem="AVk-2e-BQ6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l3q-lj-bbB"/>
-                <constraint firstAttribute="bottom" secondItem="AVk-2e-BQ6" secondAttribute="bottom" id="mFO-Ag-Xdl"/>
+                <constraint firstAttribute="bottom" secondItem="HfS-PP-UYp" secondAttribute="bottom" constant="8" id="lbZ-a1-USd"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
