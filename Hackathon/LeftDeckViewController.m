@@ -12,6 +12,7 @@
 #import "SWRevealViewController.h"
 #import "HackathonAppManager.h"
 #import "ViewController.h"
+#import "Prefix.pch"
 
 @interface LeftDeckViewController (){
     NSArray *itemsArray ;
@@ -31,7 +32,7 @@
     // Do any additional setup after loading the view.
     [self.itemListTableView registerNib:[UINib nibWithNibName:@"LeftDeckTableViewCell" bundle:nil] forCellReuseIdentifier:@"LeftDeckTableViewCell"];
     self.itemListTableView.scrollEnabled=NO;
-    self.itemListTableView.backgroundColor=RGBA(196, 56, 64, 1);
+    self.itemListTableView.backgroundColor=RGBA(196, 156, 164, 1);
     //self.itemListTableView.separatorColor = [UIColor clearColor];
 }
 
@@ -64,7 +65,7 @@
         cell = [nib objectAtIndex:0];
     }
     cell.labelForItems.text=[itemsArray objectAtIndex:indexPath.row];
-    cell.backgroundColor=RGBA(196, 56, 64, 1);
+    cell.backgroundColor=RGBA(196, 156, 164, 1);
     return cell;
 }
 

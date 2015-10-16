@@ -34,6 +34,9 @@
     }];
     wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 120, getScreenWidth(), getScreenHeight()-120-50) andProductsArray:nil];
     [self.view addSubview:wishTableView];
+    [self.addNewWishBtn.layer setBorderColor:RGBA(217, 218, 216, 1).CGColor];
+    [self.addNewWishBtn.layer setBorderWidth:1.0];
+    [self.addNewWishBtn.layer setCornerRadius:5.0f];
 
     // Do any additional setup after loading the view.
 }

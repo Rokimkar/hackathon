@@ -79,7 +79,9 @@
 //    [_leftBarButtonItem setTitle:@"Button" forState:UIControlStateNormal];
 //    [_leftBarButtonItem setTitle:@"Button" forState:UIControlStateHighlighted];
 //    [_leftBarButtonItem setBackgroundColor:[UIColor redColor]];
-    [_leftBarButtonItem setImage:[UIImage imageNamed:@"menuIcon.png"] forState:UIControlStateNormal];
+    UIImage *image = [self resizeImage:[UIImage imageNamed:@"menu_icon.png"] toSize:CGSizeMake(20, 20)];
+    image=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [_leftBarButtonItem setImage:image forState:UIControlStateNormal];
     [_leftBarButtonItem setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [leftCotainerView addSubview:_leftBarButtonItem];
     
@@ -107,6 +109,14 @@
     [revealCont revealToggleAnimated:YES];
 
     
+}
+
+-(UIImage *) resizeImage : (UIImage *)image toSize :(CGSize)rect {
+    UIGraphicsBeginImageContextWithOptions(rect, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, rect.width, rect.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 @end

@@ -38,7 +38,9 @@
         
         self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]init];
 //        self.navigationItem.leftBarButtonItem.title=@"browse";
-        [self.navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"menuIcon.png"]];
+        image = [self resizeImage:[UIImage imageNamed:@"menu_icon.png"] toSize:CGSizeMake(20, 20)];
+        image=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [self.navigationItem.leftBarButtonItem setImage:image];
         [self.navigationItem.leftBarButtonItem setTarget:self.revealViewController];
         [self.navigationItem.leftBarButtonItem setAction:@selector(revealToggle:)];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
