@@ -64,7 +64,7 @@
 		0CBC85BC1BD0D8D100FD44FF /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85BB1BD0D8D100FD44FF /* menuIcon.png */; };
 		0CBC85C01BD0EA0200FD44FF /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85BE1BD0EA0200FD44FF /* fav.png */; };
 		0CBC85C11BD0EA0200FD44FF /* unFav.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85BF1BD0EA0200FD44FF /* unFav.png */; };
-		0CBC85C51BD12C0600FD44FF /* cardLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85C41BD12C0600FD44FF /* cardLayout.png */; settings = {ASSET_TAGS = (); }; };
+		0CBC85C51BD12C0600FD44FF /* cardLayout.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC85C41BD12C0600FD44FF /* cardLayout.png */; };
 		2F085F111BCC431F004E6643 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F085F101BCC431F004E6643 /* SWRevealViewController.m */; };
 		2F1668DF1BC5580D00744672 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668DE1BC5580C00744672 /* main.m */; };
 		2F1668E21BC5580D00744672 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1668E11BC5580D00744672 /* AppDelegate.m */; };
@@ -844,7 +844,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "fdd18663-296c-4708-b76a-91b6c1c55f99";
+				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -883,7 +883,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "fdd18663-296c-4708-b76a-91b6c1c55f99";
+				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -899,7 +899,8 @@
 				INFOPLIST_FILE = Hackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fdd18663-296c-4708-b76a-91b6c1c55f99";
+				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -912,7 +913,8 @@
 				INFOPLIST_FILE = Hackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fdd18663-296c-4708-b76a-91b6c1c55f99";
+				PROVISIONING_PROFILE = "402d4562-fb0c-406a-82ec-890b132a0619";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

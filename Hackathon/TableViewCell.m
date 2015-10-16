@@ -43,7 +43,7 @@
     self.priceLabel.text=[NSString stringWithFormat:@"₹ %@",product.price];
     self.priceLabel.textColor=RGBA(192, 56, 64, 1);
     self.product=product;
-    self.sellerLabel.text=product.seller;
+    self.sellerLabel.text=[NSString stringWithFormat:@"by %@",product.seller];
     
     if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
         [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
