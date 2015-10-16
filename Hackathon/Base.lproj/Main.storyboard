@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="6Kx-If-Hfi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fSd-wO-dFN">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Browse-->
@@ -156,10 +155,6 @@
         <scene sceneID="SdL-fk-L5Q">
             <objects>
                 <viewController id="fSd-wO-dFN" customClass="LogInViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Ys-jH-4LA"/>
-                        <viewControllerLayoutGuide type="bottom" id="1wX-Pu-MzU"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1CC-fG-5Iv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,6 +166,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonForBuyer:" destination="fSd-wO-dFN" eventType="touchUpInside" id="1Rl-Nc-1ID"/>
+                                    <segue destination="6Kx-If-Hfi" kind="modal" id="alY-RF-MmB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-5K-kbv">
@@ -180,6 +176,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonForSeller:" destination="fSd-wO-dFN" eventType="touchUpInside" id="RTB-di-Sgz"/>
+                                    <segue destination="6Kx-If-Hfi" kind="modal" id="1bC-KQ-K0T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter As :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI9-pR-f6n">
@@ -311,5 +308,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="alY-RF-MmB"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
