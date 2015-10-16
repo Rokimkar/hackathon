@@ -8,6 +8,7 @@
 
 #import "CollectionViewCell.h"
 #import "HackathonAppManager.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation CollectionViewCell
 
@@ -28,7 +29,7 @@
 
 
 -(void)bindDataFor:(Product*)product{
-    
+    self.labelForProductInformation.text=product.type;
     if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:product.prodId]]){
         [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
         [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateHighlighted];
@@ -37,6 +38,26 @@
         [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateNormal];
         [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateHighlighted];
     }
+    
+    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:product.img1] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
+    
+    [self.imageForProduct setImageWithURLRequest:req placeholderImage:[UIImage imageNamed:@""] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        
+        if (!request) {
+            self.imageForProduct.image=image;
+            self.imageForProduct.contentMode=UIViewContentModeScaleAspectFit;
+        }
+        else{
+            
+            [UIView transitionWithView:self.imageForProduct duration:1.0f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                self.imageForProduct.image=image;
+                self.imageForProduct.contentMode=UIViewContentModeScaleAspectFit;
+            } completion:^(BOOL finished) {
+                
+            }];
+        }
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+    }];
 }
 
 
