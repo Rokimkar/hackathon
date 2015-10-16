@@ -16,5 +16,6 @@
 
 - (void) fetchFavoritesWithSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure;
 
+- (void) fetchAllDataWithSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure;
 
 @end
