@@ -24,12 +24,12 @@
 - (IBAction)buttonForFavoriteTapped:(id)sender {
     if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
         [[HackathonAppManager sharedInstance]removeItemFromFavIdsArray:[NSNumber numberWithInteger: self.product.prodId]];
-        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_unselected.png"] forState:UIControlStateNormal];
-        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_unselected.png"] forState:UIControlStateHighlighted];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateHighlighted];
     }
     else{
-        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_selected.jpeg"] forState:UIControlStateNormal];
-        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_selected.jpeg"] forState:UIControlStateHighlighted];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateHighlighted];
         [[HackathonAppManager sharedInstance]addItemInFavIdsArray:[NSNumber numberWithInteger: self.product.prodId]];
     }
 }
@@ -43,12 +43,12 @@
     self.product=product;
     
     if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
-        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_selected.jpeg"] forState:UIControlStateNormal];
-        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_selected.jpeg"] forState:UIControlStateHighlighted];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateHighlighted];
     }
     else{
-        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_unselected.png"] forState:UIControlStateNormal];
-        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"favorite_unselected.png"] forState:UIControlStateHighlighted];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateHighlighted];
     }
 
     

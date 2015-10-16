@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewCell.h"
+#import "HackathonAppManager.h"
 
 @implementation CollectionViewCell
 
@@ -15,13 +16,29 @@
 }
 
 - (IBAction)buttonForFavoriteTapped:(id)sender {
+    if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateHighlighted];
+    }
+    else{
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateHighlighted];
+    }
 }
 
 
--(void) bindData:(Product*)product{
+-(void)bindDataFor:(Product*)product{
     
-    
+    if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:product.prodId]]){
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateHighlighted];
+    }
+    else{
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateNormal];
+        [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateHighlighted];
+    }
 }
 
 
 @end
+

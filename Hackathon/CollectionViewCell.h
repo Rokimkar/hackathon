@@ -11,9 +11,9 @@
 @interface CollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageForProduct;
 @property (weak, nonatomic) IBOutlet UIButton *buttonForFavoriteTapped;
-- (IBAction)buttonForFavoriteTapped:(id)sender;
+@property (strong,nonatomic) Product *product;
 @property (weak, nonatomic) IBOutlet UILabel *labelForProductInformation;
-
--(void) bindData:(Product*)product;
+- (IBAction)buttonForFavoriteTapped:(id)sender;
+-(void)bindDataFor:(Product*)product;
 
 @end
