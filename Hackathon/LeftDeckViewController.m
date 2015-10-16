@@ -79,8 +79,8 @@
                 subCategoriesArray = [[HackathonAppManager sharedInstance] getSubCategoriesFor:selectedCategory];
                 CategoryDetailViewController *controller = [[CategoryDetailViewController alloc] initWithCategory:selectedCategory andSubCategoryArray:subCategoriesArray];
                 controller.delegate=self;
-                controller.view.backgroundColor = [UIColor greenColor];
-                controller.menuBar.indicatorColor = [UIColor blueColor];
+                controller.view.backgroundColor = [UIColor clearColor];
+                controller.menuBar.indicatorColor = [UIColor blackColor];
                 UINavigationController *navCont = [[UINavigationController alloc] initWithRootViewController:controller];
                 SWRevealViewController *revealCont = [self revealViewController];
                 [revealCont setFrontViewController:navCont animated:YES];
@@ -125,7 +125,7 @@ tableView heightForRowAtIndexPath: (NSIndexPath *)indexPath{
                  forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor]
                  forState:UIControlStateDisabled];
-    [button setTitleColor:[UIColor blueColor]
+    [button setTitleColor:[UIColor blackColor]
                  forState:UIControlStateSelected];
     return item;
 }
