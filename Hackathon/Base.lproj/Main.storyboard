@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Browse-->
@@ -174,12 +173,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-PS-Jj3">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-PS-Jj3">
                                 <rect key="frame" x="90" y="78" width="139" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="WQ8-YW-msj"/>
-                                    <constraint firstAttribute="width" constant="139" id="buZ-GR-XhH"/>
-                                </constraints>
                                 <segments>
                                     <segment title="Wishes"/>
                                     <segment title="Favorites"/>
@@ -188,17 +183,14 @@
                                     <action selector="segmentValChanged:" destination="bD3-V0-2tX" eventType="valueChanged" id="dYI-Bd-iKH"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZS-ZN-nOv">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZS-ZN-nOv">
                                 <rect key="frame" x="16" y="120" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="k0y-zR-jh8"/>
-                                </constraints>
                                 <state key="normal" title="Add new wish"/>
                                 <connections>
                                     <action selector="addNewWishBtn:" destination="bD3-V0-2tX" eventType="touchUpInside" id="8ub-ai-EYR"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HLg-ah-BGd">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HLg-ah-BGd">
                                 <rect key="frame" x="0.0" y="164" width="320" height="355"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.67843137249999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HKz-ix-Uv1">
@@ -225,18 +217,6 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="qZS-ZN-nOv" firstAttribute="trailing" secondItem="6v3-jt-PD4" secondAttribute="trailingMargin" id="C26-dx-fXA"/>
-                            <constraint firstItem="HLg-ah-BGd" firstAttribute="leading" secondItem="6v3-jt-PD4" secondAttribute="leadingMargin" constant="-16" id="Kvj-Dh-whI"/>
-                            <constraint firstItem="mzR-c6-8Sg" firstAttribute="top" secondItem="HLg-ah-BGd" secondAttribute="bottom" id="O54-8L-gpk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HLg-ah-BGd" secondAttribute="trailing" constant="-16" id="P4u-m3-wWM"/>
-                            <constraint firstItem="0n5-PS-Jj3" firstAttribute="top" secondItem="DKe-KQ-BGy" secondAttribute="bottom" constant="14" id="WD6-fR-hb9"/>
-                            <constraint firstItem="qZS-ZN-nOv" firstAttribute="centerX" secondItem="6v3-jt-PD4" secondAttribute="centerX" id="cH3-CN-Ar2"/>
-                            <constraint firstItem="qZS-ZN-nOv" firstAttribute="leading" secondItem="6v3-jt-PD4" secondAttribute="leadingMargin" id="fpb-oQ-aDA"/>
-                            <constraint firstItem="0n5-PS-Jj3" firstAttribute="centerX" secondItem="6v3-jt-PD4" secondAttribute="centerX" id="frf-Y5-YUd"/>
-                            <constraint firstItem="qZS-ZN-nOv" firstAttribute="top" secondItem="0n5-PS-Jj3" secondAttribute="bottom" constant="14" id="gBf-es-ZvY"/>
-                            <constraint firstItem="HLg-ah-BGd" firstAttribute="top" secondItem="qZS-ZN-nOv" secondAttribute="bottom" constant="14" id="iNh-w8-oNW"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wish" id="59O-lH-nWG"/>
                     <connections>

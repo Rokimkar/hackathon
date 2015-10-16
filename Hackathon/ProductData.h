@@ -14,5 +14,7 @@
 
 - (void) fetchDataFor:(NSString*)category andSubCategory:(NSString*)subCategory withSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure;
 
+- (void) fetchFavoritesWithSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure;
+
 
 @end

@@ -11,11 +11,11 @@
 #import "ProductData.h"
 #import "AddWishViewController.h"
 #import "CollectionViewCell.h"
+#import "Prefix.pch"
 #define SPACING 10.0
 @interface WishViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 {
     BaseTableView *wishTableView;
-    CGSize screenSize;
 }
 @end
 
@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    screenSize = ([UIScreen mainScreen]).bounds.size;
     
     ProductData *prodData = [[ProductData alloc] init];
     [self showResponsesCollectionView];
@@ -31,17 +30,29 @@
     [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
         
         self.dataArray = data;
-        
-//        wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-50) andProductsArray:data];
-//        [self.view addSubview:wishTableView];
-        
     } failure:^(NSError *error) {
         
     }];
     
+    [prodData fetchFavoritesWithSuccess:^(NSMutableArray *data) {
+        wishTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 120, getScreenWidth(), getScreenHeight()-120-50) andProductsArray:data];
+        [self.view addSubview:wishTableView];
+    } failure:^(NSError *error) {
+        
+    }];
+    
+
+    
+    
     // Do any additional setup after loading the view.
 }
 
+-(void) adjustFrames{
+    self.topSegmentControl.frame=CGRectMake((getScreenWidth()-139)*0.5, 78, 139, 29);
+    self.addNewWishBtn.frame = CGRectMake(16, getOriginY(self.topSegmentControl)+getHeight(self.topSegmentControl)+14, getScreenWidth()-32, 30);
+    int ycord = getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14;
+    self.responsesCollectionView.frame=CGRectMake(0, getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14, getScreenWidth(), getScreenHeight()-ycord);
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -51,26 +62,36 @@
 
 
 -(void) viewWillAppear:(BOOL)animated{
+    [self adjustFrames];
+    [self doNecessaryActions];
+    
+}
+- (IBAction)segmentValChanged:(id)sender {
+    
+    [self doNecessaryActions];
+}
+
+-(void) doNecessaryActions{
+    
     if (self.topSegmentControl.selectedSegmentIndex==0) {
         self.addNewWishBtn.hidden=NO;
         self.responsesCollectionView.hidden=NO;
+        wishTableView.hidden=YES;
     }
     else{
         self.addNewWishBtn.hidden=YES;
         self.responsesCollectionView.hidden=YES;
-        [self showFavTableView];
+        wishTableView.hidden=NO;
     }
+
+    
 }
-- (IBAction)segmentValChanged:(id)sender {
-}
+
+
 - (IBAction)addNewWishBtn:(id)sender {
     
     AddWishViewController *wishCont = [[AddWishViewController alloc] initWithNibName:@"AddWishViewController" bundle:nil];
     [self.navigationController pushViewController:wishCont animated:YES];
-    
-}
-
--(void) showFavTableView{
     
 }
 
@@ -82,7 +103,7 @@
 -(void) showResponsesCollectionView{
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    NSInteger width = (screenSize.width-3*SPACING)*0.5;
+    NSInteger width = (getScreenWidth()-3*SPACING)*0.5;
     layout.itemSize = CGSizeMake(width, width);
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
     layout.minimumLineSpacing = SPACING;

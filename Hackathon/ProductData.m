@@ -8,6 +8,7 @@
 
 #import "ProductData.h"
 #import "Product.h"
+#import "HackathonAppManager.h"
 @implementation ProductData
 
 - (void) fetchDataFor:(NSString*)category withSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure{
@@ -35,6 +36,24 @@
     
     
 }
+
+- (void) fetchFavoritesWithSuccess:(void (^) (NSMutableArray *data))success failure:(void (^) (NSError *error)) failure{
+    
+    
+    id object = [self getObjectFromJSON];
+    if (!object) {
+        failure(nil);
+    }
+    else
+    {
+        success([self getFavDataFrom:[object valueForKey:@"items"]]);
+    }
+
+    
+    
+}
+
+
 
 -(id) getObjectFromJSON{
     
@@ -66,6 +85,15 @@
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
     for (NSMutableDictionary *prodObj in dataObject) {
         if ([[prodObj objectForKey:@"category"] isEqualToString:category] && [[prodObj objectForKey:@"subcategory"] isEqualToString:subCategory]) {
+            [dataArray addObject:[self mapWith:prodObj]];
+        }
+    }
+    return dataArray;
+}
+-(NSMutableArray*) getFavDataFrom:(id)dataObject{
+    NSMutableArray *dataArray = [[NSMutableArray alloc] init];
+    for (NSMutableDictionary *prodObj in dataObject) {
+        if ([[HackathonAppManager sharedInstance] productExist:[NSNumber numberWithInt:[[prodObj objectForKey:@"prodId"] intValue]]]) {
             [dataArray addObject:[self mapWith:prodObj]];
         }
     }
