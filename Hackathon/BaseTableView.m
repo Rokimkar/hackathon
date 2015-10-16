@@ -18,6 +18,7 @@
     self.dataSource=self;
     self.delegate=self;
     [self registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"TableViewCell"];
+    self.separatorStyle=UITableViewCellSeparatorStyleNone;
     return [self initWithFrame:frame];
 }
 
@@ -84,7 +85,7 @@
 }
 
 -(CGFloat) tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 84;
+    return 107;
 }
 
 @end
