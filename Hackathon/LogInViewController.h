@@ -14,5 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonForSeller;
 - (IBAction)buttonForSeller:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImgView;
+@property (weak, nonatomic) IBOutlet UILabel *genericLabel;
 
 @end

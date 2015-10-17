@@ -18,19 +18,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.buttonForSeller.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
-    [self.buttonForSeller.layer setBorderWidth:1.0];
+    [self.buttonForSeller.layer setBorderColor:RGBA(225, 61, 69, 1.0).CGColor];
+    [self.buttonForSeller.layer setBorderWidth:2.0];
     [self.buttonForSeller.layer setCornerRadius:5.0];
     
-    [self.buttonForBuyer.layer setBorderColor:RGBA(217, 218, 216, 1.0).CGColor];
-    [self.buttonForBuyer.layer setBorderWidth:1.0];
+    [self.buttonForBuyer.layer setBorderColor:RGBA(225, 61, 69, 1.0).CGColor];
+    [self.buttonForBuyer.layer setBorderWidth:2.0];
     [self.buttonForBuyer.layer setCornerRadius:5.0];
+    self.bgImgView.frame=CGRectMake(0, 0, getScreenWidth(), getScreenHeight());
+    self.buttonForSeller.frame = CGRectMake((getScreenWidth()-139)*0.5, getScreenHeight()-50, 139, 30);
+    self.buttonForBuyer.frame = CGRectMake((getScreenWidth()-139)*0.5, getScreenHeight()-100, 139, 30);
+    self.genericLabel.frame = CGRectMake((getScreenWidth()-280)*0.5, getScreenHeight()-150, 280, 30);
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 /*
 #pragma mark - Navigation
