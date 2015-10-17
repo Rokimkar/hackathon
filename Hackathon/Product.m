@@ -17,20 +17,20 @@
     if(self)
     {
         
-//        self.title=@"";
-//        self.prodDesc=@"";
-//        self.price=@"";
-//        self.upperPrice=@"";
-//        self.quantity=0;
-//        self.prodId=0;
-//        self.category=@"";
-//        self.subcategory=@"";
-//        self.img1=@"";
-//        self.img2=@"";
-//        self.img3=@"";
-//        self.seller=@"";
-//        self.type=@"";
-//        self.imagesArray=[[NSArray alloc] init];
+        self.title=@"";
+        self.prodDesc=@"";
+        self.price=@"";
+        self.upperPrice=@"";
+        self.quantity=0;
+        self.prodId=0;
+        self.category=@"";
+        self.subcategory=@"";
+        self.img1=@"";
+        self.img2=@"";
+        self.img3=@"";
+        self.seller=@"";
+        self.type=@"";
+        self.imagesArray=[[NSArray alloc] init];
     }
     return self;
 }
