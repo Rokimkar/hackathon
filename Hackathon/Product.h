@@ -24,6 +24,7 @@
 @property (nonatomic,strong) NSString *img3;
 @property (nonatomic,strong) NSString *seller;
 @property (nonatomic,strong) NSString *type;
+@property (nonatomic,strong) NSArray *imagesArray;
 
 
 @end

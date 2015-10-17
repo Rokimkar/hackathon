@@ -52,6 +52,10 @@
         [self.buttonForFavoriteTapped setBackgroundImage:[UIImage imageNamed:@"unFav.png"] forState:UIControlStateHighlighted];
     }
     
+    if (product.imagesArray && product.imagesArray.count>0) {
+        self.imageForProduct.image=[product.imagesArray objectAtIndex:0];
+        return;
+    }
     NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:product.img1] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
     
     [self.imageForProduct setImageWithURLRequest:req placeholderImage:[UIImage imageNamed:@"placeHolderImage.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {

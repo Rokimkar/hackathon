@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8EE995CA6F72D00321FDB26E'
-               BlueprintName = 'Pods-Hackathon'
+               BlueprintIdentifier = '3BB66A90B44AB22E7AB71B6F'
+               BlueprintName = 'NSObject-NSCoding'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-Hackathon.a'>
+               BuildableName = 'libNSObject-NSCoding.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -164,7 +164,7 @@
     product.img3 = [prodObj objectForKey:@"img3"];
     product.seller = [prodObj objectForKey:@"seller"];
     product.type = [prodObj objectForKey:@"type"];
-
+    product.imagesArray = [prodObj objectForKey:@"imagesArray"];
     return product;
 }
 
