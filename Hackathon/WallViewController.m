@@ -34,12 +34,28 @@
     } failure:^(NSError *error) {
         
     }];
-   
+   [self navItems];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) navItems {
+    UINavigationItem *navItems = [[UINavigationItem alloc]init];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [btn setBackgroundImage:[UIImage imageNamed:@"search_image.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *searchBtn = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [btn1 setBackgroundImage:[UIImage imageNamed:@"More Filled-32.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *moreActions = [[UIBarButtonItem alloc]initWithCustomView:btn1];
+    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [btn2 setBackgroundImage:[UIImage imageNamed:@"cart.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *cart = [[UIBarButtonItem alloc]initWithCustomView:btn2];
+    //    navItems.rightBarButtonItems =
+    self.navigationItem.rightBarButtonItems=[[NSArray alloc]initWithObjects:searchBtn,cart,moreActions, nil];
+    //    return navItems;
 }
 
 /*

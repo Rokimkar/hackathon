@@ -65,12 +65,14 @@
     }
     
     UINavigationController *navCont = [self getViewController];
-    if (navCont) {
+        if (navCont) {
         [navCont pushViewController:vc animated:YES];
     }
     else{
     }
 }
+
+
 
 
 - (UINavigationController *)getViewController {

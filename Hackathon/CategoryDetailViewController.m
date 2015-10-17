@@ -55,6 +55,7 @@
 
     self.menuBar.backgroundColor = RGBA(244, 245, 244, 1);
     self.view.backgroundColor = [UIColor clearColor];
+    [self navItems];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -118,6 +119,21 @@
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
+}
+
+-(void) navItems {
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [btn setBackgroundImage:[UIImage imageNamed:@"Binoculars Filled-32.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *searchBtn = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [btn1 setBackgroundImage:[UIImage imageNamed:@"Activity Feed-50.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *moreActions = [[UIBarButtonItem alloc]initWithCustomView:btn1];
+    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [btn2 setBackgroundImage:[UIImage imageNamed:@"Shopping Cart-50.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *cart = [[UIBarButtonItem alloc]initWithCustomView:btn2];
+    //    navItems.rightBarButtonItems =
+    self.navigationItem.rightBarButtonItems=[[NSArray alloc]initWithObjects:moreActions,searchBtn,cart, nil];
+    //    return navItems;
 }
 
 @end
