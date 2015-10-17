@@ -34,6 +34,7 @@
     } failure:^(NSError *error) {
         
     }];
+    
    [self navItems];
 }
 

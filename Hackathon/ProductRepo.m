@@ -24,11 +24,15 @@
 
 - (void)encodeWithCoder:(NSCoder *)coder {
     [self autoEncodeWithCoder:coder];
+    [coder encodeObject:self.prodsArray forKey:@"prodsArray"];
+
 }
 
 - (id)initWithCoder:(NSCoder *)coder {
     if (self = [super init]) {
         [self autoDecode:coder];
+        self.prodsArray = [coder decodeObjectForKey:@"prodsArray"];
+
     }
     return self;
 }

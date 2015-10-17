@@ -28,8 +28,13 @@
     
     ProductData *prodData = [[ProductData alloc] init];
     [self showResponsesCollectionView];
-    [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
-        
+//    [prodData fetchDataFor:@"Clothing" withSuccess:^(NSMutableArray *data) {
+//        
+//        self.dataArray = data;
+//    } failure:^(NSError *error) {
+//        
+//    }];
+    [prodData fetchWishDataWithSuccess:^(NSMutableArray *data) {
         self.dataArray = data;
     } failure:^(NSError *error) {
         

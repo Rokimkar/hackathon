@@ -14,6 +14,7 @@
 
 -(void) bindItemData :(Product*) itemData;
 -(void) bindImageFor:(NSString*) imageUrl;
+-(void) bindActualImageFor:(UIImage*) image;
 
 @property (weak, nonatomic) IBOutlet UIButton *favButtonTapped;
 @property (strong, nonatomic) Product *product;

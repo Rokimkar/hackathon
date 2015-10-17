@@ -150,7 +150,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" id="Alu-4u-l6r">
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" id="Alu-4u-l6r">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -168,6 +168,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonForBuyer:" destination="fSd-wO-dFN" eventType="touchUpInside" id="1Rl-Nc-1ID"/>
+                                    <action selector="buyerBtnPressed:" destination="fSd-wO-dFN" eventType="touchUpInside" id="ozK-OJ-Z8X"/>
                                     <segue destination="6Kx-If-Hfi" kind="modal" id="alY-RF-MmB"/>
                                 </connections>
                             </button>
@@ -179,6 +180,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonForSeller:" destination="fSd-wO-dFN" eventType="touchUpInside" id="RTB-di-Sgz"/>
+                                    <action selector="sellerBtnPressed:" destination="fSd-wO-dFN" eventType="touchUpInside" id="Mit-sW-b8o"/>
                                     <segue destination="6Kx-If-Hfi" kind="modal" id="1bC-KQ-K0T"/>
                                 </connections>
                             </button>

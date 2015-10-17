@@ -174,8 +174,8 @@
 }
 - (void) updateSliderLabels
 {
-    self.lowerRange.text = [NSString stringWithFormat:@"₹ %d", (int)self.priceSlider.lowerValue];
-    self.higherRange.text = [NSString stringWithFormat:@"₹ %d", (int)self.priceSlider.upperValue];
+    self.lowerRange.text = [NSString stringWithFormat:@"%d", (int)self.priceSlider.lowerValue];
+    self.higherRange.text = [NSString stringWithFormat:@"%d", (int)self.priceSlider.upperValue];
 }
 
 #pragma mark UICollectionViewMethods
@@ -412,6 +412,7 @@
     }
     alertView.tag=404;
     [alertView show];
+    self.product.imagesArray=imagesArray;
     [[HackathonAppManager sharedInstance] addProduct:self.product];
 }
 

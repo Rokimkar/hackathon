@@ -59,23 +59,22 @@
     }
     else
     {
-        NSMutableArray* dataArray = [self getFavDataFrom:[self getDataFrom:[object valueForKey:@"items"] forCategory:@"Clothing"]];
-        if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
+        NSMutableArray* dataArray = [self getDataFrom:[object valueForKey:@"items"] forCategory:@"Clothing"];
+//        if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
             NSMutableArray *array = [HackathonAppManager sharedInstance].sellerResponses.prodsArray;
             if (!array) {
                 array = [[NSMutableArray alloc] init];
             }
+        NSMutableArray *second = [HackathonAppManager sharedInstance].buyerWishes.prodsArray;
+        if (second) {
+            [array addObjectsFromArray:second];
+        }
+
             [array addObjectsFromArray:dataArray];
             success(array);
-        }
-        else{
-            NSMutableArray *array = [HackathonAppManager sharedInstance].buyerWishes.prodsArray;
-            if (!array) {
-                array = [[NSMutableArray alloc] init];
-            }
-            [array addObjectsFromArray:dataArray];
-            success(array);
-        }
+//        }
+//        else{
+//        }
     }
 }
 
@@ -141,7 +140,7 @@
 -(NSMutableArray*) getFavDataFrom:(id)dataObject{
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
     for (NSMutableDictionary *prodObj in dataObject) {
-        if ([[HackathonAppManager sharedInstance] productExist:[NSNumber numberWithInt:[[prodObj objectForKey:@"prodId"] intValue]]]) {
+        if ([prodObj objectForKey:@"prodId"] && [[HackathonAppManager sharedInstance] productExist:[NSNumber numberWithInt:[[prodObj objectForKey:@"prodId"] intValue]]]) {
             [dataArray addObject:[self mapWith:prodObj]];
         }
     }
