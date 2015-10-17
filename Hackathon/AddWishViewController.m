@@ -162,6 +162,7 @@
     return YES;
 }
 
+
 #pragma mark Slider methods
 - (void) configureLabelSlider
 {

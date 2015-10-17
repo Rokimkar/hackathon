@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fSd-wO-dFN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fSd-wO-dFN">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Browse-->
@@ -283,7 +282,7 @@
                                     <outlet property="delegate" destination="bD3-V0-2tX" id="mb2-PZ-l1u"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_icon.jpeg" id="eut-go-GZh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addingIcon.jpeg" id="eut-go-GZh">
                                 <rect key="frame" x="72" y="122" width="30" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -292,6 +291,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Wish" id="59O-lH-nWG"/>
                     <connections>
+                        <outlet property="addIcon" destination="eut-go-GZh" id="CJJ-wT-Sjk"/>
                         <outlet property="addNewWishBtn" destination="qZS-ZN-nOv" id="qGl-CA-xYg"/>
                         <outlet property="responsesCollectionView" destination="HLg-ah-BGd" id="tQI-17-782"/>
                         <outlet property="topSegmentControl" destination="0n5-PS-Jj3" id="dzp-9z-Esh"/>
@@ -303,9 +303,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add_icon.jpeg" width="225" height="225"/>
+        <image name="addingIcon.jpeg" width="19" height="19"/>
         <image name="splash.png" width="3000" height="3000"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="alY-RF-MmB"/>
     </inferredMetricsTieBreakers>

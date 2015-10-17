@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *addNewWishBtn;
 @property (weak, nonatomic) IBOutlet UICollectionView *responsesCollectionView;
 @property (strong, nonatomic) NSMutableArray *dataArray;
+@property (weak, nonatomic) IBOutlet UIImageView *addIcon;
 
 @end

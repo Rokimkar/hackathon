@@ -43,7 +43,7 @@
     ProductData *prodData = [[ProductData alloc] init];
     
     [prodData fetchAllDataWithSuccess:^(NSMutableArray *data) {
-        baseTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0,264, self.view.frame.size.width, self.view.frame.size.height-50) andProductsArray:data];
+        baseTableView = [[BaseTableView alloc] initWithFrame:CGRectMake(0,264, getScreenWidth(), getScreenHeight()-264-50) andProductsArray:data];
         self.dataArray=data;
         baseTableView.separatorColor = [UIColor clearColor];
         [self.view addSubview:baseTableView];

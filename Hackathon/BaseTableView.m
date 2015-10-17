@@ -13,6 +13,7 @@
 #import "Prefix.pch"
 #import "WishViewController.h"
 #import "WallViewController.h"
+#import "SVProgressHUD.h"
 @implementation BaseTableView
 
 -(id) initWithFrame:(CGRect)frame andProductsArray:(NSArray*) prodsArray{
@@ -58,6 +59,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     ProductDetailViewController *vc = [[ProductDetailViewController alloc] initWithNibName:@"ProductDetailViewController" bundle:nil andProduct:[self.productArray objectAtIndex:indexPath.row]];
     
     if ([self getWallController] && [HackathonAppManager sharedInstance].appUserType==kSeller) {
@@ -69,6 +71,7 @@
         [navCont pushViewController:vc animated:YES];
     }
     else{
+        [SVProgressHUD dismiss];
     }
 }
 

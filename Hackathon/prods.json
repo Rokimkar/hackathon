@@ -43,6 +43,49 @@
               "type": "Exactly Same"
               },
               {
+              "title": "Corpus AP Casual Shoes",
+              "prodDesc": "Enhancing Your Casual Outfit, These Shoes Are Trendy And Comfortable For Long Wear",
+              "price": "399",
+              "quantity": 2,
+              "prodId": 104,
+              "category": "Clothing",
+              "subcategory": "Shoes",
+              "img1": "http://img6a.flixcart.com/image/shoe/g/h/p/navy-fighter-corpus-6-400x400-imae2yxtzchzqh9j.jpeg",
+              "img2": "http://img5a.flixcart.com/image/shoe/g/h/p/navy-fighter-corpus-6-400x400-imae2yxtvyygecfd.jpeg",
+              "img3": "http://img5a.flixcart.com/image/shoe/g/h/p/navy-fighter-corpus-6-400x400-imae2yxttdu6cwuf.jpeg",
+              "seller": "Corpus Bros.",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Puma Axis IV XT Black Sport Shoes",
+              "prodDesc": "Product colour may slightly vary due to photographic lighting sources or your monitor settings",
+              "price": "1727",
+              "quantity": 3,
+              "prodId": 105,
+              "category": "Clothing",
+              "subcategory": "Shoes",
+              "img1": "http://n3.sdlcdn.com/imgs/a/3/q/Puma-Axis-Iv-Xt-Navy-SDL771425627-1-5bb20.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/3/q/Puma-Axis-Iv-Xt-Navy-SDL771425627-2-26873.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/3/q/Puma-Axis-Iv-Xt-Navy-SDL771425627-4-50919.jpg",
+              "seller": "Naveen Shoes",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Reebok Silver Men Sports Shoes",
+              "prodDesc": "Puma is the name that comes to mind first when one talks about sportswear. Puma has shown tremendous growth from being a small shoe factory in Germany to the world's leading companies today. ",
+              "price": "1799",
+              "quantity": 5,
+              "prodId": 106,
+              "category": "Clothing",
+              "subcategory": "Shoes",
+              "img1": "http://n1.sdlcdn.com/imgs/a/o/k/Reebok-Silver-Men-Sports-Shoes-SDL868701355-1-e3c2a.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/o/k/Reebok-Silver-Men-Sports-Shoes-SDL868701355-2-e66bb.jpg",
+              "img3": "http://n2.sdlcdn.com/imgs/a/o/k/Reebok-Silver-Men-Sports-Shoes-SDL868701355-5-3d5f3.jpg",
+              "seller": "India Shoes",
+              "type": "Exactly Same"
+              },
+
+              {
               "title": "Mufti Blue Slim Fit Shirt",
               "prodDesc": "Mufti - A word derived from colonial India's armed forces-meaning casual dressing as opposed to wearing a uniform.",
               "price": "582",
@@ -84,6 +127,50 @@
               "seller": "Jack garments",
               "type": "Similar"
               },
+              
+              {
+              "title": "Mufti Blue Slim Fit Shirt",
+              "prodDesc": "Mufti - A word derived from colonial India's armed forces-meaning casual dressing as opposed to wearing a uniform.",
+              "price": "582",
+              "quantity": 10,
+              "prodId": 204,
+              "category": "Clothing",
+              "subcategory": "Shirt",
+              "img1": "http://n1.sdlcdn.com/imgs/a/2/p/Mufti-Blue-Slim-Fit-Shirt-SDL362637809-1-bbd26.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/z/n/Mufti-Blue-Slim-Fit-Shirt-SDL362637809-4-c8b0a.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/2/p/Mufti-Blue-Slim-Fit-Shirt-SDL362637809-1-bbd26.jpg",
+              "seller": "Mufti and sons",
+              "type": "Similar"
+              },
+              {
+              "title": "Jack & Jones Turquoise Shirt",
+              "prodDesc": "Jack & Jones was founded in 1989 and is one of Europe's leading producers of menswear. Jack & Jones is part of Bestseller, a family-owned clothing company founded in Denmark in 1975. ",
+              "price": "1099",
+              "quantity": 15,
+              "prodId": 205,
+              "category": "Clothing",
+              "subcategory": "Shirt",
+              "img1": "http://n1.sdlcdn.com/imgs/a/z/y/Jack-Jones-Turquoise-Shirt-SDL504475153-3-47977.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/z/y/Jack-Jones-Turquoise-Shirt-SDL504475153-4-7d04b.jpg",
+              "img3": "http://n4.sdlcdn.com/imgs/a/z/y/Jack-Jones-Turquoise-Shirt-SDL504475153-1-3b2e1.jpg",
+              "seller": "Mufti and sons",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Mufti Green Slim Fit Shirt",
+              "prodDesc": "Mufti - A word derived from colonial India's armed forces-meaning casual dressing as opposed to wearing a uniform.",
+              "price": "799",
+              "quantity": 5,
+              "prodId": 206,
+              "category": "Clothing",
+              "subcategory": "Shirt",
+              "img1": "http://n2.sdlcdn.com/imgs/a/z/n/Mufti-Green-Slim-Fit-Shirt-SDL408299989-4-692ce.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/z/n/Mufti-Green-Slim-Fit-Shirt-SDL408299989-5-7bb7c.jpg",
+              "img3": "http://n3.sdlcdn.com/imgs/a/z/n/Mufti-Green-Slim-Fit-Shirt-SDL408299989-2-42bbd.jpg",
+              "seller": "Jack garments",
+              "type": "Similar"
+              },
+
               {
               "title": "Geoffrey Beene Gray Regular Fit Formal Trousers",
               "prodDesc": "The comapany Geoffrey Beene, part of the Elizabeth Arden group, was founded in 1963 by Geoffrey Beene.",
@@ -127,6 +214,49 @@
               "type": "Exactly Same"
               },
               {
+              "title": "Geoffrey Beene Gray Regular Fit Formal Trousers",
+              "prodDesc": "The comapany Geoffrey Beene, part of the Elizabeth Arden group, was founded in 1963 by Geoffrey Beene.",
+              "price": "1099",
+              "quantity": 7,
+              "prodId": 304,
+              "category": "Clothing",
+              "subcategory": "Trousers",
+              "img1": "http://n2.sdlcdn.com/imgs/a/w/8/Geoffrey-Beene-Gray-Regular-Fit-SDL847505971-2-62163.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/w/8/Geoffrey-Beene-Gray-Regular-Fit-SDL847505971-3-7089e.jpg",
+              "img3": "http://n4.sdlcdn.com/imgs/a/w/8/Geoffrey-Beene-Gray-Regular-Fit-SDL847505971-4-fe4b1.jpg",
+              "seller": "Indian Garments",
+              "type": "Similar"
+              },
+              {
+              "title": "Being Human Yellow Slim Fit Chinos",
+              "prodDesc": "Snapdeal presents an exclusive range of clothing options for men and women from the famous brand Being Human.",
+              "price": "799",
+              "quantity": 5,
+              "prodId": 305,
+              "category": "Clothing",
+              "subcategory": "Trousers",
+              "img1": "http://n2.sdlcdn.com/imgs/a/q/b/Being-Human-Yellow-Regular-Formals-SDL688858960-4-a101e.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/q/b/Being-Human-Yellow-Regular-Formals-SDL688858960-3-9397b.jpg",
+              "img3": "http://n4.sdlcdn.com/imgs/a/q/b/Being-Human-Yellow-Regular-Formals-SDL688858960-2-6ee24.jpg",
+              "seller": "being Human",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "American Swan Blue Casuals Chinos",
+              "prodDesc": "American Swan is a lifestyle brand inspired by the American culture. Owned by The American Swan Lifestyle Company, the brand offers apparels, footwear, accessories and personal care products.",
+              "price": "1219",
+              "quantity": 5,
+              "prodId": 306,
+              "category": "Clothing",
+              "subcategory": "Trousers",
+              "img1": "http://n3.sdlcdn.com/imgs/a/5/m/American-Swan-Blue-Casuals-Chinos-SDL975484289-1-f207a.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/5/m/American-Swan-Blue-Casuals-Chinos-SDL975484289-3-d3650.jpg",
+              "img3": "http://n2.sdlcdn.com/imgs/a/5/m/American-Swan-Blue-Casuals-Chinos-SDL975484289-2-3145e.jpg",
+              "seller": "Neeraj Clothes",
+              "type": "Exactly Same"
+              },
+
+              {
               "title": "Intec IV421UHD 106 cm (42) 4K Ultra HD Smart LED Television",
               "prodDesc": "The Intec IV421UHD 106 cm 4K Ultra HD Smart LED Television will enhance your movie watching experience. It has an Utra HD panel with Penta Luma Color LED technology that ensures stunning visuals.",
               "price": "32490",
@@ -169,6 +299,49 @@
               "type": "Similar"
               },
               {
+              "title": "Intec IV421UHD 106 cm (42) 4K Ultra HD Smart LED Television",
+              "prodDesc": "The Intec IV421UHD 106 cm 4K Ultra HD Smart LED Television will enhance your movie watching experience. It has an Utra HD panel with Penta Luma Color LED technology that ensures stunning visuals.",
+              "price": "32490",
+              "quantity": 5,
+              "prodId": 404,
+              "category": "Electronics",
+              "subcategory": "Television",
+              "img1": "http://n1.sdlcdn.com/imgs/a/4/3/Intec-IV421UHD-106-cm-42-SDL181869537-1-b0e06.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/4/3/Intec-IV421UHD-106-cm-42-SDL181869537-1-b0e06.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/4/3/Intec-IV421UHD-106-cm-42-SDL181869537-1-b0e06.jpg",
+              "seller": "Chandra Electronics",
+              "type": "Similar"
+              },
+              {
+              "title": "Philips 42PFL4150/V7 107 cm (42) Full HD LED Television",
+              "prodDesc": "Watch everything in full HD with Philips 42PFL4150 LED TV. It has been developed with the highest resolution of 1080p to provide unbelievably clear picture with crisp details and rich texture. ",
+              "price": "31990",
+              "quantity": 2,
+              "prodId": 405,
+              "category": "Electronics",
+              "subcategory": "Television",
+              "img1": "http://n3.sdlcdn.com/imgs/a/z/n/Philips-42PFL4150-V7-107-cm-SDL064197204-1-903e5.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/z/n/Philips-42PFL4150-V7-107-cm-SDL064197204-2-4ac9c.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/z/n/Philips-42PFL4150-V7-107-cm-SDL064197204-4-d3567.jpg",
+              "seller": "Capital Electronics",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Samsung 40J5100 102 cm (40) Full HD LED Television",
+              "prodDesc": "Brand New Samsung Full Hd Led TV joy Series J5100 2015 Latest Model One Year Sellers Warranty Same Warranty As The Samsung Company Would Be Applicable.",
+              "price": "47000",
+              "quantity": 5,
+              "prodId": 406,
+              "category": "Electronics",
+              "subcategory": "Television",
+              "img1": "http://n3.sdlcdn.com/imgs/a/6/1/Samsung-J5100-109-22-Cm-SDL319126048-1-2219f.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/6/1/Samsung-J5100-109-22-Cm-SDL319126048-2-18e8a.jpg",
+              "img3": "http://n3.sdlcdn.com/imgs/a/6/1/Samsung-J5100-109-22-Cm-SDL319126048-3-5467d.jpg",
+              "seller": "Planet Electronics",
+              "type": "Similar"
+              },
+
+              {
               "title": "YU Yunique 8GB",
               "prodDesc": "Explore the world of 4G LTE with the new YU Yunique 8GB Black with 2 Extra Back Panels. Extremely stylish yet professional, this dual SIM smartphone runs on the latest Snapdragon 410 processor along with the advanced Android Lollipop 5.1 Operating System. ",
               "price": "4999",
@@ -202,6 +375,48 @@
               "price": "9999",
               "quantity": 5,
               "prodId": 503,
+              "category": "Electronics",
+              "subcategory": "Mobiles",
+              "img1": "http://n2.sdlcdn.com/imgs/a/t/b/Samsung-Galaxy-Grand-Max-SDL386918046-1-af513.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/t/e/Black2-c909d.jpg",
+              "img3": "http://n4.sdlcdn.com/imgs/a/t/e/Black3-fc75b.jpg",
+              "seller": "Planet Electronics",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "YU Yunique 8GB",
+              "prodDesc": "Explore the world of 4G LTE with the new YU Yunique 8GB Black with 2 Extra Back Panels. Extremely stylish yet professional, this dual SIM smartphone runs on the latest Snapdragon 410 processor along with the advanced Android Lollipop 5.1 Operating System. ",
+              "price": "4999",
+              "quantity": 5,
+              "prodId": 504,
+              "category": "Electronics",
+              "subcategory": "Mobiles",
+              "img1": "http://n3.sdlcdn.com/imgs/a/8/7/yu1-ae28e.jpg",
+              "img2": "http://n4.sdlcdn.com/imgs/a/8/7/yu2-5f420.jpg",
+              "img3": "http://n4.sdlcdn.com/imgs/a/8/7/yu3-6d32a.jpg",
+              "seller": "Deal Merchant",
+              "type": "Similar"
+              },
+              {
+              "title": "Sony Xperia E4 Dual SIM 8GB",
+              "prodDesc": "Encased in an extremely stylish design along with Sony’s legendary expertise, the all-new Sony Xperia E4 smartphone will certainly impress you with its outstanding performance. ",
+              "price": "8990",
+              "quantity": 2,
+              "prodId": 505,
+              "category": "Electronics",
+              "subcategory": "Mobiles",
+              "img1": "http://n2.sdlcdn.com/imgs/a/u/u/Sony-Xperia-E4-SDL676650078-2-32bb8.jpg",
+              "img2": "http://n4.sdlcdn.com/imgs/a/u/5/2_2_-e76bd.jpg",
+              "img3": "http://n4.sdlcdn.com/imgs/a/u/u/Sony-Xperia-E4-SDL676650078-1-cf7e7.jpg",
+              "seller": "Wadhwa Mobile Care",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Samsung Galaxy Grand Max 16GB",
+              "prodDesc": "The all-new Samsung Galaxy Grand Max smartphone comes with an amazing amalgamation of utility and style. Packed with the latest features along with an impressive design, this pocket-friendly smartphone by Samsung will undoubtedly thrill you with its excellent performance.",
+              "price": "9999",
+              "quantity": 5,
+              "prodId": 506,
               "category": "Electronics",
               "subcategory": "Mobiles",
               "img1": "http://n2.sdlcdn.com/imgs/a/t/b/Samsung-Galaxy-Grand-Max-SDL386918046-1-af513.jpg",
@@ -253,6 +468,49 @@
               "type": "Similar"
               },
               {
+              "title": "Nikon Coolpix L31 16.1MP Digital Camera",
+              "prodDesc": "Capture the best moments of your life in high quality with Nikon L31 Digital Camera. It comes with simple control buttons and provides you a perfect grip to take awesome shots. ",
+              "price": "3818",
+              "quantity": 5,
+              "prodId": 604,
+              "category": "Electronics",
+              "subcategory": "Cameras",
+              "img1": "http://n2.sdlcdn.com/imgs/a/v/8/Nikon-L31-Digital-Camera-Black-SDL264007280-1-2e759.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/v/8/Nikon-L31-Digital-Camera-Black-SDL264007280-2-f1c1e.jpg",
+              "img3": "http://n4.sdlcdn.com/imgs/a/v/8/Nikon-L31-Digital-Camera-Black-SDL264007280-3-c3a9d.jpg",
+              "seller": "Camera King",
+              "type": "Similar"
+              },
+              {
+              "title": "Canon EOS 1200D with 18-55mm + 55-250mm Lens",
+              "prodDesc": "Photography is certainly an art and so is the choice of a right camera! In this scenario, when compact cameras are striving hard to make their presence felt in the smartphone’s generation, DSLRs have their own charm and yes, a strong market though. With the rising interest of novice photographers, DSLRs are gaining huge popularity.",
+              "price": "24990",
+              "quantity": 2,
+              "prodId": 605,
+              "category": "Electronics",
+              "subcategory": "Cameras",
+              "img1": "http://n1.sdlcdn.com/imgs/a/h/7/Canon-EOS-1200D-Kit-EF-SDL233126882-5-3df4d.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/h/7/Canon-EOS-1200D-Kit-EF-SDL233126882-4-66aff.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/h/7/Canon-EOS-1200D-Kit-EF-SDL233126882-5-3df4d.jpg",
+              "seller": "Smart Sales",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Canon EOS 700D with 18-55mm + 55-250mm Lens",
+              "prodDesc": "Also known as Canon EOS Rebel T5i, the DP Review Silver Award winner consists of ISO speed range of 100-12800 (further extendable up to 25600, 3 inch vari-angle TFT LCD 1,040k display, 1/4000 sec. of shutter speed, live view shooting modes and much more.",
+              "price": "38400",
+              "quantity": 5,
+              "prodId": 606,
+              "category": "Electronics",
+              "subcategory": "Cameras",
+              "img1": "http://n3.sdlcdn.com/imgs/a/w/b/Canon-EOS-700D-with-18-SDL708765217-1-d6540.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/w/b/Canon-EOS-700D-with-18-SDL708765217-2-f30b9.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/w/b/Canon-EOS-700D-with-18-SDL708765217-3-e1cf6.jpg",
+              "seller": "Photo Store",
+              "type": "Similar"
+              },
+
+              {
               "title": "Head First Java, 2/Ed (Cover Java 5.0)",
               "prodDesc": "Head First Java delivers a highly interactive, multisensory learning experience that lets new programmers pick up the fundamentals of the Java language quickly.",
               "price": "595",
@@ -294,6 +552,49 @@
               "seller": "Comma Store",
               "type": "Similar"
               },
+              {
+              "title": "Head First Java, 2/Ed (Cover Java 5.0)",
+              "prodDesc": "Head First Java delivers a highly interactive, multisensory learning experience that lets new programmers pick up the fundamentals of the Java language quickly.",
+              "price": "595",
+              "quantity": 5,
+              "prodId": 704,
+              "category": "Books",
+              "subcategory": "Academic",
+              "img1": "http://n1.sdlcdn.com/imgs/a/5/h/Head-First-Java-2-Ed-SDL763458459-1-b7acc.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/5/h/Head-First-Java-2-Ed-SDL763458459-1-b7acc.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/5/h/Head-First-Java-2-Ed-SDL763458459-1-b7acc.jpg",
+              "seller": "Orange Books",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Fluid Mechanics For Chemical Engineering",
+              "prodDesc": "Fluid Mechanics For Chemical Engineering",
+              "price": "740",
+              "quantity": 2,
+              "prodId": 705,
+              "category": "Books",
+              "subcategory": "Academic",
+              "img1": "http://n1.sdlcdn.com/imgs/a/4/8/Fluid-Mechanics-For-Chemical-Engineering-SDL770703013-1-e715b.jpg",
+              "img2": "http://n1.sdlcdn.com/imgs/a/4/8/Fluid-Mechanics-For-Chemical-Engineering-SDL770703013-1-e715b.jpg",
+              "img3": "http://n1.sdlcdn.com/imgs/a/4/8/Fluid-Mechanics-For-Chemical-Engineering-SDL770703013-1-e715b.jpg",
+              "seller": "Smart Sales",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Introduction To Logic (Pb)",
+              "prodDesc": "Introduction To Logic (Pb)",
+              "price": "613",
+              "quantity": 5,
+              "prodId": 706,
+              "category": "Books",
+              "subcategory": "Academic",
+              "img1": "http://n2.sdlcdn.com/imgs/a/5/h/Introduction-To-Logic-Pb--SDL453709025-1-500c9.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/5/h/Introduction-To-Logic-Pb--SDL453709025-1-500c9.jpg",
+              "img3": "http://n2.sdlcdn.com/imgs/a/5/h/Introduction-To-Logic-Pb--SDL453709025-1-500c9.jpg",
+              "seller": "Comma Store",
+              "type": "Similar"
+              },
+
               {
               "title": "Scion Of Ikshvaku (English)",
               "prodDesc": "Ram Rajya. The Perfect Land. But perfection has a price. He paid that price. 3400 BCE. INDIA Ayodhya is weakened by divisions. A terrible war has taken its toll. The damage runs deep.",
@@ -337,6 +638,49 @@
               "type": "Similar"
               },
               {
+              "title": "Scion Of Ikshvaku (English)",
+              "prodDesc": "Ram Rajya. The Perfect Land. But perfection has a price. He paid that price. 3400 BCE. INDIA Ayodhya is weakened by divisions. A terrible war has taken its toll. The damage runs deep.",
+              "price": "215",
+              "quantity": 5,
+              "prodId": 804,
+              "category": "Books",
+              "subcategory": "Fiction",
+              "img1": "http://n3.sdlcdn.com/imgs/a/4/g/Scion-Of-Ikshvaku-SDL612693717-1-ac218.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/4/g/Scion-Of-Ikshvaku-SDL612693717-1-ac218.jpg",
+              "img3": "http://n3.sdlcdn.com/imgs/a/4/g/Scion-Of-Ikshvaku-SDL612693717-1-ac218.jpg",
+              "seller": "Comma Books",
+              "type": "Similar"
+              },
+              {
+              "title": "A Walk To Remember",
+              "prodDesc": "A Walk To Remember",
+              "price": "315",
+              "quantity": 2,
+              "prodId": 805,
+              "category": "Books",
+              "subcategory": "Fiction",
+              "img1": "http://n4.sdlcdn.com/imgs/a/5/g/A-Walk-To-Remember-SDL319747130-1-7e77f.jpg",
+              "img2": "http://n4.sdlcdn.com/imgs/a/5/g/A-Walk-To-Remember-SDL319747130-1-7e77f.jpg",
+              "img3": "http://n4.sdlcdn.com/imgs/a/5/g/A-Walk-To-Remember-SDL319747130-1-7e77f.jpg",
+              "seller": "Smart Sales",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Forge Your Future",
+              "prodDesc": "Forge Your Future",
+              "price": "225",
+              "quantity": 5,
+              "prodId": 806,
+              "category": "Books",
+              "subcategory": "Fiction",
+              "img1": "http://n2.sdlcdn.com/imgs/a/4/g/Forge-Your-Future-SDL743750858-1-09b77.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/4/g/Forge-Your-Future-SDL743750858-1-09b77.jpg",
+              "img3": "http://n2.sdlcdn.com/imgs/a/4/g/Forge-Your-Future-SDL743750858-1-09b77.jpg",
+              "seller": "Orange Books",
+              "type": "Similar"
+              },
+
+              {
               "title": "How To Make Money Trading With Charts",
               "prodDesc": "How To Make Money Trading With Charts",
               "price": "799",
@@ -377,7 +721,50 @@
               "img3": "http://n2.sdlcdn.com/imgs/a/4/v/Food-And-Beverage-Services-A-SDL262683134-1-b78da.jpg",
               "seller": "Orange Books",
               "type": "Similar"
+              },
+              {
+              "title": "How To Make Money Trading With Charts",
+              "prodDesc": "How To Make Money Trading With Charts",
+              "price": "799",
+              "quantity": 5,
+              "prodId": 904,
+              "category": "Books",
+              "subcategory": "Business",
+              "img1": "http://n3.sdlcdn.com/imgs/a/4/v/How-To-Make-Money-Trading-SDL961374760-1-3e72c.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/4/v/How-To-Make-Money-Trading-SDL961374760-1-3e72c.jpg",
+              "img3": "http://n3.sdlcdn.com/imgs/a/4/v/How-To-Make-Money-Trading-SDL961374760-1-3e72c.jpg",
+              "seller": "Seller Score",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Thinking, Fast And Slow",
+              "prodDesc": "Thinking, Fast And Slow",
+              "price": "449",
+              "quantity": 2,
+              "prodId": 905,
+              "category": "Books",
+              "subcategory": "Business",
+              "img1": "http://n3.sdlcdn.com/imgs/a/5/h/Thinking-Fast-And-Slow-SDL538027225-1-15e62.jpg",
+              "img2": "http://n3.sdlcdn.com/imgs/a/5/h/Thinking-Fast-And-Slow-SDL538027225-1-15e62.jpg",
+              "img3": "http://n3.sdlcdn.com/imgs/a/5/h/Thinking-Fast-And-Slow-SDL538027225-1-15e62.jpg",
+              "seller": "Comma Books",
+              "type": "Exactly Same"
+              },
+              {
+              "title": "Food And Beverage Services: A Training Manual, 3Rd Ed.",
+              "prodDesc": "Food And Beverage Services: A Training Manual, 3Rd Ed.",
+              "price": "435",
+              "quantity": 5,
+              "prodId": 906,
+              "category": "Books",
+              "subcategory": "Business",
+              "img1": "http://n2.sdlcdn.com/imgs/a/4/v/Food-And-Beverage-Services-A-SDL262683134-1-b78da.jpg",
+              "img2": "http://n2.sdlcdn.com/imgs/a/4/v/Food-And-Beverage-Services-A-SDL262683134-1-b78da.jpg",
+              "img3": "http://n2.sdlcdn.com/imgs/a/4/v/Food-And-Beverage-Services-A-SDL262683134-1-b78da.jpg",
+              "seller": "Orange Books",
+              "type": "Similar"
               }
+
               
               
               

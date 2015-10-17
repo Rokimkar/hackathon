@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C31A02B1BD1BA120052AFBF /* ProductRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C31A02A1BD1BA120052AFBF /* ProductRepo.m */; settings = {ASSET_TAGS = (); }; };
-		0C31A02F1BD1C96F0052AFBF /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C31A02E1BD1C96F0052AFBF /* splash.png */; settings = {ASSET_TAGS = (); }; };
+		0C31A02B1BD1BA120052AFBF /* ProductRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C31A02A1BD1BA120052AFBF /* ProductRepo.m */; };
+		0C31A02F1BD1C96F0052AFBF /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C31A02E1BD1C96F0052AFBF /* splash.png */; };
 		0C369B5F1BD0206C00EE5539 /* HackathonAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C369B5E1BD0206C00EE5539 /* HackathonAppManager.m */; };
 		0C369B611BD029AC00EE5539 /* CategoriesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C369B601BD029AC00EE5539 /* CategoriesList.plist */; };
 		0C958F9D1BCED670007A7694 /* ProductDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C958F901BCED670007A7694 /* ProductDescriptionTableViewCell.m */; };
@@ -96,6 +96,7 @@
 		A080369D1BD1C69B002F375B /* Binoculars Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A080369A1BD1C69B002F375B /* Binoculars Filled-32.png */; };
 		A080369E1BD1C69B002F375B /* Shopping Cart-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A080369B1BD1C69B002F375B /* Shopping Cart-50.png */; };
 		A08036A01BD1C819002F375B /* More Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A080369F1BD1C819002F375B /* More Filled-32.png */; };
+		A08036A21BD20CA3002F375B /* addingIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A08036A11BD20CA3002F375B /* addingIcon.jpeg */; };
 		A0A7AAAF1BCD83B600F0CBFC /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAAE1BCD83B600F0CBFC /* BaseTableView.m */; };
 		A0A7AAB41BCD851D00F0CBFC /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAB21BCD851D00F0CBFC /* TableViewCell.m */; };
 		A0A7AAB51BCD851D00F0CBFC /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0A7AAB31BCD851D00F0CBFC /* TableViewCell.xib */; };
@@ -242,6 +243,7 @@
 		A080369A1BD1C69B002F375B /* Binoculars Filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Binoculars Filled-32.png"; sourceTree = "<group>"; };
 		A080369B1BD1C69B002F375B /* Shopping Cart-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart-50.png"; sourceTree = "<group>"; };
 		A080369F1BD1C819002F375B /* More Filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More Filled-32.png"; sourceTree = "<group>"; };
+		A08036A11BD20CA3002F375B /* addingIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = addingIcon.jpeg; sourceTree = "<group>"; };
 		A0A7AAAD1BCD83B600F0CBFC /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
 		A0A7AAAE1BCD83B600F0CBFC /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		A0A7AAB11BCD851D00F0CBFC /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				0CE54A741BD16A910043A1C2 /* addIcon.png */,
 				A08036921BD1B97A002F375B /* navigation_icon */,
 				A07E81B51BD15FE900FCE32B /* menu_icon.png */,
+				A08036A11BD20CA3002F375B /* addingIcon.jpeg */,
 				0CBC85C41BD12C0600FD44FF /* cardLayout.png */,
 				A07E81B11BD1157200FCE32B /* placeHolderImage.png */,
 				A0E8E9D31BCED753003F0F51 /* favorite_selected.jpeg */,
@@ -686,6 +689,7 @@
 				0C958FCB1BCED6B9007A7694 /* slider-default-trackBackground.png in Resources */,
 				0C958FD61BCED6B9007A7694 /* slider-metal-handle-highlighted.png in Resources */,
 				0C958FD31BCED6B9007A7694 /* slider-default7-trackBackground@2x.png in Resources */,
+				A08036A21BD20CA3002F375B /* addingIcon.jpeg in Resources */,
 				0C958FCC1BCED6B9007A7694 /* slider-default-trackCrossedOver.png in Resources */,
 				0C958FD81BCED6B9007A7694 /* slider-metal-handle.png in Resources */,
 				0CBC85BC1BD0D8D100FD44FF /* menuIcon.png in Resources */,

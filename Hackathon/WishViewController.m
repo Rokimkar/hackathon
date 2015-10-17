@@ -58,14 +58,19 @@
     if ([HackathonAppManager sharedInstance].appUserType==kSeller) {
         self.addNewWishBtn.frame = CGRectMake(16, getOriginY(self.topSegmentControl)+getHeight(self.topSegmentControl)+14, getScreenWidth()-32, 0);
         self.addNewWishBtn.hidden=YES;
+        self.addIcon.hidden=YES;
         int ycord = getOriginY(self.topSegmentControl)+getHeight(self.topSegmentControl)+14;
-        self.responsesCollectionView.frame=CGRectMake(0, ycord, getScreenWidth(), getScreenHeight()-ycord);
+        self.responsesCollectionView.frame=CGRectMake(0, ycord, getScreenWidth(), getScreenHeight()-ycord-50);
         
     }
     else{
         self.addNewWishBtn.frame = CGRectMake(16, getOriginY(self.topSegmentControl)+getHeight(self.topSegmentControl)+14, getScreenWidth()-32, 30);
+        self.addIcon.frame = CGRectMake(45, getOriginY(self.addNewWishBtn)+3, 30, 25);
+        
+        self.addNewWishBtn.hidden=NO;
+        self.addIcon.hidden=NO;
         int ycord = getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14;
-        self.responsesCollectionView.frame=CGRectMake(0, getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14, getScreenWidth(), getScreenHeight()-ycord);
+        self.responsesCollectionView.frame=CGRectMake(0, getOriginY(self.addNewWishBtn)+getHeight(self.addNewWishBtn)+14, getScreenWidth(), getScreenHeight()-ycord-50);
         
     }
     self.topSegmentControl.backgroundColor = [UIColor whiteColor];
