@@ -56,7 +56,7 @@
                                                   cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                               timeoutInterval:60];
     
-    [self.bgImageView setImageWithURLRequest:imageRequest placeholderImage:[UIImage imageNamed:@"placeHolderImage.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+    [self.bgImageView setImageWithURLRequest:imageRequest placeholderImage:[UIImage imageNamed:@""] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         [self.bgImageView setContentMode:UIViewContentModeCenter];
         if (!request){ // image was cached
             [self.bgImageView setContentMode:UIViewContentModeScaleAspectFit];

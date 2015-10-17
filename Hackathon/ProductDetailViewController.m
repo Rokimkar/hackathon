@@ -165,9 +165,9 @@
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, 44)];
         UILabel *lbl =[[UILabel alloc] initWithFrame:CGRectMake(30, 0, screenSize.width, 44)];
         lbl.text=@"Description";
-        lbl.textColor=RGBA(256, 256, 256, 1);
+        lbl.textColor=[UIColor blackColor];
 //        lbl.font=[UIFont fontWithName:@"SinkinSans-300Light" size:15];
-        [view setBackgroundColor:RGBA(5, 173, 255, 1.0)];
+        [view setBackgroundColor:RGBA(244, 245, 244, 1.0)];
         [view addSubview:lbl];
         return view;
     }
