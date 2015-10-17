@@ -24,6 +24,7 @@
     UITabBarItem *wishTabBarItem = [tabBar.items objectAtIndex:1];
     UITabBarItem *browseTabBarItem = [tabBar.items objectAtIndex:2];
     UIImage *image = [self resizeImage:[UIImage imageNamed:@"feed.png"] toSize:CGSizeMake(25, 25)];
+//    self.navigationController.navigationItem.rightBarButtonItems =self.navItems;
     image=[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     wallTabBarItem.image=image;
     image = [self resizeImage:[UIImage imageNamed:@"search.png"] toSize:CGSizeMake(25,25)];
@@ -47,6 +48,7 @@
         revealController.rearViewRevealWidth=150.0f;
     }
     self.title=@"Home";
+    [self navItems];
     //wallViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"mc" image:image selectedImage:image];
 }
 
@@ -63,5 +65,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) navItems {
+    UINavigationItem *navItems = [[UINavigationItem alloc]init];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [btn setBackgroundImage:[UIImage imageNamed:@"Binoculars Filled-32.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *searchBtn = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [btn1 setBackgroundImage:[UIImage imageNamed:@"More Filled-32.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *moreActions = [[UIBarButtonItem alloc]initWithCustomView:btn1];
+    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [btn2 setBackgroundImage:[UIImage imageNamed:@"Shopping Cart-50.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *cart = [[UIBarButtonItem alloc]initWithCustomView:btn2];//    navItems.rightBarButtonItems =
+    self.navigationItem.rightBarButtonItems=[[NSArray alloc]initWithObjects:moreActions,searchBtn,cart, nil];
+//    return navItems;
+}
 
 @end

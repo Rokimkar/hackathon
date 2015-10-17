@@ -93,6 +93,9 @@
 		A07E81B21BD1157200FCE32B /* placeHolderImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A07E81B11BD1157200FCE32B /* placeHolderImage.png */; };
 		A07E81B61BD15FE900FCE32B /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A07E81B51BD15FE900FCE32B /* menu_icon.png */; };
 		A07E81BF1BD1A6B100FCE32B /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07E81BE1BD1A6B100FCE32B /* LogInViewController.m */; };
+		A080369D1BD1C69B002F375B /* Binoculars Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A080369A1BD1C69B002F375B /* Binoculars Filled-32.png */; };
+		A080369E1BD1C69B002F375B /* Shopping Cart-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A080369B1BD1C69B002F375B /* Shopping Cart-50.png */; };
+		A08036A01BD1C819002F375B /* More Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A080369F1BD1C819002F375B /* More Filled-32.png */; };
 		A0A7AAAF1BCD83B600F0CBFC /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAAE1BCD83B600F0CBFC /* BaseTableView.m */; };
 		A0A7AAB41BCD851D00F0CBFC /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A7AAB21BCD851D00F0CBFC /* TableViewCell.m */; };
 		A0A7AAB51BCD851D00F0CBFC /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0A7AAB31BCD851D00F0CBFC /* TableViewCell.xib */; };
@@ -236,6 +239,9 @@
 		A07E81B51BD15FE900FCE32B /* menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon.png; sourceTree = "<group>"; };
 		A07E81BD1BD1A6B100FCE32B /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		A07E81BE1BD1A6B100FCE32B /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		A080369A1BD1C69B002F375B /* Binoculars Filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Binoculars Filled-32.png"; sourceTree = "<group>"; };
+		A080369B1BD1C69B002F375B /* Shopping Cart-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart-50.png"; sourceTree = "<group>"; };
+		A080369F1BD1C819002F375B /* More Filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More Filled-32.png"; sourceTree = "<group>"; };
 		A0A7AAAD1BCD83B600F0CBFC /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
 		A0A7AAAE1BCD83B600F0CBFC /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		A0A7AAB11BCD851D00F0CBFC /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
@@ -517,6 +523,7 @@
 			children = (
 				A07E81B81BD1822700FCE32B /* SplashImages */,
 				0CE54A741BD16A910043A1C2 /* addIcon.png */,
+				A08036921BD1B97A002F375B /* navigation_icon */,
 				A07E81B51BD15FE900FCE32B /* menu_icon.png */,
 				0CBC85C41BD12C0600FD44FF /* cardLayout.png */,
 				A07E81B11BD1157200FCE32B /* placeHolderImage.png */,
@@ -560,6 +567,16 @@
 				0C31A02E1BD1C96F0052AFBF /* splash.png */,
 			);
 			name = SplashImages;
+			sourceTree = "<group>";
+		};
+		A08036921BD1B97A002F375B /* navigation_icon */ = {
+			isa = PBXGroup;
+			children = (
+				A080369F1BD1C819002F375B /* More Filled-32.png */,
+				A080369A1BD1C69B002F375B /* Binoculars Filled-32.png */,
+				A080369B1BD1C69B002F375B /* Shopping Cart-50.png */,
+			);
+			name = navigation_icon;
 			sourceTree = "<group>";
 		};
 		A0A7AAB01BCD83C500F0CBFC /* BaseTableView */ = {
@@ -683,6 +700,7 @@
 				2F1882551BC850A400F29C34 /* search.png in Resources */,
 				0CE54A751BD16A910043A1C2 /* addIcon.png in Resources */,
 				2F1668E81BC5580D00744672 /* Main.storyboard in Resources */,
+				A080369E1BD1C69B002F375B /* Shopping Cart-50.png in Resources */,
 				0C958FCA1BCED6B9007A7694 /* slider-default-track@2x.png in Resources */,
 				0C958FD21BCED6B9007A7694 /* slider-default7-trackBackground.png in Resources */,
 				0C958FD41BCED6B9007A7694 /* slider-default7-trackCrossedOver.png in Resources */,
@@ -709,8 +727,10 @@
 				0C958FD51BCED6B9007A7694 /* slider-default7-trackCrossedOver@2x.png in Resources */,
 				0C958FCE1BCED6B9007A7694 /* slider-default7-handle.png in Resources */,
 				0C958FC71BCED6B9007A7694 /* slider-default-handle.png in Resources */,
+				A08036A01BD1C819002F375B /* More Filled-32.png in Resources */,
 				2F1668EA1BC5580D00744672 /* Images.xcassets in Resources */,
 				0C958FC81BCED6B9007A7694 /* slider-default-handle@2x.png in Resources */,
+				A080369D1BD1C69B002F375B /* Binoculars Filled-32.png in Resources */,
 				A0E8E9D61BCED753003F0F51 /* favorite_unselected.png in Resources */,
 				0C958FDB1BCED6B9007A7694 /* slider-metal-track@2x.png in Resources */,
 				2F1882541BC850A400F29C34 /* feed.png in Resources */,
