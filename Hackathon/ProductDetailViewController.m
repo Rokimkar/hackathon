@@ -16,6 +16,7 @@
 #import "WishViewController.h"
 #import "WallViewController.h"
 #import "AddWishViewController.h"
+#import "SVProgressHUD.h"
 @interface ProductDetailViewController () <UITableViewDelegate,UITableViewDataSource>
 {
     CGSize screenSize;
@@ -41,6 +42,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [SVProgressHUD dismiss];
     [self setBtnTitle];
 }
 
