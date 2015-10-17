@@ -43,6 +43,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [SVProgressHUD dismiss];
+   [super viewWillAppear:animated];
     [self setBtnTitle];
 }
 

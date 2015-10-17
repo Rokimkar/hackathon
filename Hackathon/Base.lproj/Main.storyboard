@@ -291,6 +291,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Wish" id="59O-lH-nWG"/>
                     <connections>
+                        <outlet property="addIcon" destination="eut-go-GZh" id="CJJ-wT-Sjk"/>
                         <outlet property="addNewWishBtn" destination="qZS-ZN-nOv" id="qGl-CA-xYg"/>
                         <outlet property="responsesCollectionView" destination="HLg-ah-BGd" id="tQI-17-782"/>
                         <outlet property="topSegmentControl" destination="0n5-PS-Jj3" id="dzp-9z-Esh"/>

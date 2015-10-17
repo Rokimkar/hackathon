@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C07535FAA08A3011C78E19D4'
+               BlueprintIdentifier = 'F87532E64964DEED18BDAB2E'
                BlueprintName = 'NSObject-NSCoding'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libNSObject-NSCoding.a'>
