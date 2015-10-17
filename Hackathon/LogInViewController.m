@@ -8,6 +8,7 @@
 
 #import "LogInViewController.h"
 #import "Prefix.pch"
+#import "HackathonAppManager.h"
 
 @interface LogInViewController ()
 
@@ -37,8 +38,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buyerBtnPressed:(id)sender {
+    [HackathonAppManager sharedInstance].appUserType=kBuyer;
+}
 
 
+- (IBAction)sellerBtnPressed:(id)sender {
+        [HackathonAppManager sharedInstance].appUserType=kSeller;
+}
 
 /*
 #pragma mark - Navigation

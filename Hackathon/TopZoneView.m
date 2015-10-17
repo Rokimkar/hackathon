@@ -161,15 +161,30 @@
     cell.product=self.product;
     if (indexPath.row==0) {
         [cell bindItemData:self.product];
-        [cell bindImageFor:self.product.img1];
+        
+        if (self.product.imagesArray.count>0) {
+//            [(TopZoneCollectionViewCell*)cell setBgImageView:[self.product.imagesArray objectAtIndex:0]];
+            [(TopZoneCollectionViewCell*)cell bindActualImageFor:[self.product.imagesArray objectAtIndex:0]];
+            
+        }
+        else
+            [cell bindImageFor:self.product.img1];
     }
     else if (indexPath.row==1) {
-                [cell bindItemData:self.product];
-        [cell bindImageFor:self.product.img2];
+        [cell bindItemData:self.product];
+        if (self.product.imagesArray.count>1) {
+            [(TopZoneCollectionViewCell*)cell bindActualImageFor:[self.product.imagesArray objectAtIndex:1]];
+        }
+        else
+            [cell bindImageFor:self.product.img2];
     }
     else if (indexPath.row==2) {
-                [cell bindItemData:self.product];
-        [cell bindImageFor:self.product.img3];
+        [cell bindItemData:self.product];
+        if (self.product.imagesArray.count>2) {
+            [(TopZoneCollectionViewCell*)cell bindActualImageFor:[self.product.imagesArray objectAtIndex:2]];
+        }
+        else
+            [cell bindImageFor:self.product.img3];
     }   if([[HackathonAppManager sharedInstance]productExist:[NSNumber numberWithInteger:self.product.prodId]]){
         [cell.favButtonTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateNormal];
         [cell.favButtonTapped setBackgroundImage:[UIImage imageNamed:@"fav.png"] forState:UIControlStateHighlighted];

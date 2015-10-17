@@ -39,9 +39,19 @@
     self.mainLabel.hidden=YES;
 //    self.bgImageView.image = [UIImage imageNamed:@"addIcon"];
 }
+-(void) bindActualImageFor:(UIImage*) image{
+    
+    self.bgImageView.image=image;
+    
+}
+
 
 -(void) bindImageFor:(NSString*) imageUrl
 {
+    if (!imageUrl || [imageUrl isEqualToString:@""]) {
+        return;
+    }
+    
     NSURLRequest *imageRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:imageUrl]
                                                   cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                               timeoutInterval:60];

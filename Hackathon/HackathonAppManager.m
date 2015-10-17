@@ -32,7 +32,6 @@
 {
     self = [super init];
     self.favIdsArray = [[NSMutableArray alloc]init];
-    self.appUserType=kBuyer;
     self.buyerWishes = [Archiver retrieve:@"buyerWishes"];
     if (!self.buyerWishes) {
         self.buyerWishes = [[ProductRepo alloc] init];
@@ -106,6 +105,21 @@
 
 -(void) addProduct:(Product*) product{
     
+    int max=8000;
+    int min=2000;
+    
+    int randNum = rand() % (max - min) + min; //create the random number.
+    self.buyerWishes = [Archiver retrieve:@"buyerWishes"];
+    if (!self.buyerWishes) {
+        self.buyerWishes = [[ProductRepo alloc] init];
+    }
+    self.sellerResponses = [Archiver retrieve:@"sellerResponses"];
+    if (!self.sellerResponses) {
+        self.sellerResponses = [[ProductRepo alloc] init];
+    }
+
+    product.prodId = randNum;
+    product.seller=@"Sanchit & sons";
     if (self.appUserType==kSeller) {
         [self.sellerResponses.prodsArray addObject:product];
         [Archiver delete:@"sellerResponses"];

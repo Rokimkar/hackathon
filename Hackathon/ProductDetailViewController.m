@@ -40,6 +40,11 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self setBtnTitle];
+}
+
 -(void)viewDidAppear:(BOOL)animated{
     self.navigationController.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
